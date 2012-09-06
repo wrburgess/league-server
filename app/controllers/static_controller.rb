@@ -1,4 +1,4 @@
-class StaticController < ActionController::Base
+class StaticController < ApplicationController
   protect_from_forgery
 
   def index
