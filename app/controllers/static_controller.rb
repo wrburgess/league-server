@@ -2,7 +2,9 @@ class StaticController < ApplicationController
   protect_from_forgery
 
   def index
-    @test = "instance works"
+    @page_title = "Home"
+    @body_id = "home"
+    @body_class = "page"
   end
 
 end
