@@ -9,10 +9,12 @@ gem 'pg'
 
 group :test do
   gem 'debugger'
+  gem 'rspec-rails'
 end
 
 group :development do
   gem 'debugger'
+  gem 'rspec-rails'
 end
 
 group :assets do
