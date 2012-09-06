@@ -10,4 +10,3 @@ player = Player.create(first_name: 'John', last_name: 'Smith')
 player = Player.create(first_name: 'Robert', last_name: 'Jones')
 player = Player.create(first_name: 'Peter', last_name: 'Thomas')
 
-
