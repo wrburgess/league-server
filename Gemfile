@@ -7,13 +7,9 @@ gem 'haml-rails'
 gem 'jquery-rails'
 gem 'pg'
 
-group :test do
+group :test, :development do
   gem 'debugger'
-  gem 'rspec-rails'
-end
-
-group :development do
-  gem 'debugger'
+  gem "factory_girl_rails", "~> 4.0"
   gem 'rspec-rails'
 end
 
