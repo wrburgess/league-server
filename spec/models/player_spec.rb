@@ -6,6 +6,14 @@ describe Player do
     FactoryGirl.create(:player).should be_valid
   end
 
+  it 'is invalid without a first_name' do
+    FactoryGirl.build(:player, first_name: nil).should_not be_valid
+  end
+
+  it 'is invalid without a last_name' do
+    FactoryGirl.build(:player, last_name: nil).should_not be_valid
+  end
+
   describe '#full_name' do
 
     it 'sets full_name from first_name and last_name' do
