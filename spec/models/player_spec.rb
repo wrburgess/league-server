@@ -17,7 +17,7 @@ describe Player do
   describe '#full_name' do
 
     it 'sets full_name from first_name and last_name' do
-      FactoryGirl.create(:player).full_name.should == 'John Smith'
+      FactoryGirl.create(:player).full_name.should == 'Hines Ward'
     end
 
   end
