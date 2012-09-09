@@ -18,7 +18,10 @@ describe Player do
     FactoryGirl.build(:player, team_id: nil).should_not be_valid
   end
 
-  it { should belong_to(:team)}
+  it { should belong_to(:team) }
+  it { should have_many(:game_stats) }
+  it { should have_many(:season_stats) }
+  it { should have_one(:career_stat) }
 
   describe '#full_name' do
 
