@@ -7,6 +7,7 @@ Fantasy sports league engine
 * [Models](#models)
 * [Tools](#tools)
 * [Plugins](#plugins)
+* [Heroku Setup](#heroku-setup)
 
 ## Models
 
