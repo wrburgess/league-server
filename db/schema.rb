@@ -11,7 +11,33 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120908162816) do
+ActiveRecord::Schema.define(:version => 20120909212555) do
+
+  create_table "career_stats", :force => true do |t|
+    t.integer  "player_id"
+    t.integer  "pa_att",     :default => 0
+    t.integer  "pa_comp",    :default => 0
+    t.integer  "pa_td",      :default => 0
+    t.integer  "pa_yd",      :default => 0
+    t.integer  "pa_int",     :default => 0
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+  end
+
+  create_table "game_stats", :force => true do |t|
+    t.integer  "player_id"
+    t.integer  "opponent_id"
+    t.date     "game_date"
+    t.integer  "season"
+    t.integer  "pa_att",      :default => 0
+    t.integer  "pa_comp",     :default => 0
+    t.integer  "pa_td",       :default => 0
+    t.integer  "pa_yd",       :default => 0
+    t.integer  "pa_int",      :default => 0
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
+    t.integer  "week"
+  end
 
   create_table "players", :force => true do |t|
     t.string   "first_name"
@@ -19,6 +45,18 @@ ActiveRecord::Schema.define(:version => 20120908162816) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.integer  "team_id"
+  end
+
+  create_table "season_stats", :force => true do |t|
+    t.integer  "player_id"
+    t.integer  "season"
+    t.integer  "pa_att",     :default => 0
+    t.integer  "pa_comp",    :default => 0
+    t.integer  "pa_td",      :default => 0
+    t.integer  "pa_yd",      :default => 0
+    t.integer  "pa_int",     :default => 0
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
   end
 
   create_table "teams", :force => true do |t|
