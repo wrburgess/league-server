@@ -12,6 +12,10 @@
   %body{ id: "#{@body_id}", class: "#{@body_class}"}
     #wrapper
       %header
+        %p.notice 
+          = notice
+        %p.alert
+          = alert
       #content
         = yield
       %footer

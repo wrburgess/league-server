@@ -23,7 +23,7 @@ Fantasy sports league engine
 * [PostgreSQL](http://www.postgresql.org) - *database*
 * [Heroku](http://heroku.com) - *hosting*
 * [Haml](http://haml.info) - *markup*
-* [Sass - SCSS](http://sass-lang.com/) - *styling*
+* [Sass (SCSS)](http://sass-lang.com/) - *styling*
 
 ## Plugins
 
