@@ -8,6 +8,7 @@ gem 'rails', '3.2.8'
 gem 'devise', '~> 2.1.2'
 gem 'haml-rails'
 gem 'jquery-rails'
+gem 'omniauth'
 gem 'pg'
 
 #asset-specific
