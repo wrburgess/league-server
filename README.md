@@ -28,3 +28,15 @@ Fantasy sports league engine
 ## Plugins
 
 * [Devise](https://github.com/plataformatec/devise) - *user management*
+
+## Heroku Setup
+
+### Apps
+
+* [Staging](http://league-server-stage.herokuapp.com)
+* [Production](http://league-server-prod.herokuapp.com)
+
+### Add-ons
+
+* [Papertrail](https://papertrailapp.com) - *log analysis*
+* [PGBackups](https://addons.heroku.com/pgbackups) - *db backups*
