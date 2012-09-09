@@ -2,6 +2,12 @@
 
 Fantasy sports league engine
 
+## TOC
+
+* [Models](#models)
+* [Tools](#tools)
+* [Plugins](#plugins)
+
 ## Models
 
 * Player
