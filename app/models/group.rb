@@ -3,6 +3,6 @@ class Group < ActiveRecord::Base
 
   validates_presence_of :name
 
-  has_many :managers, :through => :group_managers
-  has_many :rosters, :through => :group_rosters
+  has_many :group_users
+  has_many :users, :through => :group_users
 end

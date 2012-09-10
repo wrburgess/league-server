@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120910012704) do
+ActiveRecord::Schema.define(:version => 20120910013504) do
 
   create_table "career_stats", :force => true do |t|
     t.integer  "player_id"
@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(:version => 20120910012704) do
     t.integer  "week"
   end
 
-  create_table "group_managers", :force => true do |t|
+  create_table "group_users", :force => true do |t|
     t.integer  "user_id"
     t.integer  "group_id"
     t.datetime "created_at", :null => false
