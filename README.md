@@ -21,9 +21,9 @@ Fantasy sports league engine
 ### Game Management
 * User
 * Roster
-* RosterUser
+* RosterUser - *roster/user assoc*
 * Group
-* GroupUser
+* GroupUser - *group/user assoc*
 
 ## Tools
 
