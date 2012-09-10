@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120910013504) do
+ActiveRecord::Schema.define(:version => 20120910014726) do
 
   create_table "career_stats", :force => true do |t|
     t.integer  "player_id"
@@ -42,8 +42,10 @@ ActiveRecord::Schema.define(:version => 20120910013504) do
   create_table "group_users", :force => true do |t|
     t.integer  "user_id"
     t.integer  "group_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
+    t.boolean  "owner",      :default => false
+    t.boolean  "viewer",     :default => true
   end
 
   create_table "groups", :force => true do |t|
@@ -60,11 +62,13 @@ ActiveRecord::Schema.define(:version => 20120910013504) do
     t.integer  "team_id"
   end
 
-  create_table "roster_managers", :force => true do |t|
+  create_table "roster_users", :force => true do |t|
     t.integer  "user_id"
     t.integer  "roster_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
+    t.boolean  "owner",      :default => true
+    t.boolean  "viewer",     :default => true
   end
 
   create_table "rosters", :force => true do |t|
