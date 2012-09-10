@@ -1,4 +1,4 @@
-# league
+# league-server
 
 Fantasy sports league engine
 
