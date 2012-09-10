@@ -11,11 +11,19 @@ Fantasy sports league engine
 
 ## Models
 
+### Gamepieces
 * Player
 * Team
 * GameStat
 * SeasonStat
 * CareerStat
+
+### Game Management
+* User
+* Roster
+* RosterManager
+* Group
+* GroupManager
 
 ## Tools
 
