@@ -6,6 +6,11 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+user1 = User.create(email: 'test@google.com')
+user2 = User.create(email: 'test@hotmail.com')
+user3 = User.create(email: 'test@yahoo.com')
+user4 = User.create(email: 'test@facebook.com')
+
 team1 = Team.create(location_name: 'NA', nickname: 'NA', abbreviation: 'NA')
 team2 = Team.create(location_name: 'Georgia', nickname: 'Bulldogs', abbreviation: 'GA')
 team3 = Team.create(location_name: 'Florida', nickname: 'Gators', abbreviation: 'FLA')
