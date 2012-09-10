@@ -1,4 +1,5 @@
 FactoryGirl.define do
+
   factory :season_stat do
     player_id 1
     season 1
@@ -8,4 +9,5 @@ FactoryGirl.define do
     pa_yd 3
     pa_int 5
   end
+  
 end

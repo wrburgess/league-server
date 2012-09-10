@@ -14,6 +14,14 @@ describe GroupUser do
     FactoryGirl.build(:group_user, group_id: nil).should_not be_valid
   end
 
+  it 'is invalid without an owner designation' do
+    FactoryGirl.build(:group_user, owner: nil).should_not be_valid
+  end
+
+  it 'is invalid without a viewer designation' do
+    FactoryGirl.build(:group_user, viewer: nil).should_not be_valid
+  end
+
   it { should belong_to(:user) }
   it { should belong_to(:group) }
 
