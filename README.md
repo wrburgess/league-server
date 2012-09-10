@@ -21,9 +21,9 @@ Fantasy sports league engine
 ### Game Management
 * User
 * Roster
-* RosterManager
+* RosterUser
 * Group
-* GroupManager
+* GroupUser
 
 ## Tools
 
@@ -34,9 +34,12 @@ Fantasy sports league engine
 * [Haml](http://haml.info) - *markup*
 * [Sass (SCSS)](http://sass-lang.com/) - *styling*
 
-## Plugins
+## Gems
 
-* [Devise](https://github.com/plataformatec/devise) - *user management*
+* [devise](https://github.com/plataformatec/devise) - *user management*
+* [omniauth](https://github.com/intridea/omniauth) - *external user authentication*
+* [factory_girl](https://github.com/thoughtbot/factory_girl) - *testing help*
+* [shoulda](https://github.com/thoughtbot/shoulda) - *testing help*
 
 ## Heroku Setup
 
