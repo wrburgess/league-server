@@ -10,6 +10,7 @@ gem 'haml-rails'
 gem 'jquery-rails'
 gem 'omniauth'
 gem 'pg'
+gem 'thin'
 
 #asset-specific
 group :assets do
