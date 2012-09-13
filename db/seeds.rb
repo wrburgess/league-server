@@ -13,6 +13,13 @@ CSV.foreach("#{Rails.root}/db/fill/users.csv") do |row|
 end
 puts "Import users.csv END"
 
+puts "Import team.csv BEGIN"
+CSV.foreach("#{Rails.root}/db/fill/teams.csv") do |row|
+  Team.create!(location_name: row[0], nickname: row[1], abbreviation: row[2])
+  puts "Team created: #{row[0]}, #{row[1]}, #{row[2]}"
+end
+puts "Import team.csv END"
+
 # user1 = User.create(email: 'test@google.com')
 # user2 = User.create(email: 'test@hotmail.com')
 # user3 = User.create(email: 'test@yahoo.com')
