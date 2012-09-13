@@ -1,35 +1,23 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
 
-puts "Import users.csv BEGIN"
-CSV.foreach("#{Rails.root}/db/fill/users.csv") do |row|
-  User.create!(email: row[2], password: row[3])
-  puts "User created: #{row[2]}, #{row[3]}"
+admin_user = User.create(email: "wrburgess@wrburgess.com", password: "secret")
+
+(2..100).each do |u|
+  user = User.create(email: "test#{u}@test.com")
+  puts "User created: test#{u}@test.com"
 end
-puts "Import users.csv END"
 
-puts "Import team.csv BEGIN"
 CSV.foreach("#{Rails.root}/db/fill/teams.csv") do |row|
   Team.create!(location_name: row[0], nickname: row[1], abbreviation: row[2])
   puts "Team created: #{row[0]}, #{row[1]}, #{row[2]}"
 end
-puts "Import team.csv END"
 
-# user1 = User.create(email: 'test@google.com')
-# user2 = User.create(email: 'test@hotmail.com')
-# user3 = User.create(email: 'test@yahoo.com')
-# user4 = User.create(email: 'test@facebook.com')
-
-# team1 = Team.create(location_name: 'NA', nickname: 'NA', abbreviation: 'NA')
-# team2 = Team.create(location_name: 'Georgia', nickname: 'Bulldogs', abbreviation: 'GA')
-# team3 = Team.create(location_name: 'Florida', nickname: 'Gators', abbreviation: 'FLA')
-# team4 = Team.create(location_name: 'South Carolina', nickname: 'Gamecocks', abbreviation: 'SCAR')
-# team5 = Team.create(location_name: 'Tennessee', nickname: 'Volunteers', abbreviation: 'TENN')
+(1..200).each do |p|
+  team_id = rand(1..100)
+  player = Player.create(first_name: 'John#{p}', last_name: 'Wilson#{p}', team_id: team_id)
+  puts "Player created: John#{p} Wilson#{p}, Team: #{team_id}"
+end
 
 # player1 = Player.create(first_name: 'James', last_name: 'Wilson', team_id: team1)
 # player2 = Player.create(first_name: 'John', last_name: 'Smith', team_id: team2)
