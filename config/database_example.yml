@@ -1,0 +1,17 @@
+development:
+  adapter: postgresql
+  host: localhost
+  username: [username] #replace
+  password: 
+  database: league-server
+  pool: 5
+  timeout: 5000
+
+test:
+  adapter: postgresql
+  host: localhost
+  username: [username] #replace
+  password: 
+  database: league-server
+  pool: 5
+  timeout: 5000
