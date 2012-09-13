@@ -9,7 +9,7 @@ Fantasy sports league engine
 * [Plugins](#plugins)
 * [Heroku Setup](#heroku-setup)
 
-## Philosophies
+## Approach
 * [12Factor](http://www.12factor.net/)
 
 ## Models
@@ -55,3 +55,21 @@ Fantasy sports league engine
 
 * [Papertrail](https://papertrailapp.com) - *log analysis*
 * [PGBackups](https://addons.heroku.com/pgbackups) - *db backups*
+
+## Custom Rake Tasks
+
+**ls:rebuild** calls db:drop, db:create, db:schema:load, db:seed, db:test:prepare
+
+## Seeding
+
+csv with mock data at db/fill
+  * user.csv
+  * player.csv
+  * team.csv
+
+## Initial Setup
+
+### PostgreSQL
+
+ * psql invokes command line
+ * 

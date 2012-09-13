@@ -3,7 +3,7 @@ development:
   host: localhost
   username: [username] #replace
   password: 
-  database: league-server
+  database: league-server-dev
   pool: 5
   timeout: 5000
 
@@ -12,6 +12,6 @@ test:
   host: localhost
   username: [username] #replace
   password: 
-  database: league-server
+  database: league-server-test
   pool: 5
   timeout: 5000
