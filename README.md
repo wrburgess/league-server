@@ -9,6 +9,9 @@ Fantasy sports league engine
 * [Plugins](#plugins)
 * [Heroku Setup](#heroku-setup)
 
+## Philosophies
+* [12Factor](http://www.12factor.net/)
+
 ## Models
 
 ### Gamepieces
