@@ -81,3 +81,14 @@ Fantasy sports league engine
 ### PostgreSQL
 
 * psql invokes command line
+
+## Response Codes
+
+[HTTP Status Codes](http://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
+400 Bad Request : The request cannot be fulfilled due to bad syntax.
+401 Unauthorized : Authentication is required and has failed or has not yet been provided.
+403 Forbidden : The request was a valid request, but the server is refusing to respond to it.
+405 Method Not Allowed
+408 Request Timeout
+410 Gone
+500 Internal Server Error
