@@ -15,8 +15,26 @@ end
 
 (1..200).each do |p|
   team_id = rand(1..100)
-  player = Player.create(first_name: 'John#{p}', last_name: 'Wilson#{p}', team_id: team_id)
+  date1 = "2013-01-01"
+  date2 = "2013-12-31"
+  game_date = Time.now
+
+  player = Player.create(first_name: "John#{p}", last_name: "Wilson#{p}", team_id: team_id)
   puts "Player created: John#{p} Wilson#{p}, Team: #{team_id}"
+
+  career_stat = CareerStat.create(player_id: player)
+  puts "CareerStat created: John#{p} Wilson#{p}, ID: #{team_id}"
+
+  (2011..2013).each do |ss|
+    season_stat = SeasonStat.create(player_id: player, season: ss)
+    puts "SeasonStat created: John#{p} Wilson#{p}, Season: #{ss}"
+  end
+
+  (1..15).each do |gs|
+    game_stat = GameStat.create(player_id: player.id, opponent_id: rand(1..100), game_date: game_date, season: "2013", week: gs)
+    puts "GameStat created: John#{p} Wilson#{p}, Team: #{team_id}"
+    game_date + 7.days
+  end
 end
 
 # player1 = Player.create(first_name: 'James', last_name: 'Wilson', team_id: team1)
