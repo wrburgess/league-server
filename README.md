@@ -10,11 +10,26 @@ Fantasy sports league engine
 * [Heroku Setup](#heroku-setup)
 
 ## Approach
+
 * [12Factor](http://www.12factor.net/)
+
+## Railscasts
+
+* [REST API Versioning](http://railscasts.com/episodes/350-rest-api-versioning)
+* [RABL](http://railscasts.com/episodes/322-rabl)
+* [Securing an API](http://railscasts.com/episodes/352-securing-an-api)
+
+## Blog Posts
+* [If you’re using to_json, you’re doing it wrong](http://engineering.gomiso.com/2011/05/16/if-youre-using-to_json-youre-doing-it-wrong/)
+
+## To Dos
+
+* [Consider rate limiting](http://developer.github.com/v3/#rate-limiting)
 
 ## Models
 
 ### Gamepieces
+
 * Player
 * Team
 * GameStat
@@ -22,6 +37,7 @@ Fantasy sports league engine
 * CareerStat
 
 ### Game Management
+
 * User
 * Roster
 * RosterUser - *roster/user assoc*
@@ -60,16 +76,8 @@ Fantasy sports league engine
 
 **ls:rebuild** calls db:drop, db:create, db:schema:load, db:seed, db:test:prepare
 
-## Seeding
-
-csv with mock data at db/fill
-  * user.csv
-  * player.csv
-  * team.csv
-
 ## Initial Setup
 
 ### PostgreSQL
 
- * psql invokes command line
- * 
+* psql invokes command line

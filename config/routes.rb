@@ -1,6 +1,19 @@
 League::Application.routes.draw do
+  require 'api_constraints'
+
+  root :to => 'static#index'
 
   devise_for :users
+
+  namespace :api, defaults: { format: 'json' } do
+    scope module: :v1, constraints: ApiConstraints.new(version: 1) do
+      resources :players
+    end
+
+    scope module: :v2, constraints: ApiConstraints.new(version: 2) do
+      resources :players
+    end
+  end
 
   namespace :admin do
     resources :players do
@@ -16,7 +29,4 @@ League::Application.routes.draw do
       get 'users' => 'users#index'
     end
   end
-
-  root :to => 'static#index'
-
 end
