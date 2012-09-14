@@ -1,5 +1,3 @@
 object @players
 
-attributes :id
-node(:meta1) { @players.count }
-node(:meta2) { @players.count }
+attributes :id, :first_name, :last_name, :full_name, :team_id
