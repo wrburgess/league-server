@@ -1,0 +1,8 @@
+#h1
+  = @player.full_name
+%ul
+- @player.game_stats.each do |game_stat|
+  %li
+    PaComp: 
+    = game_stat.pa_comp
+    = game_stat.game_date
