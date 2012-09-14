@@ -8,8 +8,10 @@ gem 'rails', '3.2.8'
 gem 'devise', '~> 2.1.2'
 gem 'haml-rails'
 gem 'jquery-rails'
+gem 'json'
 gem 'omniauth'
 gem 'pg'
+gem 'rabl'
 gem 'thin'
 
 #asset-specific
