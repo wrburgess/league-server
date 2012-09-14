@@ -1,8 +1,10 @@
 class Api::V1::PlayersController < ApiController
-  respond_to :json
 
   def index
-    respond_with Player.all
+    @players = Player.all
+
+    response.headers["X-LS-Records-Returned"] = "#{@players.count}"
+    response.headers["X-LS-License"] = "All Rights Reserved"
   end
 
   def show
