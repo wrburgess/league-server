@@ -1,8 +1,8 @@
-class Api::V1::PlayersController < ApiController
+class Api::V2::PlayersController < ApiController
   respond_to :json
 
   def index
-    respond_with Player.all
+    respond_with Player.find_by_id(1)
   end
 
   def show

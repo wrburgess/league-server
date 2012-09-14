@@ -4,13 +4,13 @@ class ApiConstraints
   end
     
   def matches? req
-    @req = req
+    @request = req
     type_matches? and version_matches?
   end
 
   private
 
-  def type_mathces?
+  def type_matches?
     @request.headers['Accept'].include?("version=#{@version}")
   end
 

@@ -1,5 +1,6 @@
+require 'api_constraints'
+
 League::Application.routes.draw do
-  require 'api_constraints'
 
   root :to => 'static#index'
 
