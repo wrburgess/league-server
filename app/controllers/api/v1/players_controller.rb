@@ -1,4 +1,7 @@
 class Api::V1::PlayersController < ApiController
+  include ActionController::HttpAuthentication::Token::ControllerMethods
+
+  before_filter :require_token
 
   def index
     @players = Player.all
@@ -17,6 +20,15 @@ class Api::V1::PlayersController < ApiController
 
   def update
 
+  end
+
+  private
+
+  def require_token
+    authenticate_with_http_token do |token, options|
+      #@current_user = Token.find_by_key(key).account if Token.exists?(key: key)
+      head :unauthorized unless token == "XXX"
+    end
   end
 
 end

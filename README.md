@@ -82,6 +82,20 @@ Fantasy sports league engine
 
 * psql invokes command line
 
+### API Call 
+
+    method: GET
+    url: api/players
+    Accept: application/vnd.league-server?version=[version_number]  
+    Authorization: Token token="[token_value]" 
+
+example:
+
+    method: GET
+    url: http://localhost:3000/api/players
+    Accept: application/vnd.league-server?version=1  
+    Authorization: Token token="xxxxxxxxxx" 
+
 ## Response Codes
 
 [HTTP Status Codes](http://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
