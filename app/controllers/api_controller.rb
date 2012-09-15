@@ -1,4 +1,5 @@
 class ApiController < ApplicationController
+  
   # #before_filter :authenticate_user!
 
   # # Rails requires these be from least- to most-specific exception

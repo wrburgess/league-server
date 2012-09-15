@@ -13,5 +13,15 @@ describe Api::V1::PlayersController do
       get :index
       response.header["X-LS-License"].should eq("All Rights Reserved")
     end 
+
+    xit "should retrieve records-returned header" do
+      get :index
+      response.header["X-LS-Records-Returned"].should == "200"
+    end
+
+    xit "should retrieve at least one record" do
+      get :index
+      response.body.should eq("All Rights Reserved")
+    end
   end
 end
