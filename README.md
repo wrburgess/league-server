@@ -19,6 +19,10 @@ Fantasy sports league engine
 * [RABL](http://railscasts.com/episodes/322-rabl)
 * [Securing an API](http://railscasts.com/episodes/352-securing-an-api)
 
+##
+
+* [http_authentication in rails](http://api.rubyonrails.org/classes/ActionController/HttpAuthentication/Token/ControllerMethods.html)
+
 ## Blog Posts
 * [If you’re using to_json, you’re doing it wrong](http://engineering.gomiso.com/2011/05/16/if-youre-using-to_json-youre-doing-it-wrong/)
 
