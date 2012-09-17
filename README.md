@@ -63,6 +63,7 @@ Fantasy sports league engine
 * [omniauth](https://github.com/intridea/omniauth) - *external user authentication*
 * [factory_girl](https://github.com/thoughtbot/factory_girl) - *testing help*
 * [shoulda](https://github.com/thoughtbot/shoulda) - *testing help*
+* [annotate](https://github.com/ctran/annotate_models) - *schema comments on models/specs*
 
 ## Heroku Setup
 
