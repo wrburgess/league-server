@@ -4,6 +4,8 @@ League::Application.routes.draw do
 
   root :to => 'static#index'
 
+  mount Resque::Server, :at => "/resque"
+
   devise_for :users
 
   namespace :api, defaults: { format: 'json' } do
