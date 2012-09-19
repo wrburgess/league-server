@@ -12,6 +12,7 @@ gem 'json'
 gem 'omniauth'
 gem 'pg'
 gem 'rabl'
+gem 'settingslogic'
 gem 'thin'
 
 #asset-specific

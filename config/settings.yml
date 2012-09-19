@@ -1,0 +1,42 @@
+defaults: &defaults
+  app:
+    name: "league-server"
+    server: "Default"
+    developer: "Randy Burgess"
+    contact: "wrburgess@wrburgess.com"
+  redis:
+    host: localhost
+    port: 6379
+    password:
+
+test:
+  <<: *defaults
+  app:
+    name: "league-server"
+    server: "Test"
+
+development:
+  <<: *defaults
+  app:
+    name: "league-server"
+    server: "Development"
+
+staging:
+  <<: *defaults
+  app:
+    name: "league-server"
+    server: "Staging"
+  redis:
+    host: <%= ENV["REDIS_HOST"] %>
+    port: <%= ENV["REDIS_PORT"] %>
+    password: <%= ENV["REDIS_PASSWORD"] %>
+
+production:
+  <<: *defaults  
+  app:
+    name: "league-server"
+    server: "Production"
+  redis:
+    host: <%= ENV["REDIS_HOST"] %>
+    port: <%= ENV["REDIS_PORT"] %>
+    password: <%= ENV["REDIS_PASSWORD"] %>
