@@ -59,11 +59,12 @@ Fantasy sports league engine
 
 ## Gems
 
-* [devise](https://github.com/plataformatec/devise) - *user management*
-* [omniauth](https://github.com/intridea/omniauth) - *external user authentication*
-* [factory_girl](https://github.com/thoughtbot/factory_girl) - *testing help*
-* [shoulda](https://github.com/thoughtbot/shoulda) - *testing help*
 * [annotate](https://github.com/ctran/annotate_models) - *schema comments on models/specs*
+* [devise](https://github.com/plataformatec/devise) - *user management*
+* [factory_girl](https://github.com/thoughtbot/factory_girl) - *testing help*
+* [omniauth](https://github.com/intridea/omniauth) - *external user authentication*
+* [settingslogic](https://github.com/binarylogic/settingslogic) - *site-wide config values*
+* [shoulda](https://github.com/thoughtbot/shoulda) - *testing help*
 
 ## Heroku Setup
 
