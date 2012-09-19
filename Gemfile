@@ -12,6 +12,7 @@ gem 'json'
 gem 'omniauth'
 gem 'pg'
 gem 'rabl'
+gem 'resque', :require => 'resque/server'
 gem 'settingslogic'
 gem 'thin'
 
