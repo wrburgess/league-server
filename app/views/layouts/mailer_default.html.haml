@@ -3,9 +3,4 @@
   %head
   %body
     #wrapper
-      #header
-        = render :partial => "shared/mailer_header_default"
-      #content
-        = yield
-      #footer
-        = render :partial => "shared/mailer_footer_default"
+      = yield

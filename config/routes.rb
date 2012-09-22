@@ -30,6 +30,7 @@ League::Application.routes.draw do
 
     resources :users do
       get 'users' => 'users#index'
+      get 'users/:id' => 'users#show'
     end
   end
 end

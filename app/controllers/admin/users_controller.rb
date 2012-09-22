@@ -9,4 +9,12 @@ class Admin::UsersController < ApplicationController
     @body_class = "page"
   end
 
+  def show
+    @user = User.find(params[:id])
+
+    @page_title = "Users Show"
+    @body_id = "users-show"
+    @body_class = "page"
+  end
+
 end
