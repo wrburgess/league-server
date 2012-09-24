@@ -1,22 +1,21 @@
-class GroupMailer < ActionMailer::Base
+class RosterMailer < ActionMailer::Base
   layout 'mailer_default'
 
-  def weekly_review(user)
+  def weekly_preview(user)
     @user = user
-    @url = "http://example.com/login"
     mail(
       charset:       "utf-8",
       content_type:  "text/html",
       from:          Settings.mailer.from,
-      subject:       "Group Weekly Review",
+      subject:       "Roster Weekly Preview",
       to:            user.email
     )
   end
 
   class Preview < MailView
-    def group_weekly_review
+    def roster_weekly_preview
       user = User.first
-      mail = GroupMailer.weekly_review(user)
+      mail = RosterMailer.weekly_preview(user)
       mail
     end
   end

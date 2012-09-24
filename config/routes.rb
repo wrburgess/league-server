@@ -33,4 +33,9 @@ League::Application.routes.draw do
       get 'users/:id' => 'users#show'
     end
   end
+
+  if Rails.env.development?
+    mount GroupMailer::Preview => 'mail_view_group'
+    mount RosterMailer::Preview => 'mail_view_roster'
+  end
 end

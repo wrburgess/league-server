@@ -23,5 +23,16 @@ describe Group do
   it { should have_many(:group_users) }
   it { should have_many(:users) }
 
+  describe 'mailers' do
+
+    it "sends a weekly_review" do
+      user = FactoryGirl.create(:user, email: "test@example.com", password: "secret")
+      group = FactoryGirl.create(:group)
+      group.send_weekly_review(user)
+      ActionMailer::Base.deliveries.last.to.should == [user.email]
+    end
+
+  end
+
 end
 
