@@ -2,7 +2,7 @@ require "spec_helper"
 
 describe GroupMailer do
 
-  describe 'instructions' do
+  describe 'weekly_review' do
     let(:user) { FactoryGirl.create(:user, email: "test@example.com", password: "secret") }
     let(:mail) { GroupMailer.weekly_review(user) }
  
