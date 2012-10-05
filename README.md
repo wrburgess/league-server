@@ -102,6 +102,10 @@ example:
     Accept: application/vnd.league-server?version=1  
     Authorization: Token token="xxxxxxxxxx" 
 
+## Pusher Integration
+
+* [Pusher Gem](https://github.com/pusher/pusher-gem)
+
 ## Response Codes
 
 [HTTP Status Codes](http://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
