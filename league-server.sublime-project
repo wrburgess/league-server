@@ -1,0 +1,15 @@
+{
+	"folders":
+	[
+		{
+			"path": "/Users/wrburgess/dev/jbrb/league-server"
+		}
+	],
+  "build_systems":
+  [
+    {
+      "name": "List",
+      "cmd": ["ls"]
+    }
+  ]
+}

@@ -19,7 +19,7 @@ Fantasy sports league engine
 * [RABL](http://railscasts.com/episodes/322-rabl)
 * [Securing an API](http://railscasts.com/episodes/352-securing-an-api)
 
-##
+## Docs
 
 * [http_authentication in rails](http://api.rubyonrails.org/classes/ActionController/HttpAuthentication/Token/ControllerMethods.html)
 
