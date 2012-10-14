@@ -51,8 +51,33 @@
 	},
 	"buffers":
 	[
+		{
+			"file": ".gitignore",
+			"settings":
+			{
+				"buffer_size": 231,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "ssaadd11\n",
+			"settings":
+			{
+				"buffer_size": 9,
+				"line_ending": "Unix",
+				"name": "ssaadd11"
+			}
+		},
+		{
+			"file": "league-server.sublime-project",
+			"settings":
+			{
+				"buffer_size": 165,
+				"line_ending": "Unix"
+			}
+		}
 	],
-	"build_system": "",
+	"build_system": "List",
 	"command_palette":
 	{
 		"height": 316.0,
@@ -100,6 +125,7 @@
 	},
 	"file_history":
 	[
+		"/Users/wrburgess/dev/jbrb/league-server/.gitignore",
 		"/Users/wrburgess/dev/jbrb/league-server/README.md",
 		"/Users/wrburgess/dev/jbrb/league-server/fcbb_README.md",
 		"/Users/wrburgess/dev/jbrb/league-server/doc/README_FOR_APP",
@@ -226,8 +252,7 @@
 		"/Users/wrburgess/dev/dm/devmynd_wp_site/wp-content/themes/devmynd/sidebar.php",
 		"/Users/wrburgess/dev/dm/lessonnote_cloud/app/serializers/note_serializer.rb",
 		"/Users/wrburgess/dev/dm/lessonnote_cloud/doc/classroom_for_big_lesson_002.json",
-		"/Users/wrburgess/dev/dm/lessonnote_cloud/doc/big_lesson_002.json",
-		"/Users/wrburgess/dev/dm/lessonnote_cloud/db/migrate/20120620175850_create_photos.rb"
+		"/Users/wrburgess/dev/dm/lessonnote_cloud/doc/big_lesson_002.json"
 	],
 	"find":
 	{
@@ -399,8 +424,67 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": ".gitignore",
+					"settings":
+					{
+						"buffer_size": 231,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								220,
+								220
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 1,
+					"settings":
+					{
+						"buffer_size": 9,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								9,
+								9
+							]
+						],
+						"settings":
+						{
+							"auto_name": "ssaadd11",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		},
 		{
@@ -409,13 +493,35 @@
 			]
 		},
 		{
+			"selected": 0,
 			"sheets":
 			[
-			]
-		},
-		{
-			"sheets":
-			[
+				{
+					"buffer": 2,
+					"file": "league-server.sublime-project",
+					"settings":
+					{
+						"buffer_size": 165,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								81,
+								81
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -488,6 +594,18 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"gitig",
+				".gitignore"
+			],
+			[
+				"sub",
+				"league-server.sublime-project"
+			],
+			[
+				"git",
+				".gitignore"
+			],
 			[
 				"read",
 				"doc/README_FOR_APP"
@@ -655,6 +773,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 163.0,
+	"side_bar_width": 194.0,
 	"status_bar_visible": true
 }

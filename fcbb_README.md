@@ -20,3 +20,18 @@
 * One or both ends of a doubleheader are sometimes seven innings in length. 
 * The NCAA has recently tightened the interpretation of what constitutes a regulation game, encouraging schools to play as many nine-inning games as possible. 
 * A mercy rule may be in use, which terminates play when one team is ahead by 10 or more runs after seven innings (6½ innings if the home team is winning). In games that are scheduled for seven innings the rule takes effect in the fifth.
+
+## Likely 2013 Schedule
+
+Season Start: Sun 2/10/2013  
+Season End: Sun 5/12/2013  
+Total Weeks: 13 weeks  
+
+Regular Season Weeks: 2/10/13 to 4/21/2013 (11 weeks)  
+Semi-finals: 4/28/2013 (1 week)  
+Finals: 5/5/2013 (1 week)  
+
+*Final week of regular college baseball season not included*  
+
+
+
