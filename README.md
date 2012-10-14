@@ -136,6 +136,14 @@ example:
 * Edit Player
 * Delete Player
 
+### Teams
+
+* Create Team
+* Update Team
+* Read Team
+* Read Teams
+* Delete Team
+
 ### Stats
 
 * Create Stat
@@ -174,6 +182,14 @@ example:
 * Read Scoring Rules
 * Update Scoring Rules
 
+### Roster
+
+* Create Roster
+* Read Roster
+* Read Rosters
+* Update Roster
+* Delete Roster
+
 ### Transaction
 
 *Adds, Drops, Trades, Waivers, Roster Moves*
@@ -183,6 +199,13 @@ example:
 * Read Transactions
 * Update Transaction
 * Delete Transaction
+
+### Bulk Transaction
+
+*Adds, Drops*
+
+* Create Bulk Transaction
+* Read Bulk Transaction
 
 ### Messages
 
