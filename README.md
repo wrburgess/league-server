@@ -227,8 +227,12 @@ example:
 
 ### Article
 
+*News, Story, Player Tags*
+
 * Create Article
 * Read Article
 * Read Articles
 * Update Article
 * Delete Article
+
+
