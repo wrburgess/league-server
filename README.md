@@ -117,3 +117,87 @@ example:
 408 Request Timeout
 410 Gone
 500 Internal Server Error
+
+## API Features
+
+### Players
+
+* Create Player
+* Read Player
+* Read Players
+* Edit Player
+* Delete Player
+
+### Stats
+
+* Create Stat
+* Read Stat
+* Read Stats
+* Update Stat
+* Delete Stat
+
+### Group
+
+* Create Group
+* Read Group
+* Update Group
+* Delete Group
+
+### Group Details
+
+* Read Group Standings
+* Read Group Schedule
+* Read Group Scores
+* Read Group Transactions
+* Read Group Calendar
+
+### Group Rules
+
+*Created with Group, Destroyed by Group*  
+*Transactions, Deadlines, Roster Limits, Player Pool*
+
+* Read Rules
+* Update Rules
+
+### Group Scoring
+
+*Created with Group, Destroyed by Group*
+
+* Read Scoring Rules
+* Update Scoring Rules
+
+### Transaction
+
+*Adds, Drops, Trades, Waivers, Roster Moves*
+
+* Create Transaction
+* Read Transaction
+* Read Transactions
+* Update Transaction
+* Delete Transaction
+
+### Messages
+
+* Create Message
+* Read Message
+* Read Messages
+* Update Messages
+* Delete Messages
+
+### Users
+
+*Permissions, Roles, Notifications*
+
+* Create User
+* Read User
+* Read Users
+* Update User
+* Delete User
+
+### Article
+
+* Create Article
+* Read Article
+* Read Articles
+* Update Article
+* Delete Article
