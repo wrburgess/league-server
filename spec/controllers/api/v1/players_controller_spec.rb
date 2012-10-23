@@ -82,4 +82,116 @@ describe Api::V1::PlayersController do
       response.body.should include('Joe Smith')
     end
   end
+
+  describe "#create" do
+
+    before do
+      request_payload = {
+        player: {
+          first_name: "Buck",
+          last_name: "Carradine",
+          team_id: "1",
+          junk: "trunk"
+        }
+      }
+
+      post :create, request_payload
+    end
+
+    it "should retrieve status code of 200" do
+      response.response_code.should == 200
+    end
+
+    it "should retrieve application name header" do
+      response.header["X-LS-Application"].should == "league-server"
+    end
+
+    it "should retrieve license header" do
+      response.header["X-LS-License"].should == "All Rights Reserved"
+    end
+
+    it "should retrieve records-returned header" do
+      response.header["X-LS-Records-Returned"].should == "1"
+    end
+
+    it "should retrieve a content-type of json" do
+      response.header['Content-Type'].should include 'application/json'
+    end
+
+    it "should retrieve a single player" do
+      response.body.should include('Buck Carradine')
+      response.body.should_not include('junk')
+    end
+  end
+
+  describe "#update" do
+
+    before do
+      request_payload = {
+        player: {
+          first_name: "Buck",
+          last_name: "Carradine",
+          team_id: "1"
+        }
+      }
+
+      put :update, id: @player1.id, request_payload
+    end
+
+    # it "should retrieve status code of 200" do
+    #   response.response_code.should == 200
+    # end
+
+    # it "should retrieve application name header" do
+    #   response.header["X-LS-Application"].should == "league-server"
+    # end
+
+    # it "should retrieve license header" do
+    #   response.header["X-LS-License"].should == "All Rights Reserved"
+    # end
+
+    # it "should retrieve records-returned header" do
+    #   response.header["X-LS-Records-Returned"].should == "1"
+    # end
+
+    # it "should retrieve a content-type of json" do
+    #   response.header['Content-Type'].should include 'application/json'
+    # end
+
+    # it "should retrieve a single player" do
+    #   response.body.should include('Buck')
+    #   response.body.should_not include('Joe')
+    # end
+  end
+
+  describe "#delete" do
+
+    before do
+      delete :destroy, id: @player1.id
+    end
+
+    it "should retrieve status code of 200" do
+      response.response_code.should == 200
+    end
+
+    it "should retrieve application name header" do
+      response.header["X-LS-Application"].should == "league-server"
+    end
+
+    it "should retrieve license header" do
+      response.header["X-LS-License"].should == "All Rights Reserved"
+    end
+
+    it "should retrieve records-returned header" do
+      response.header["X-LS-Records-Returned"].should == "0"
+    end
+
+    it "should retrieve a content-type of json" do
+      response.header['Content-Type'].should include 'application/json'
+    end
+
+    it "should retrieve a single player" do
+      response.body.should include('Player deleted')
+    end
+  end
 end

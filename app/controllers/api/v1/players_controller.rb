@@ -17,15 +17,37 @@ class Api::V1::PlayersController < ApiController
   end
 
   def create
+    player = {
+      first_name: params[:player][:first_name],
+      last_name: params[:player][:last_name],
+      team_id: params[:player][:team_id]
+    }
 
+    @player = Player.create!(player)
+    record_count = Player.where(id: @player.id).count
+
+    response.headers["X-LS-Records-Returned"] = "#{record_count}" if @player
   end
 
   def update
+    player = {
+      first_name: params[:player][:first_name],
+      last_name: params[:player][:last_name],
+      team_id: params[:player][:team_id]
+    }
 
+    @player = Player.find params[:id]
+    @player.update!(player)
+    record_count = Player.where(id: @player.id).count
+
+    response.headers["X-LS-Records-Returned"] = "#{record_count}" if @player
   end
 
   def destroy
+    player = Player.find params[:id]
+    player.delete
 
+    response.headers["X-LS-Records-Returned"] = "0"
   end
 
   private

@@ -13,7 +13,7 @@
 class Player < ActiveRecord::Base
   attr_accessible :first_name, :last_name, :team_id
 
-  validates_presence_of :first_name, :last_name, :team_id
+  validates :first_name, :last_name, :team_id, presence: true
 
   belongs_to :team
   has_many :game_stats

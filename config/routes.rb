@@ -22,9 +22,6 @@ League::Application.routes.draw do
     resources :players do
       get 'players' => 'players#index'
       get 'players/:id' => 'players#show'
-      post 'players' => 'players#create'
-      put 'players/:id' => 'players#update'
-      delete 'players/:id' => 'players#destroy'
     end
 
     resources :teams do
