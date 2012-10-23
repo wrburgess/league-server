@@ -138,7 +138,7 @@ describe Api::V1::PlayersController do
         }
       }
 
-      put :update, { id: 1 }, request_payload
+      put :update, { id: @player1.id }.merge(request_payload)
     end
 
     it "should retrieve status code of 200" do

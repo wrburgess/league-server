@@ -37,7 +37,7 @@ class Api::V1::PlayersController < ApiController
     }
 
     @player = Player.find params[:id]
-    @player.update!(player)
+    @player.update_attributes(player)
     record_count = Player.where(id: @player.id).count
 
     response.headers["X-LS-Records-Returned"] = "#{record_count}" if @player
