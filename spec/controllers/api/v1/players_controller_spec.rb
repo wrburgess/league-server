@@ -120,6 +120,9 @@ describe Api::V1::PlayersController do
 
     it "should retrieve a single player" do
       response.body.should include('Buck Carradine')
+    end
+
+    it "should not add extraneous attributes" do
       response.body.should_not include('junk')
     end
   end
@@ -135,33 +138,33 @@ describe Api::V1::PlayersController do
         }
       }
 
-      put :update, id: @player1.id, request_payload
+      put :update, { id: 1 }, request_payload
     end
 
-    # it "should retrieve status code of 200" do
-    #   response.response_code.should == 200
-    # end
+    it "should retrieve status code of 200" do
+      response.response_code.should == 200
+    end
 
-    # it "should retrieve application name header" do
-    #   response.header["X-LS-Application"].should == "league-server"
-    # end
+    it "should retrieve application name header" do
+      response.header["X-LS-Application"].should == "league-server"
+    end
 
-    # it "should retrieve license header" do
-    #   response.header["X-LS-License"].should == "All Rights Reserved"
-    # end
+    it "should retrieve license header" do
+      response.header["X-LS-License"].should == "All Rights Reserved"
+    end
 
-    # it "should retrieve records-returned header" do
-    #   response.header["X-LS-Records-Returned"].should == "1"
-    # end
+    it "should retrieve records-returned header" do
+      response.header["X-LS-Records-Returned"].should == "1"
+    end
 
-    # it "should retrieve a content-type of json" do
-    #   response.header['Content-Type'].should include 'application/json'
-    # end
+    it "should retrieve a content-type of json" do
+      response.header['Content-Type'].should include 'application/json'
+    end
 
-    # it "should retrieve a single player" do
-    #   response.body.should include('Buck')
-    #   response.body.should_not include('Joe')
-    # end
+    it "should retrieve a single player" do
+      response.body.should include('Buck')
+      response.body.should_not include('Joe')
+    end
   end
 
   describe "#delete" do
