@@ -11,7 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120910014726) do
+ActiveRecord::Schema.define(:version => 20121024031256) do
+
+  create_table "api_logs", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "career_stats", :force => true do |t|
     t.integer  "player_id"

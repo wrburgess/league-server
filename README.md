@@ -33,6 +33,7 @@ Fantasy sports league engine
 
 ## Blog Posts
 * [If you’re using to_json, you’re doing it wrong](http://engineering.gomiso.com/2011/05/16/if-youre-using-to_json-youre-doing-it-wrong/)
+* [Ruby Rogues Podcast: API Episode](http://rubyrogues.com/073-rr-apis/)
 
 ## To Dos
 
@@ -96,19 +97,19 @@ Fantasy sports league engine
 
 * psql invokes command line
 
-### API Call 
+### API Call
 
     method: GET
     url: api/players
-    Accept: application/vnd.league-server?version=[version_number]  
-    Authorization: Token token="[token_value]" 
+    Accept: application/vnd.league-server?version=[version_number]
+    Authorization: Token token="[token_value]"
 
 example:
 
     method: GET
     url: http://localhost:3000/api/players
-    Accept: application/vnd.league-server?version=1  
-    Authorization: Token token="xxxxxxxxxx" 
+    Accept: application/vnd.league-server?version=1
+    Authorization: Token token="xxxxxxxxxx"
 
 ## Pusher Integration
 
@@ -169,7 +170,7 @@ example:
 
 ### Group Rules
 
-*Created with Group, Destroyed by Group*  
+*Created with Group, Destroyed by Group*
 *Transactions, Deadlines, Roster Limits, Player Pool*
 
 * Read Rules
