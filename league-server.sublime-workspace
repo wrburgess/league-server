@@ -51,13 +51,81 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "app/models/player.rb",
+			"settings":
+			{
+				"buffer_size": 567,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "spec/controllers/api/v1/players_controller_spec.rb",
+			"settings":
+			{
+				"buffer_size": 5349,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "docs/player.md",
+			"settings":
+			{
+				"buffer_size": 707,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "spec/models/player_spec.rb",
+			"settings":
+			{
+				"buffer_size": 1059,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/api/v1/players_controller.rb",
+			"settings":
+			{
+				"buffer_size": 1671,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "db/migrate/20121024031256_add_fields_to_api_log.rb",
+			"settings":
+			{
+				"buffer_size": 533,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/models/api_log.rb",
+			"settings":
+			{
+				"buffer_size": 262,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "List",
 	"command_palette":
 	{
-		"height": 316.0,
+		"height": 227.0,
 		"selected_items":
 		[
+			[
+				"mark",
+				"Markdown Preview: preview in Sublime Text"
+			],
+			[
+				"install pac",
+				"Package Control: Install Package"
+			],
+			[
+				"markdown",
+				"Set Syntax: Markdown"
+			],
 			[
 				"pack",
 				"Package Control: Install Package"
@@ -83,7 +151,7 @@
 				"Git: Status"
 			]
 		],
-		"width": 548.0
+		"width": 575.0
 	},
 	"console":
 	{
@@ -100,13 +168,27 @@
 	},
 	"file_history":
 	[
+		"/Users/wrburgess/dev/jbrb/league-server/README.md",
+		"/Users/wrburgess/dev/jbrb/league-server/config/routes.rb",
+		"/Users/wrburgess/dev/jbrb/league-server/db/schema.rb",
+		"/Users/wrburgess/dev/jbrb/league-server/doc/README_FOR_APP",
+		"/Users/wrburgess/dev/jbrb/league-server/app/views/api/v1/players/update.rabl",
+		"/Users/wrburgess/dev/jbrb/league-server/app/views/api/v1/players/destroy.rabl",
+		"/Users/wrburgess/dev/jbrb/league-server/app/views/api/v1/players/delete.rabl",
+		"/Users/wrburgess/dev/jbrb/league-server/app/views/api/v1/players/show.rabl",
+		"/Users/wrburgess/dev/jbrb/league-server/spec/controllers/api/v1/players_controller_spec.rb",
+		"/Users/wrburgess/dev/jbrb/league-server/app/views/api/v1/players/index.rabl",
+		"/Users/wrburgess/dev/jbrb/league-server/app/views/api/v1/players/create.rabl",
+		"/Users/wrburgess/.bash_profile",
+		"/Users/wrburgess/dev/jbrb/league-server/app/views/api/v1/players/new.rabl",
+		"/Users/wrburgess/dev/jbrb/league-server/config/settings.yml",
+		"/Users/wrburgess/dev/jbrb/league-server/spec/spec_helper.rb",
+		"/Users/wrburgess/dev/jbrb/league-server/app/controllers/admin_controller.rb",
+		"/Users/wrburgess/dev/jbrb/league-server/app/controllers/api_controller.rb",
 		"/Users/wrburgess/dev/jbrb/league-server/.gitignore",
 		"/Users/wrburgess/dev/jbrb/league-server/league-server.sublime-project",
-		"/Users/wrburgess/dev/jbrb/league-server/README.md",
 		"/Users/wrburgess/dev/jbrb/league-server/fcbb_README.md",
-		"/Users/wrburgess/dev/jbrb/league-server/doc/README_FOR_APP",
 		"/Users/wrburgess/dev/dm/lessonnote_cloud/app/assets/javascripts/classrooms.js.coffee",
-		"/Users/wrburgess/.bash_profile",
 		"/Users/wrburgess/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
 		"/Users/wrburgess/dev/dm/lessonnote_cloud/app/assets/stylesheets/admin.css.scss",
 		"/Users/wrburgess/dev/dm/lessonnote_cloud/app/views/admin/classrooms/_classroom_home_table_row.html.haml",
@@ -163,7 +245,6 @@
 		"/Users/wrburgess/dev/dm/lessonnote_cloud/bin/wkhtmltopdf-amd64",
 		"/Users/wrburgess/dev/dm/lessonnote_cloud/config/initializers/wicked_pdf.rb",
 		"/Users/wrburgess/dev/dm/lessonnote_cloud/app/views/admin/lessons/show.pdf.haml",
-		"/Users/wrburgess/dev/jbrb/league-server/config/settings.yml",
 		"/Users/wrburgess/dev/jbrb/league-server/spec/mailers/group_mailer_spec.rb",
 		"/Users/wrburgess/dev/jbrb/league-server/config/environments/test.rb",
 		"/Users/wrburgess/dev/jbrb/league-server/spec/models/group_spec.rb",
@@ -176,7 +257,6 @@
 		"/Users/wrburgess/dev/jbrb/league-server/app/views/shared/_mailer_footer_default.html.haml",
 		"/Users/wrburgess/dev/jbrb/league-server/app/views/shared/_mailer_header_default.html.haml",
 		"/Users/wrburgess/dev/jbrb/league-server/Gemfile",
-		"/Users/wrburgess/dev/jbrb/league-server/config/routes.rb",
 		"/Users/wrburgess/dev/jbrb/league-server/spec/models/user_spec.rb",
 		"/Users/wrburgess/dev/jbrb/league-server/app/controllers/admin/users_controller.rb",
 		"/Users/wrburgess/dev/jbrb/league-server/app/views/layouts/mailer_default.html.haml",
@@ -215,19 +295,7 @@
 		"/Users/wrburgess/dev/dm/lessonnote_cloud/db/seeds/users.csv",
 		"/Users/wrburgess/dev/dm/lessonnote_cloud/app/views/admin/users/edit.html.haml",
 		"/Users/wrburgess/dev/dm/lessonnote_cloud/config/initializers/kaminari_config.rb",
-		"/Users/wrburgess/dev/dm/lessonnote_cloud/lib/tasks/set_classroom_last_lesson_datex.rake",
-		"/Users/wrburgess/dev/dm/lessonnote_cloud/spec/models/classroom_spec.rb",
-		"/Users/wrburgess/dev/dm/lessonnote_cloud/lib/tasks/set_lesson_start_date.rake",
-		"/Users/wrburgess/dev/dm/lessonnote_cloud/spec/controllers/api/v1/lessons_controller_spec.rb",
-		"/Users/wrburgess/dev/dm/lessonnote_cloud/doc/classroom_order_example.txt",
-		"/Users/wrburgess/dev/dm/lessonnote_cloud/db/migrate/20120907214437_add_lesson_time_to_classrooms.rb",
-		"/Users/wrburgess/dev/jbrb/league/Gemfile",
-		"/Users/wrburgess/dev/jbrb/league/spec/spec_helper.rb",
-		"/Users/wrburgess/dev/dm/lessonnote_cloud/app/views/admin/lessons/_lesson_classroom_thumbnail.html.haml",
-		"/Users/wrburgess/dev/dm/lessonnote_cloud/app/views/admin/classrooms/_classroom_thumbnail.html.haml",
-		"/Users/wrburgess/dev/dm/devmynd_wp_site/wp-content/themes/devmynd/sidebar.php",
-		"/Users/wrburgess/dev/dm/lessonnote_cloud/app/serializers/note_serializer.rb",
-		"/Users/wrburgess/dev/dm/lessonnote_cloud/doc/classroom_for_big_lesson_002.json"
+		"/Users/wrburgess/dev/dm/lessonnote_cloud/lib/tasks/set_classroom_last_lesson_datex.rake"
 	],
 	"find":
 	{
@@ -235,7 +303,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 93.0,
 		"where_history":
 		[
 			"",
@@ -257,6 +325,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Settings.",
 			"Setup",
 			"plugins",
 			"tools",
@@ -399,18 +468,209 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "app/models/player.rb",
+					"settings":
+					{
+						"buffer_size": 567,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								352,
+								352
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "spec/controllers/api/v1/players_controller_spec.rb",
+					"settings":
+					{
+						"buffer_size": 5349,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								528,
+								528
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "docs/player.md",
+					"settings":
+					{
+						"buffer_size": 707,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								233,
+								233
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 152.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "spec/models/player_spec.rb",
+					"settings":
+					{
+						"buffer_size": 1059,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								265,
+								265
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		},
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 4,
+					"file": "app/controllers/api/v1/players_controller.rb",
+					"settings":
+					{
+						"buffer_size": 1671,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1562,
+								1578
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 696.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		},
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 5,
+					"file": "db/migrate/20121024031256_add_fields_to_api_log.rb",
+					"settings":
+					{
+						"buffer_size": 533,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								159,
+								159
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/models/api_log.rb",
+					"settings":
+					{
+						"buffer_size": 262,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								72,
+								72
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		},
 		{
@@ -459,13 +719,13 @@
 		"cols":
 		[
 			0.0,
-			0.580950427002,
+			0.481530570712,
 			1.0
 		],
 		"rows":
 		[
 			0.0,
-			0.523166023166,
+			0.5,
 			1.0
 		]
 	},
@@ -489,6 +749,46 @@
 		"selected_items":
 		[
 			[
+				"api_log.",
+				"app/models/api_log.rb"
+			],
+			[
+				"api_log",
+				"db/migrate/20121024031256_add_fields_to_api_log.rb"
+			],
+			[
+				"read",
+				"README.md"
+			],
+			[
+				"playerspec",
+				"spec/models/player_spec.rb"
+			],
+			[
+				"delete",
+				"app/views/api/v1/players/delete.rabl"
+			],
+			[
+				"show",
+				"app/views/api/v1/players/show.rabl"
+			],
+			[
+				"player",
+				"spec/controllers/api/v1/players_controller_spec.rb"
+			],
+			[
+				"spechelp",
+				"spec/spec_helper.rb"
+			],
+			[
+				"routes",
+				"config/routes.rb"
+			],
+			[
+				"schema",
+				"db/schema.rb"
+			],
+			[
 				"gitig",
 				".gitignore"
 			],
@@ -501,20 +801,12 @@
 				".gitignore"
 			],
 			[
-				"read",
-				"doc/README_FOR_APP"
-			],
-			[
 				"readme",
 				"fcbb_README.md"
 			],
 			[
 				"rea",
 				"README.md"
-			],
-			[
-				"routes",
-				"config/routes.rb"
 			],
 			[
 				"classroomspec",
@@ -585,16 +877,8 @@
 				"app/views/admin/lessons/index.html.haml"
 			],
 			[
-				"show",
-				"app/views/admin/lessons/show.html.haml"
-			],
-			[
 				"helper",
 				"app/helpers/admin/lessons_helper.rb"
-			],
-			[
-				"schema",
-				"db/schema.rb"
 			],
 			[
 				"adminless",
@@ -666,7 +950,7 @@
 	"show_minimap": false,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": true,
-	"side_bar_width": 194.0,
+	"side_bar_visible": false,
+	"side_bar_width": 243.0,
 	"status_bar_visible": true
 }

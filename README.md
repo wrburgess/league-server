@@ -3,23 +3,38 @@
 Fantasy sports league engine
 
 ## TOC
-
+* [TODO](#todo)
+* [MVP](#mvp)
 * [Models](#models)
 * [Tools](#tools)
 * [Plugins](#plugins)
 * [Heroku Setup](#heroku-setup)
 
+## TODO
+
+* Seed Player
+* Seed Roster
+* Seed Group
+
+## MVP
+
+* Standings
+* Schedule
+* Transaction Report
+* Roster Management
+* Add/Drop/Waivers
+* Score Board
+* Draft Room
+* Trade Desk
+* Player Search
+* Stats Loader
+* Scoring
+
 ## Target Dates
 
-* **League Server V1 Launch Target**: Sun, Dec 17, 2012
-* **League Client V1 Launch Target**: Sun, Jan 13, 2013
 * **League Product Launch**: Fantasy College Baseball, Sun, Jan 7, 2013
 * **League Season Begins**: Fantasy College Baseball, Sun, Feb 10, 2013
 * **League Season Ends**: Fantasy College Baseball, Sun, May 13, 2013
-
-## Approach
-
-* [12Factor](http://www.12factor.net/)
 
 ## Railscasts
 

@@ -19,3 +19,4 @@ database.yml
 dump.rdb
 
 *.sublime-workspace
+*.sublime-project
