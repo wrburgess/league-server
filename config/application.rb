@@ -62,5 +62,8 @@ module League
 
     # For Devise
     config.assets.initialize_on_precompile = false
+
+    #For jQuery-Rails
+    config.action_view.javascript_expansions[:defaults] = %w(jquery rails)
   end
 end
