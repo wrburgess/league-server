@@ -1,7 +1,7 @@
 /*
  *= require_self
- *= require bootstrap
- *= require bootstrap-responsive
+ *= require lib/bootstrap
+ *= require lib/bootstrap-responsive
  *= require fonts
  *= require style
  */

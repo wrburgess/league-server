@@ -4,3 +4,7 @@
 //= require lib/backbone-0_9_2
 //= require lib/bootstrap-2_2_2
 //= require lib/rails
+
+$(document).ready( function() {
+  $("a[rel=tooltip]").tooltip();
+});
