@@ -1,3 +1,18 @@
 body {
 
 }
+
+.row, .row-fluid {
+  background-color: #e0e0e0;
+}
+
+.span2, .span4, .span6, .span8, .span10 {
+  border-color: #000000;
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+}
+
+#nav-search {
+  width: 100px;
+  margin: 0 20px 0 0;
+}
