@@ -56,12 +56,25 @@ class CreateModels < ActiveRecord::Migration
       t.datetime "updated_at", :null => false
     end
 
-    create_table "roster_stats", :force => true do |t|
+    create_table "roster_season_stats", :force => true do |t|
       t.integer  "roster_id"
       t.integer  "season",      :null => false
       t.integer  "wins"
       t.integer  "losses"
       t.integer  "ties"
+      t.integer  "points_for"
+      t.integer  "points_against"
+      t.datetime "created_at", :null => false
+      t.datetime "updated_at", :null => false
+    end
+
+    create_table "roster_week_stats", :force => true do |t|
+      t.integer  "roster_id"
+      t.integer  "season",      :null => false
+      t.integer  "week",      :null => false
+      t.integer  "win"
+      t.integer  "loss"
+      t.integer  "tie"
       t.integer  "points_for"
       t.integer  "points_against"
       t.datetime "created_at", :null => false
