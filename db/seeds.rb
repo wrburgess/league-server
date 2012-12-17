@@ -13,6 +13,21 @@ CSV.foreach("#{Rails.root}/db/fill/teams.csv") do |row|
   puts "Team created: #{row[0]}, #{row[1]}, #{row[2]}"
 end
 
+CSV.foreach("#{Rails.root}/db/fill/groups.csv") do |row|
+  Group.create!(name: row[0], abbreviation: row[1])
+  puts "Roster created: #{row[0]}, #{row[1]}"
+end
+
+CSV.foreach("#{Rails.root}/db/fill/rosters.csv") do |row|
+  Roster.create!(name: row[0], abbreviation: row[1])
+  puts "Roster created: #{row[0]}, #{row[1]}"
+end
+
+CSV.foreach("#{Rails.root}/db/fill/rosters.csv") do |row|
+  Group_Roster.create!(group_id: row[0], roster_id: row[1])
+  puts "Group_Roster created: #{row[0]}, #{row[1]}"
+end
+
 (1..200).each do |p|
   team_id = rand(1..100)
   date1 = "2013-01-01"
