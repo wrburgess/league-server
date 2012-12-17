@@ -45,8 +45,8 @@ ActiveRecord::Schema.define(:version => 20121215111111) do
   end
 
   create_table "group_rosters", :force => true do |t|
-    t.integer  "roster_id"
     t.integer  "group_id"
+    t.integer  "roster_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(:version => 20121215111111) do
   create_table "group_users", :force => true do |t|
     t.integer  "user_id"
     t.integer  "group_id"
+    t.boolean  "founder",    :default => false
     t.boolean  "owner",      :default => false
     t.boolean  "viewer",     :default => true
     t.datetime "created_at",                    :null => false
@@ -75,7 +76,7 @@ ActiveRecord::Schema.define(:version => 20121215111111) do
     t.integer  "team_id"
   end
 
-  create_table "roster_stats", :force => true do |t|
+  create_table "roster_season_stats", :force => true do |t|
     t.integer  "roster_id"
     t.integer  "season",         :null => false
     t.integer  "wins"
@@ -88,12 +89,26 @@ ActiveRecord::Schema.define(:version => 20121215111111) do
   end
 
   create_table "roster_users", :force => true do |t|
-    t.integer  "user_id"
     t.integer  "roster_id"
+    t.integer  "user_id"
+    t.boolean  "founder",    :default => false
     t.boolean  "owner",      :default => true
     t.boolean  "viewer",     :default => true
-    t.datetime "created_at",                   :null => false
-    t.datetime "updated_at",                   :null => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
+  end
+
+  create_table "roster_week_stats", :force => true do |t|
+    t.integer  "roster_id"
+    t.integer  "season",         :null => false
+    t.integer  "week",           :null => false
+    t.integer  "win"
+    t.integer  "loss"
+    t.integer  "tie"
+    t.integer  "points_for"
+    t.integer  "points_against"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
   end
 
   create_table "rosters", :force => true do |t|

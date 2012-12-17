@@ -4,9 +4,9 @@ namespace :ls do
     STDOUT.puts "Drop, recreate, and seed database? y[es] or n[o]"
     input = STDIN.gets.chomp
     if input == "y" && Rails.env == 'development'
-      Rake::Task["db:drop"].execute 
+      Rake::Task["db:drop"].execute
       Rake::Task["db:create"].execute
-      Rake::Task["db:schema:load"].execute
+      Rake::Task["db:migrate"].execute
       Rake::Task["db:seed"].execute
       Rake::Task["db:test:prepare"].execute
     else
