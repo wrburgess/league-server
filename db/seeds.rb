@@ -3,6 +3,11 @@
 
 admin_user = User.create(email: "wrburgess@wrburgess.com", password: "secret")
 
+(1..50).each do |u|
+  user = User.create(email: "user#{u}@example.com", password: "secret")
+  puts "User created: user#{u}@example.com"
+end
+
 (2..100).each do |u|
   user = User.create(email: "test#{u}@test.com")
   puts "User created: test#{u}@test.com"
@@ -23,9 +28,19 @@ CSV.foreach("#{Rails.root}/db/fill/rosters.csv") do |row|
   puts "Roster created: #{row[0]}, #{row[1]}"
 end
 
-CSV.foreach("#{Rails.root}/db/fill/rosters.csv") do |row|
+CSV.foreach("#{Rails.root}/db/fill/group_rosters.csv") do |row|
   Group_Roster.create!(group_id: row[0], roster_id: row[1])
   puts "Group_Roster created: #{row[0]}, #{row[1]}"
+end
+
+CSV.foreach("#{Rails.root}/db/fill/roster_users.csv") do |row|
+  RosterUser.create!(roster_id: row[0], user_id: row[1], founder: row[2], owner: row[3], viewer: row[4])
+  puts "Roster_User created: #{row[0]}, #{row[1]}"
+end
+
+CSV.foreach("#{Rails.root}/db/fill/group_users.csv") do |row|
+  Group_User.create!(group_id: row[0], user_id: row[1], founder: row[2], owner: row[3], viewer: row[4])
+  puts "Group_User created: #{row[0]}, #{row[1]}"
 end
 
 (1..200).each do |p|

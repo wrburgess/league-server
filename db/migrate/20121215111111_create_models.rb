@@ -34,8 +34,8 @@ class CreateModels < ActiveRecord::Migration
     end
 
     create_table "group_rosters", :force => true do |t|
-      t.integer  "roster_id"
       t.integer  "group_id"
+      t.integer  "roster_id"
       t.datetime "created_at",  :null => false
       t.datetime "updated_at",  :null => false
     end
@@ -43,6 +43,7 @@ class CreateModels < ActiveRecord::Migration
     create_table "group_users", :force => true do |t|
       t.integer  "user_id"
       t.integer  "group_id"
+      t.boolean  "founder",     :default => false
       t.boolean  "owner",       :default => false
       t.boolean  "viewer",      :default => true
       t.datetime "created_at",  :null => false
@@ -90,8 +91,9 @@ class CreateModels < ActiveRecord::Migration
     end
 
     create_table "roster_users", :force => true do |t|
-      t.integer  "user_id"
       t.integer  "roster_id"
+      t.integer  "user_id"
+      t.boolean  "founder",    :default => false
       t.boolean  "owner",      :default => true
       t.boolean  "viewer",     :default => true
       t.datetime "created_at", :null => false
