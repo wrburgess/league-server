@@ -34,7 +34,8 @@ League::Application.routes.draw do
 
   scope :module => "browser" do
     root :to => 'static#index'
-    get 'leagues/:id' => 'groups#index'
+    get 'leagues' => 'groups#index'
+    get 'leagues/:id' => 'groups#show'
   end
 
   if Rails.env.development?
