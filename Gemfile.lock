@@ -38,7 +38,12 @@ GEM
       multi_json (~> 1.0)
     arel (3.0.2)
     bcrypt-ruby (3.0.1)
+    better_errors (0.3.2)
+      coderay (>= 1.0.0)
+      erubis (>= 2.7.0)
+    binding_of_caller (0.6.8)
     builder (3.0.0)
+    coderay (1.0.8)
     columnize (0.3.6)
     daemons (1.1.9)
     debugger (1.2.0)
@@ -180,6 +185,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  better_errors
+  binding_of_caller
   debugger
   devise (~> 2.1.2)
   factory_girl_rails (~> 4.0)

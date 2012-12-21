@@ -24,6 +24,8 @@ end
 
 #environment-specific
 group :test, :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'debugger'
   gem 'factory_girl_rails', '~> 4.0'
   gem 'mail_view', git: 'git://github.com/37signals/mail_view.git', ref: '6a4bc7f01a'
