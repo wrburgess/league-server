@@ -1,4 +1,4 @@
-class StaticController < ApplicationController
+class Browser::StaticController < ApplicationController
   protect_from_forgery
 
   def index

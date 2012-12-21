@@ -2,8 +2,6 @@ require 'api_constraints'
 
 League::Application.routes.draw do
 
-  root :to => 'static#index'
-
   mount Resque::Server, :at => "/resque"
 
   devise_for :users
@@ -32,6 +30,11 @@ League::Application.routes.draw do
       get 'users' => 'users#index'
       get 'users/:id' => 'users#show'
     end
+  end
+
+  scope :module => "browser" do
+    root :to => 'static#index'
+    get 'leagues/:id' => 'groups#index'
   end
 
   if Rails.env.development?
