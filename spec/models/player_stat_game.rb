@@ -28,7 +28,7 @@ describe PlayerStatGame do
   describe '#pass_summary' do
 
     it 'sets passing summary from passing stats' do
-      FactoryGirl.create(:game_stat).pass_summary.should == '1-2-3 Pass, 4 PaTD, 5 PaInt'
+      FactoryGirl.create(:player_stat_game).pass_summary.should == '1-2-3 Pass, 4 PaTD, 5 PaInt'
     end
 
   end

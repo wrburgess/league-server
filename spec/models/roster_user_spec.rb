@@ -1,16 +1,3 @@
-# == Schema Information
-#
-# Table name: roster_users
-#
-#  id         :integer          not null, primary key
-#  user_id    :integer
-#  roster_id  :integer
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
-#  owner      :boolean          default(TRUE)
-#  viewer     :boolean          default(TRUE)
-#
-
 require 'spec_helper'
 
 describe RosterUser do

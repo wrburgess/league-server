@@ -1,15 +1,3 @@
-# == Schema Information
-#
-# Table name: players
-#
-#  id         :integer          not null, primary key
-#  first_name :string(255)
-#  last_name  :string(255)
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
-#  team_id    :integer
-#
-
 require 'spec_helper'
 
 describe Player do
@@ -26,14 +14,14 @@ describe Player do
     FactoryGirl.build(:player, last_name: nil).should_not be_valid
   end
 
-  it 'is invalid without a team' do
-    FactoryGirl.build(:player, team_id: nil).should_not be_valid
+  it 'is invalid without a player_team' do
+    FactoryGirl.build(:player, player_team_id: nil).should_not be_valid
   end
 
-  it { should belong_to(:team) }
-  it { should have_many(:game_stats) }
-  it { should have_many(:season_stats) }
-  it { should have_one(:career_stat) }
+  it { should belong_to(:player_team) }
+  it { should have_many(:player_stat_games) }
+  it { should have_many(:player_stat_seasons) }
+  it { should have_one(:player_stat_career) }
 
   describe '#full_name' do
 
