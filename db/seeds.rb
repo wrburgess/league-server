@@ -24,8 +24,8 @@ CSV.foreach("#{Rails.root}/db/fill/rosters.csv", :headers => :first_row) do |row
 end
 
 CSV.foreach("#{Rails.root}/db/fill/group_rosters.csv", :headers => :first_row) do |row|
-  GroupRoster.create!(group_id: row[0], roster_id: row[1])
-  puts "GroupRoster created: #{row[0]}, #{row[1]}"
+  GroupRoster.create!(group_id: row[0], roster_id: row[1], group_division_id: row[2])
+  puts "GroupRoster created: #{row[0]}, #{row[1]}, #{row[2]}"
 end
 
 CSV.foreach("#{Rails.root}/db/fill/roster_users.csv", :headers => :first_row) do |row|
@@ -39,7 +39,7 @@ CSV.foreach("#{Rails.root}/db/fill/group_users.csv", :headers => :first_row) do 
 end
 
 (1..200).each do |p|
-  team_id = rand(1..100)
+  player_team_id = rand(1..100)
   date1 = "2013-01-01"
   date2 = "2013-12-31"
   game_date = Time.now
@@ -47,17 +47,17 @@ end
   player = Player.create(first_name: "John#{p}", last_name: "Wilson#{p}", player_team_id: player_team_id)
   puts "Player created: John#{p} Wilson#{p}, Player Team: #{player_team_id}"
 
-  career_stat = PlayerStatCareer.create(player_id: player)
-  puts "CareerStat created: John#{p} Wilson#{p}, ID: #{team_id}"
+  player_stat_career = PlayerStatCareer.create(player_id: player.id)
+  puts "CareerStat created: John#{p} Wilson#{p}"
 
   (2011..2013).each do |ss|
-    season_stat = PlayerStatSeason.create(player_id: player, season: ss)
+    player_stat_season = PlayerStatSeason.create(player_id: player.id, season: ss)
     puts "SeasonStat created: John#{p} Wilson#{p}, Season: #{ss}"
   end
 
   (1..15).each do |gs|
     game_stat = PlayerStatGame.create(player_id: player.id, opponent_id: rand(1..100), game_date: game_date, season: "2013", week: gs)
-    puts "GameStat created: John#{p} Wilson#{p}, Team: #{team_id}"
+    puts "GameStat created: John#{p} Wilson#{p}, Team: #{player_team_id}"
     game_date + 7.days
   end
 end
