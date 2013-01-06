@@ -1,5 +1,6 @@
 class BrowserController < ApplicationController
   layout 'browser'
+
   before_filter :set_constants
 
   def set_constants

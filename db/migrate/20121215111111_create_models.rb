@@ -103,13 +103,6 @@ class CreateModels < ActiveRecord::Migration
       t.datetime "updated_at",  :null => false
     end
 
-    create_table "group_scoring", :force => true do |t|
-      t.integer  "group_id"
-      t.integer  "season"
-      t.datetime "created_at",  :null => false
-      t.datetime "updated_at",  :null => false
-    end
-
     create_table "group_users", :force => true do |t|
       t.integer  "user_id"
       t.integer  "group_id"
