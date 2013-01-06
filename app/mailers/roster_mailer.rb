@@ -6,7 +6,7 @@ class RosterMailer < ActionMailer::Base
     mail(
       charset:       "utf-8",
       content_type:  "text/html",
-      from:          Settings.mailer.from,
+      from:          Settings.mailer_from,
       subject:       "Roster Weekly Preview",
       to:            user.email
     )

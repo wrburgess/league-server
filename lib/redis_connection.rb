@@ -11,9 +11,9 @@ class RedisConnection
   private
 
   def self.new_connection
-    Redis.new(:host => Settings.redis.host,
-              :port => Settings.redis.port,
-              :password => Settings.redis.password,
+    Redis.new(:host => Settings.redis_host,
+              :port => Settings.redis_port,
+              :password => Settings.redis_password,
               :thread_safe => true)
   end
 end

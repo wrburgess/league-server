@@ -14,7 +14,7 @@
       %header
         .navbar.navbar-inverse
           .navbar-inner
-            %a.brand{ href: "/", title: "League Home" }
+            %a.brand{ href: "#{@group_id}", title: "League Home" }
               Pre Pro East
             %ul.nav
               %li.dropdown
@@ -23,16 +23,16 @@
                   %b.caret
                 %ul.dropdown-menu
                   %li
-                    %a{ href: "#", title: "Teams & Rosters" }
+                    %a{ href: "leagues/1", title: "Teams & Rosters" }
                       Teams/Rosters
                   %li
-                    %a{ href: "/standings", title: "League Standings" }
+                    %a{ href: "leagues/1/standings", title: "League Standings" }
                       Standings
                   %li
-                    %a{ href: "/transactions", title: "League Transactions" }
+                    %a{ href: "leagues/1/transactions", title: "League Transactions" }
                       Transactions
                   %li
-                    %a{ href: "/draft", title: "Draft Room" }
+                    %a{ href: "leagues/1/draft", title: "Draft Room" }
                       Draft
               %li.dropdown
                 %a.dropdown-toggle{ href: "#", "data-toggle" => "dropdown" }

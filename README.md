@@ -16,6 +16,17 @@ Fantasy sports league engine
 * Seed Roster
 * Seed Group
 
+## Acronyms
+
+* cfb - *college football*
+* cbb - *college baseball*
+* cmb - *college mens basketball*
+* mbb - *minor baseball*
+* pafb - *pro american football*
+* pabb - *pro baseball*
+* pmb - *pro mens basketball*
+* pifb - *pro international football*
+
 ## MVP
 
 * Standings
@@ -32,7 +43,6 @@ Fantasy sports league engine
 
 ## Target Dates
 
-* **League Product Launch**: Fantasy College Baseball, Sun, Jan 7, 2013
 * **League Season Begins**: Fantasy College Baseball, Sun, Feb 10, 2013
 * **League Season Ends**: Fantasy College Baseball, Sun, May 13, 2013
 

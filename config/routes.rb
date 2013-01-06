@@ -32,17 +32,16 @@ League::Application.routes.draw do
     end
   end
 
-  scope :module => "browser" do
+  scope :module => "browser", defaults: { format: 'html' } do
     root :to => 'static#index'
 
     get 'leagues' => 'groups#index'
-    get 'leagues/:id' => 'groups#show'
-    get 'draft' => 'groups#draft'
-    get 'standings' => 'groups#standings'
-    get 'transactions' => 'groups#transactions'
-
-    get 'scoreboard' => 'games#scoreboard'
-    get 'schedule' => 'games#schedule'
+    get 'league/:group_id' => 'groups#show'
+    get 'league/:group_id/draft' => 'groups#draft'
+    get 'league/:group_id/standings' => 'groups#standings'
+    get 'league/:group_id/transactions' => 'groups#transactions'
+    get 'league/:group_id/scoreboard' => 'games#scoreboard'
+    get 'league/:group_id/schedule' => 'games#schedule'
   end
 
   if Rails.env.development?

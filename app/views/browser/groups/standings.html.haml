@@ -1,2 +1,10 @@
 %h1
   Standings
+
+%table
+  %th
+    Team
+  - @group.rosters.each do |roster|
+    %tr
+      %td
+        = roster.name

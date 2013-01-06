@@ -17,7 +17,7 @@ class Browser::GroupsController < BrowserController
   end
 
   def show
-    @group = Group.find(params[:id])
+    @group = Group.find(params[:group_id])
 
     @page_title = "Home"
     @body_id = "group_show"
@@ -25,6 +25,7 @@ class Browser::GroupsController < BrowserController
   end
 
   def standings
+    @group = Group.find(params[:group_id])
 
     @page_title = "Standings"
     @body_id = "standings"
