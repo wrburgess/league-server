@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(:version => 20121215111111) do
   create_table "group_divisions", :force => true do |t|
     t.integer  "group_id"
     t.string   "name"
+    t.integer  "weight"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -46,13 +47,6 @@ ActiveRecord::Schema.define(:version => 20121215111111) do
   end
 
   create_table "group_rules", :force => true do |t|
-    t.integer  "group_id"
-    t.integer  "season"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "group_scoring", :force => true do |t|
     t.integer  "group_id"
     t.integer  "season"
     t.datetime "created_at", :null => false
