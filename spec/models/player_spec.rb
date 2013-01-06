@@ -19,6 +19,8 @@ describe Player do
   end
 
   it { should belong_to(:player_team) }
+  it { should have_many(:group_player_teams) }
+  it { should have_many(:groups) }
   it { should have_many(:player_stat_games) }
   it { should have_many(:player_stat_seasons) }
   it { should have_one(:player_stat_career) }
