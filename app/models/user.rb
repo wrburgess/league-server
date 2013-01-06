@@ -10,5 +10,4 @@ class User < ActiveRecord::Base
 
   has_many :roster_users
   has_many :rosters, :through => :roster_users
-
 end

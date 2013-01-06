@@ -34,7 +34,6 @@ League::Application.routes.draw do
 
   scope :module => "browser", defaults: { format: 'html' } do
     root :to => 'static#index'
-
     get 'leagues' => 'groups#index'
     get 'league/:group_id' => 'groups#show'
     get 'league/:group_id/draft' => 'groups#draft'
