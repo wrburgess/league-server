@@ -12,4 +12,5 @@ class Roster < ActiveRecord::Base
   has_many :roster_game_stats
   has_many :roster_season_stats
   has_many :roster_career_stats
+  has_many :group_logs
 end

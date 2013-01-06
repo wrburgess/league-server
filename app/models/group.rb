@@ -13,6 +13,7 @@ class Group < ActiveRecord::Base
   has_many :player_teams, :through => :group_player_teams
 
   has_many :group_rules
+  has_many :group_logs
 
   def send_weekly_review(user)
     GroupMailer.weekly_review(user).deliver
