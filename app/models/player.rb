@@ -12,6 +12,9 @@ class Player < ActiveRecord::Base
   has_many :group_player_teams, :through => :player_team
   has_many :groups, :through => :group_player_teams
 
+  has_many :roster_slots
+  has_many :rosters, :through => :roster_slots
+
   def full_name
     "#{first_name} #{last_name}"
   end

@@ -24,6 +24,8 @@ describe Player do
   it { should have_many(:player_stat_games) }
   it { should have_many(:player_stat_seasons) }
   it { should have_one(:player_stat_career) }
+  it { should have_many(:roster_slots) }
+  it { should have_many(:rosters) }
 
   describe '#full_name' do
 

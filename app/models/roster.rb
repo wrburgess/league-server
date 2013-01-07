@@ -13,4 +13,7 @@ class Roster < ActiveRecord::Base
   has_many :roster_stat_seasons
   has_many :roster_stat_careers
   has_many :group_logs
+
+  has_many :roster_slots
+  has_many :players, :through => :roster_slots
 end

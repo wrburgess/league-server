@@ -12,5 +12,7 @@ describe Roster  do
 
   it { should have_many(:roster_users) }
   it { should have_many(:users) }
+  it { should have_many(:roster_slots) }
+  it { should have_many(:players) }
 
 end
