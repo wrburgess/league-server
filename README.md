@@ -74,6 +74,10 @@ Fantasy sports league engine
 * SeasonStat
 * CareerStat
 
+#### GameLogs
+
+Actions: adds, drops, reserves, starts, suspends, injury reserves, redshirts, trades in, trades out
+
 ### Game Management
 
 * User

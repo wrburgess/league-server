@@ -90,7 +90,7 @@ class CreateModels < ActiveRecord::Migration
       t.integer  "group_id"
       t.integer  "roster_id"
       t.integer  "player_id"
-      t.string   "action" # add, drop, reserve, start, trade add, trade drop
+      t.string   "action"
       t.boolean  "group_owner"
       t.string   "note"
       t.datetime "created_at",  :null => false
