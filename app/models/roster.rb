@@ -9,8 +9,8 @@ class Roster < ActiveRecord::Base
   has_many :group_rosters
   has_many :groups, :through => :group_rosters
 
-  has_many :roster_game_stats
-  has_many :roster_season_stats
-  has_many :roster_career_stats
+  has_many :roster_stat_games
+  has_many :roster_stat_seasons
+  has_many :roster_stat_careers
   has_many :group_logs
 end

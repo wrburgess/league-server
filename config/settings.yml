@@ -3,13 +3,7 @@ defaults: &defaults
   app_name: "league-server"
   app_server: "Default"
   app_license: "All Rights Reserved"
-  # games
-  pfb_season: 2013
-  pmb_season: 2013
-  pbb_season: 2013
-  cfb_season: 2013
-  cmb_season: 2013
-  cbb_season: 2013
+  app_season: 2013
   # redis
   redis_host: localhost
   redis_port: 6379

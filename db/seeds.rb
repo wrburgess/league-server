@@ -19,7 +19,26 @@ CSV.foreach("#{Rails.root}/db/fill/groups.csv", :headers => :first_row) do |row|
 end
 
 CSV.foreach("#{Rails.root}/db/fill/rosters.csv", :headers => :first_row) do |row|
-  Roster.create!(name: row[0], abbreviation: row[1])
+  roster = Roster.create!(name: row[0], abbreviation: row[1])
+
+  (1..15).each do |rsg|
+    RosterStatGame.create!(roster_id: roster.id, season: 2012, week: rsg)
+    puts "RosterStatGame created"
+  end
+
+  (1..15).each do |rsg|
+    RosterStatGame.create!(roster_id: roster.id, season: 2013, week: rsg)
+    puts "RosterStatGame created"
+  end
+
+  RosterStatSeason.create!(roster_id: roster.id, season: 2012)
+  puts "RosterStatSeason created"
+  RosterStatSeason.create!(roster_id: roster.id, season: 2013)
+  puts "RosterStatSeason created"
+
+  RosterStatCareer.create!(roster_id: roster.id)
+  puts "RosterStatCareer created"
+
   puts "Roster created: #{row[0]}, #{row[1]}"
 end
 

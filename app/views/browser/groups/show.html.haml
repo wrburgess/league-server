@@ -1,9 +1,11 @@
 %table
-  %tr
-    %th
-      Team
-    %th
-      Owner
+  %thead
+    %tr
+      %th
+        Team
+      %th
+        Owner
+  %tbody
     - @group.rosters.each do |roster|
       %tr
         %td

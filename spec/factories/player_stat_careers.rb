@@ -1,6 +1,6 @@
 FactoryGirl.define do
 
-  factory :player_stat_career do
+  factory :roster_stat_career do
     player_id 1
     pa_att 2
     pa_comp 1

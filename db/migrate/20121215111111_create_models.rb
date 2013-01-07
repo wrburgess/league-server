@@ -125,17 +125,20 @@ class CreateModels < ActiveRecord::Migration
       t.integer  "roster_id"
       t.integer  "season",      :null => false
       t.integer  "week",      :null => false
-      t.integer  "win"
-      t.integer  "loss"
-      t.integer  "tie"
-      t.integer  "points_for"
-      t.integer  "points_against"
-      t.integer  "champ_win"
-      t.integer  "champ_loss"
-      t.integer  "champ_tie"
-      t.integer  "playoff_win"
-      t.integer  "playoff_losse"
-      t.integer  "playoff_tie"
+      t.integer  "win",        :default => 0
+      t.integer  "loss",        :default => 0
+      t.integer  "tie",        :default => 0
+      t.integer  "div_win",        :default => 0
+      t.integer  "div_loss",        :default => 0
+      t.integer  "div_tie",        :default => 0
+      t.integer  "points_for",        :default => 0
+      t.integer  "points_against",        :default => 0
+      t.integer  "champ_win",        :default => 0
+      t.integer  "champ_loss",        :default => 0
+      t.integer  "champ_tie",        :default => 0
+      t.integer  "playoff_win",        :default => 0
+      t.integer  "playoff_losses",        :default => 0
+      t.integer  "playoff_tie",        :default => 0
       t.datetime "created_at", :null => false
       t.datetime "updated_at", :null => false
     end
@@ -143,34 +146,40 @@ class CreateModels < ActiveRecord::Migration
     create_table "roster_stat_seasons", :force => true do |t|
       t.integer  "roster_id"
       t.integer  "season",      :null => false
-      t.integer  "wins"
-      t.integer  "losses"
-      t.integer  "ties"
-      t.integer  "points_for"
-      t.integer  "points_against"
-      t.integer  "champ_wins"
-      t.integer  "champ_losses"
-      t.integer  "champ_ties"
-      t.integer  "playoff_wins"
-      t.integer  "playoff_losses"
-      t.integer  "playoff_ties"
+      t.integer  "wins",        :default => 0
+      t.integer  "losses",        :default => 0
+      t.integer  "ties",        :default => 0
+      t.integer  "div_wins",        :default => 0
+      t.integer  "div_losses",        :default => 0
+      t.integer  "div_ties",        :default => 0
+      t.integer  "points_for",        :default => 0
+      t.integer  "points_against",        :default => 0
+      t.integer  "champ_wins",        :default => 0
+      t.integer  "champ_losses",        :default => 0
+      t.integer  "champ_ties",        :default => 0
+      t.integer  "playoff_wins",        :default => 0
+      t.integer  "playoff_losses",        :default => 0
+      t.integer  "playoff_ties",        :default => 0
       t.datetime "created_at", :null => false
       t.datetime "updated_at", :null => false
     end
 
     create_table "roster_stat_careers", :force => true do |t|
-      t.integer  "roster_id"
-      t.integer  "wins"
-      t.integer  "losses"
-      t.integer  "ties"
-      t.integer  "points_for"
-      t.integer  "points_against"
-      t.integer  "champ_wins"
-      t.integer  "champ_losses"
-      t.integer  "champ_ties"
-      t.integer  "playoff_wins"
-      t.integer  "playoff_losses"
-      t.integer  "playoff_ties"
+      t.integer  "roster_id",        :default => 0
+      t.integer  "wins",             :default => 0
+      t.integer  "losses",           :default => 0
+      t.integer  "ties",             :default => 0
+      t.integer  "div_wins",        :default => 0
+      t.integer  "div_losses",        :default => 0
+      t.integer  "div_ties",        :default => 0
+      t.integer  "points_for",       :default => 0
+      t.integer  "points_against",   :default => 0
+      t.integer  "champ_wins",       :default => 0
+      t.integer  "champ_losses",     :default => 0
+      t.integer  "champ_ties",       :default => 0
+      t.integer  "playoff_wins",     :default => 0
+      t.integer  "playoff_losses",   :default => 0
+      t.integer  "playoff_ties",     :default => 0
       t.datetime "created_at", :null => false
       t.datetime "updated_at", :null => false
     end

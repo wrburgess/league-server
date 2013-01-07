@@ -2,9 +2,25 @@
   Standings
 
 %table
-  %th
-    Team
-  - @group.rosters.each do |roster|
+  %thead
     %tr
-      %td
-        = roster.name
+      %th
+        Team
+      %th
+        W
+      %th
+        L
+      %th
+        T
+      %th
+        PF
+      %th
+        PA
+  %tbody
+    - @group.rosters.each do |roster|
+      %tr
+        %td
+          = roster.name
+        %td
+          = roster.roster_stat_seasons.where(season: Settings.app_season).wins
+
