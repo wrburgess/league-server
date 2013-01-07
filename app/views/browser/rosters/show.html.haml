@@ -1,0 +1,17 @@
+%h1
+  My Team
+
+%table
+  %thead
+    %tr
+      %th
+        Slot
+      %th
+        Player
+  %tbody
+    - @roster.each do |roster|
+      %tr
+        %td
+          Slot
+        %td
+          = roster.player.full_nameproutes

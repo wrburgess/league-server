@@ -42,6 +42,21 @@ CSV.foreach("#{Rails.root}/db/fill/rosters.csv", :headers => :first_row) do |row
   puts "Roster created: #{row[0]}, #{row[1]}"
 end
 
+(1..8).each do |group|
+  (1..50).each do |entry|
+    GroupLog.create(
+      transaction_id: entry,
+      group_id: group,
+      roster_id: rand(1..50),
+      player_id: rand(1..100),
+      action: ['adds', 'drops', 'starts', 'reserves', 'injury reserves', 'suspends', 'redshirts', 'trades out', 'trades in'].sample,
+      group_owner: [true, false].sample,
+      note: ['allowed', 'controversial', 'zing!', 'commish will review', ''].sample
+    )
+    puts "Group log created"
+  end
+end
+
 CSV.foreach("#{Rails.root}/db/fill/group_rosters.csv", :headers => :first_row) do |row|
   GroupRoster.create!(group_id: row[0], roster_id: row[1], group_division_id: row[2])
   puts "GroupRoster created: #{row[0]}, #{row[1]}, #{row[2]}"

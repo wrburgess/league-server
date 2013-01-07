@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(:version => 20121215111111) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "group_log", :force => true do |t|
+  create_table "group_logs", :force => true do |t|
     t.integer  "transaction_id"
     t.integer  "group_id"
     t.integer  "roster_id"

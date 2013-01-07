@@ -1,2 +1,25 @@
 %h1
   Transactions
+
+%table
+  %thead
+    %tr
+      %th
+        Date
+      %th
+        Team
+      %th
+        Action
+      %th
+        Player
+  %tbody
+    - @group.group_logs.each do |log|
+      %tr
+        %td
+          = log.created_at.strftime("%m-%d-%y %H:%M")
+        %td
+          = log.roster.name
+        %td
+          = log.action
+        %td
+          = log.player.full_name

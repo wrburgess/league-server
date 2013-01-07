@@ -33,6 +33,7 @@ class Browser::GroupsController < BrowserController
   end
 
   def transactions
+    @group = Group.find(params[:group_id])
 
     @page_title = "Transactions"
     @body_id = "transactions"
