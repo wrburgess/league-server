@@ -12,6 +12,22 @@ RosterSlotType.create(name: "Injured", abbreviation: "INJ")
 RosterSlotType.create(name: "Suspended", abbreviation: "SUSP")
 RosterSlotType.create(name: "Redshirt", abbreviation: "RS")
 
+RosterSlotPosition.create(name: "Quarterback", abbreviation: "QB")
+RosterSlotPosition.create(name: "Running Back", abbreviation: "RB")
+RosterSlotPosition.create(name: "Wide Receiver", abbreviation: "WR")
+RosterSlotPosition.create(name: "Tight End", abbreviation: "TE")
+RosterSlotPosition.create(name: "Flex QB/RB", abbreviation: "QB/RB")
+RosterSlotPosition.create(name: "Flex QB/RB/WR", abbreviation: "QB/RB/WR")
+RosterSlotPosition.create(name: "Flex QB/RB/WR/TE", abbreviation: "QB/RB/WR/TE")
+RosterSlotPosition.create(name: "Flex RB/WR", abbreviation: "RB/WR")
+RosterSlotPosition.create(name: "Flex RB/TE", abbreviation: "RB/TE")
+RosterSlotPosition.create(name: "Flex RB/WR/TE", abbreviation: "RB/WR/TE")
+RosterSlotPosition.create(name: "Flex WR/TE", abbreviation: "WR/TE")
+RosterSlotPosition.create(name: "Placekicker", abbreviation: "PK")
+RosterSlotPosition.create(name: "Defensive/Special Team", abbreviation: "DFST")
+RosterSlotPosition.create(name: "Defensive Team", abbreviation: "DF")
+RosterSlotPosition.create(name: "Special Team", abbreviation: "ST")
+
 admin_user = User.create(email: "wrburgess@wrburgess.com", password: "secret")
 
 CSV.foreach("#{Rails.root}/db/fill/player_teams.csv") do |row|

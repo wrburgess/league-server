@@ -6,6 +6,7 @@ FactoryGirl.define do
     roster_id 1
     player_id 1
     roster_slot_type 1
+    roster_slot_position 1
   end
 
 end

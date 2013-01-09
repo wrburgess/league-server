@@ -3,5 +3,5 @@ class RosterSlotType < ActiveRecord::Base
 
   validates_presence_of :name, :abbreviation, :player_id, :roster_id, :roster_slot_type_id
 
-  belongs_to :roster_slot
+  has_many :roster_slots
 end
