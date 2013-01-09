@@ -2,6 +2,8 @@
 
 Fantasy sports league engine
 
+[![Dependency Status](https://gemnasium.com/wrburgess/league-server.png)](https://gemnasium.com/wrburgess/league-server)
+
 ## TOC
 * [TODO](#todo)
 * [MVP](#mvp)
