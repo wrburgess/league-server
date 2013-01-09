@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 # core
 ruby '1.9.3'
-gem 'rails', '3.2.9'
+gem 'rails', '3.2.11'
 
 # plugins
 gem 'devise', '~> 2.1.2'
