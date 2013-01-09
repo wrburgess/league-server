@@ -2,7 +2,7 @@
 
 Fantasy sports league engine
 
-{<img src="https://secure.travis-ci.org/wrburgess/league-server.png?branch=master" />}[http://travis-ci.org/wrburgess/league-server]
+[![Build Status](https://travis-ci.org/wrburgess/league-server)](https://travis-ci.org/wrburgess/league-server])
 [![Dependency Status](https://gemnasium.com/wrburgess/league-server.png)](https://gemnasium.com/wrburgess/league-server)
 
 ## TOC
