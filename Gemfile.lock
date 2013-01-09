@@ -203,4 +203,4 @@ DEPENDENCIES
   settingslogic (~> 2.0.9)
   shoulda (~> 3.3.2)
   thin (~> 1.5.0)
-  uglifier (~> 1.0.3)
+  uglifier (~> 1.0.4)
