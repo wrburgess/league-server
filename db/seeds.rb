@@ -6,6 +6,8 @@
   puts "User created: user#{u}@example.com"
 end
 
+admin_user = User.create(email: "wrburgess@wrburgess.com", password: "secret")
+
 RosterSlotType.create(name: "Starter", abbreviation: "START")
 RosterSlotType.create(name: "Reserve", abbreviation: "RESV")
 RosterSlotType.create(name: "Injured", abbreviation: "INJ")
@@ -27,8 +29,6 @@ RosterSlotPosition.create(name: "Placekicker", abbreviation: "PK")
 RosterSlotPosition.create(name: "Defensive/Special Team", abbreviation: "DFST")
 RosterSlotPosition.create(name: "Defensive Team", abbreviation: "DF")
 RosterSlotPosition.create(name: "Special Team", abbreviation: "ST")
-
-admin_user = User.create(email: "wrburgess@wrburgess.com", password: "secret")
 
 CSV.foreach("#{Rails.root}/db/fill/player_teams.csv") do |row|
   PlayerTeam.create!(location_name: row[0], nickname: row[1], abbreviation: row[2])

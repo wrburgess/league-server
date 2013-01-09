@@ -125,13 +125,29 @@ ActiveRecord::Schema.define(:version => 20121215111111) do
     t.datetime "updated_at",     :null => false
   end
 
+  create_table "roster_slot_positions", :force => true do |t|
+    t.integer  "name",         :null => false
+    t.integer  "abbreviation", :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  create_table "roster_slot_types", :force => true do |t|
+    t.integer  "name",         :null => false
+    t.integer  "abbreviation", :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
   create_table "roster_slots", :force => true do |t|
-    t.integer  "season",     :null => false
-    t.integer  "week",       :null => false
-    t.integer  "roster_id",  :null => false
-    t.integer  "player_id",  :null => false
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "season",                  :null => false
+    t.integer  "week",                    :null => false
+    t.integer  "roster_id",               :null => false
+    t.integer  "player_id",               :null => false
+    t.integer  "roster_slot_type_id",     :null => false
+    t.integer  "roster_slot_position_id", :null => false
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
   end
 
   create_table "roster_stat_careers", :force => true do |t|
