@@ -19,7 +19,7 @@ gem 'thin', '~> 1.5.0'
 
 #asset-specific
 group :assets do
-  gem 'uglifier', '~> 1.0.4'
+  gem 'uglifier', '~> 1.3.0'
 end
 
 #environment-specific
