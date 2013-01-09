@@ -5,6 +5,7 @@ FactoryGirl.define do
     week 1
     roster_id 1
     player_id 1
+    roster_slot_type 1
   end
 
 end

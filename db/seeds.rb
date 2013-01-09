@@ -6,6 +6,12 @@
   puts "User created: user#{u}@example.com"
 end
 
+RosterSlotType.create(name: "Starter", abbreviation: "START")
+RosterSlotType.create(name: "Reserve", abbreviation: "RESV")
+RosterSlotType.create(name: "Injured", abbreviation: "INJ")
+RosterSlotType.create(name: "Suspended", abbreviation: "SUSP")
+RosterSlotType.create(name: "Redshirt", abbreviation: "RS")
+
 admin_user = User.create(email: "wrburgess@wrburgess.com", password: "secret")
 
 CSV.foreach("#{Rails.root}/db/fill/player_teams.csv") do |row|

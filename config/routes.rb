@@ -42,6 +42,7 @@ League::Application.routes.draw do
     get 'league/:group_id/scoreboard' => 'games#scoreboard'
     get 'league/:group_id/schedule' => 'games#schedule'
     get 'league/:group_id/team' => 'rosters#show'
+    get 'league/:group_id/team/:team_id' => 'rosters#show'
   end
 
   if Rails.env.development?

@@ -126,6 +126,14 @@ class CreateModels < ActiveRecord::Migration
       t.integer  "week",         :null => false
       t.integer  "roster_id",    :null => false
       t.integer  "player_id",    :null => false
+      t.integer  "roster_slot_type_id", :null => false
+      t.datetime "created_at",   :null => false
+      t.datetime "updated_at",   :null => false
+    end
+
+    create_table "roster_slot_types", :force => true do |t|
+      t.integer  "name",         :null => false
+      t.integer  "abbreviation", :null => false
       t.datetime "created_at",   :null => false
       t.datetime "updated_at",   :null => false
     end

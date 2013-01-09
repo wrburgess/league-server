@@ -12,5 +12,6 @@ describe RosterSlot do
 
   it { should belong_to(:roster) }
   it { should belong_to(:player) }
+  it { should belong_to(:roster_slot_type) }
 
 end
