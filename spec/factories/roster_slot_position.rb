@@ -3,5 +3,4 @@ FactoryGirl.define do
     name "Quarterback"
     abbreviation "QB"
   end
-
 end

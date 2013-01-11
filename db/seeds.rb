@@ -1,5 +1,24 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
+RosterSlotType.create(name: "Starter", abbreviation: "START") #1
+RosterSlotType.create(name: "Reserve", abbreviation: "RESV") #2
+RosterSlotType.create(name: "Injured", abbreviation: "INJ") #3
+RosterSlotType.create(name: "Suspended", abbreviation: "SUSP") #4
+RosterSlotType.create(name: "Redshirt", abbreviation: "RS") #5
+
+RosterSlotPosition.create(name: "Quarterback", abbreviation: "QB") #1
+RosterSlotPosition.create(name: "Running Back", abbreviation: "RB") #2
+RosterSlotPosition.create(name: "Wide Receiver", abbreviation: "WR") #3
+RosterSlotPosition.create(name: "Tight End", abbreviation: "TE") #4
+RosterSlotPosition.create(name: "Flex QB/RB", abbreviation: "QB/RB") #5
+RosterSlotPosition.create(name: "Flex QB/RB/WR", abbreviation: "QB/RB/WR") #6
+RosterSlotPosition.create(name: "Flex QB/RB/WR/TE", abbreviation: "QB/RB/WR/TE") #7
+RosterSlotPosition.create(name: "Flex RB/WR", abbreviation: "RB/WR") #8
+RosterSlotPosition.create(name: "Flex RB/TE", abbreviation: "RB/TE") #9
+RosterSlotPosition.create(name: "Flex RB/WR/TE", abbreviation: "RB/WR/TE") #10
+RosterSlotPosition.create(name: "Flex WR/TE", abbreviation: "WR/TE") #11
+RosterSlotPosition.create(name: "Placekicker", abbreviation: "PK") #12
+RosterSlotPosition.create(name: "Defensive/Special Team", abbreviation: "DFST") #13
+RosterSlotPosition.create(name: "Defensive Team", abbreviation: "DF") #14
+RosterSlotPosition.create(name: "Special Teams", abbreviation: "ST") #15
 
 (1..50).each do |u|
   user = User.create(email: "user#{u}@example.com", password: "secret")
@@ -7,28 +26,6 @@
 end
 
 admin_user = User.create(email: "wrburgess@wrburgess.com", password: "secret")
-
-RosterSlotType.create(name: "Starter", abbreviation: "START")
-RosterSlotType.create(name: "Reserve", abbreviation: "RESV")
-RosterSlotType.create(name: "Injured", abbreviation: "INJ")
-RosterSlotType.create(name: "Suspended", abbreviation: "SUSP")
-RosterSlotType.create(name: "Redshirt", abbreviation: "RS")
-
-RosterSlotPosition.create(name: "Quarterback", abbreviation: "QB")
-RosterSlotPosition.create(name: "Running Back", abbreviation: "RB")
-RosterSlotPosition.create(name: "Wide Receiver", abbreviation: "WR")
-RosterSlotPosition.create(name: "Tight End", abbreviation: "TE")
-RosterSlotPosition.create(name: "Flex QB/RB", abbreviation: "QB/RB")
-RosterSlotPosition.create(name: "Flex QB/RB/WR", abbreviation: "QB/RB/WR")
-RosterSlotPosition.create(name: "Flex QB/RB/WR/TE", abbreviation: "QB/RB/WR/TE")
-RosterSlotPosition.create(name: "Flex RB/WR", abbreviation: "RB/WR")
-RosterSlotPosition.create(name: "Flex RB/TE", abbreviation: "RB/TE")
-RosterSlotPosition.create(name: "Flex RB/WR/TE", abbreviation: "RB/WR/TE")
-RosterSlotPosition.create(name: "Flex WR/TE", abbreviation: "WR/TE")
-RosterSlotPosition.create(name: "Placekicker", abbreviation: "PK")
-RosterSlotPosition.create(name: "Defensive/Special Team", abbreviation: "DFST")
-RosterSlotPosition.create(name: "Defensive Team", abbreviation: "DF")
-RosterSlotPosition.create(name: "Special Team", abbreviation: "ST")
 
 CSV.foreach("#{Rails.root}/db/fill/player_teams.csv") do |row|
   PlayerTeam.create!(location_name: row[0], nickname: row[1], abbreviation: row[2])
@@ -116,5 +113,14 @@ end
     puts "GameStat created: John#{p} Wilson#{p}, Team: #{player_team_id}"
     game_date + 7.days
   end
+
+  (1..50).each do |roster|
+    (1..14).each do |week|
+      (1.15).each do |roster_slot_fill|
+        roster_slot = RosterSlot.create(season: 2013, week: 1, roster: roster, player_id: 1, roster_slot_type_id: roster_slot_fill, roster_slot_position_id: roster_slot_fill)
+      end
+    end
+  end
+
 end
 
