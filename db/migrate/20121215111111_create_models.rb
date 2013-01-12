@@ -33,9 +33,9 @@ class CreateModels < ActiveRecord::Migration
     end
 
     create_table "player_stat_games", :force => true do |t|
-      t.integer  "player_id"
-      t.integer  "season"
-      t.integer  "week"
+      t.integer  "player_id",  :null => false
+      t.integer  "season",  :null => false
+      t.integer  "week",  :null => false
       t.date     "game_date"
       t.integer  "opponent_id"
       t.integer  "pa_att",      :default => 0
@@ -48,8 +48,8 @@ class CreateModels < ActiveRecord::Migration
     end
 
     create_table "player_stat_seasons", :force => true do |t|
-      t.integer  "player_id"
-      t.integer  "season"
+      t.integer  "player_id",  :null => false
+      t.integer  "season",     :null => false
       t.integer  "pa_att",     :default => 0
       t.integer  "pa_comp",    :default => 0
       t.integer  "pa_td",      :default => 0
@@ -60,7 +60,7 @@ class CreateModels < ActiveRecord::Migration
     end
 
     create_table "player_stat_careers", :force => true do |t|
-      t.integer  "player_id"
+      t.integer  "player_id",  :null => false
       t.integer  "pa_att",     :default => 0
       t.integer  "pa_comp",    :default => 0
       t.integer  "pa_td",      :default => 0
@@ -95,11 +95,11 @@ class CreateModels < ActiveRecord::Migration
     end
 
     create_table "group_logs", :force => true do |t|
-      t.integer  "transaction_id"
-      t.integer  "group_id"
-      t.integer  "roster_id"
+      t.integer  "transaction_id", :null => false
+      t.integer  "group_id",       :null => false
+      t.integer  "roster_id",      :null => false
       t.integer  "player_id"
-      t.string   "action"
+      t.string   "action",         :null => false
       t.boolean  "group_owner"
       t.string   "note"
       t.datetime "created_at",  :null => false
@@ -119,6 +119,13 @@ class CreateModels < ActiveRecord::Migration
       t.boolean  "founder",     :default => false
       t.boolean  "owner",       :default => false
       t.boolean  "viewer",      :default => true
+      t.datetime "created_at",  :null => false
+      t.datetime "updated_at",  :null => false
+    end
+
+    create_table "group_player_teams", :force => true do |t|
+      t.integer  "group_id",  :null => false
+      t.integer  "player_team_id",  :null => false
       t.datetime "created_at",  :null => false
       t.datetime "updated_at",  :null => false
     end
