@@ -2,7 +2,7 @@ FactoryGirl.define do
 
   factory :player_stat_season do
     player_id 1
-    season 1
+    season 2013
     pa_att 2
     pa_comp 1
     pa_td 4
