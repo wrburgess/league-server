@@ -15,9 +15,8 @@ Fantasy sports league engine
 
 ## TODO
 
-* Seed Player
-* Seed Roster
-* Seed Group
+* Consider consolidation of Player and Roster stats
+* Consider consolidation of Player and Roster positions (unlikely)
 
 ## Acronyms
 

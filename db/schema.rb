@@ -71,6 +71,14 @@ ActiveRecord::Schema.define(:version => 20121215111111) do
     t.datetime "updated_at",   :null => false
   end
 
+  create_table "player_positions", :force => true do |t|
+    t.string   "name",         :null => false
+    t.string   "abbreviation", :null => false
+    t.integer  "weight",       :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
   create_table "player_stat_careers", :force => true do |t|
     t.integer  "player_id"
     t.integer  "pa_att",     :default => 0
@@ -118,11 +126,12 @@ ActiveRecord::Schema.define(:version => 20121215111111) do
   end
 
   create_table "players", :force => true do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.integer  "player_team_id"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.string   "first_name",         :null => false
+    t.string   "last_name",          :null => false
+    t.integer  "player_team_id",     :null => false
+    t.integer  "player_position_id", :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
   end
 
   create_table "roster_slot_positions", :force => true do |t|

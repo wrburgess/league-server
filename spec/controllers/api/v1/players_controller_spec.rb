@@ -4,9 +4,9 @@ describe Api::V1::PlayersController do
   render_views
 
   before do
-    @player1 = FactoryGirl.create(:player, first_name: "Joe", last_name: "Smith", player_team_id: 1)
-    @player2 = FactoryGirl.create(:player, first_name: "Bob", last_name: "Jones", player_team_id: 2)
-    @player3 = FactoryGirl.create(:player, first_name: "Peter", last_name: "Wilson", player_team_id: 3)
+    @player1 = FactoryGirl.create(:player, first_name: "Joe", last_name: "Smith", player_team_id: 1, player_position_id: 1)
+    @player2 = FactoryGirl.create(:player, first_name: "Bob", last_name: "Jones", player_team_id: 2, player_position_id: 2)
+    @player3 = FactoryGirl.create(:player, first_name: "Peter", last_name: "Wilson", player_team_id: 3, player_position_id: 3)
   end
 
   describe "#index" do
@@ -91,6 +91,7 @@ describe Api::V1::PlayersController do
           first_name: "Buck",
           last_name: "Carradine",
           player_team_id: "1",
+          player_position_id: "1",
           junk: "trunk"
         }
       }
@@ -134,7 +135,8 @@ describe Api::V1::PlayersController do
         player: {
           first_name: "Buck",
           last_name: "Carradine",
-          player_team_id: "1"
+          player_team_id: "1",
+          player_position_id: "1"
         }
       }
 

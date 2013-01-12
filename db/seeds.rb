@@ -20,6 +20,15 @@ RosterSlotPosition.create(name: "Defensive/Special Team", abbreviation: "DFST", 
 RosterSlotPosition.create(name: "Defensive Team", abbreviation: "DF", weight: 820)
 RosterSlotPosition.create(name: "Special Teams", abbreviation: "ST", weight: 930)
 
+PlayerPosition.create(name: "Quarterback", abbreviation: "QB", weight: 100) #1
+PlayerPosition.create(name: "Running Back", abbreviation: "RB", weight: 200) #2
+PlayerPosition.create(name: "Wide Receiver", abbreviation: "WR", weight: 300) #3
+PlayerPosition.create(name: "Tight End", abbreviation: "TE", weight: 400) #4
+PlayerPosition.create(name: "Placekicker", abbreviation: "PK", weight: 500) #5
+PlayerPosition.create(name: "Defensive/Special Team", abbreviation: "DFST", weight: 600) #6
+PlayerPosition.create(name: "Defensive Team", abbreviation: "DF", weight: 700) #7
+PlayerPosition.create(name: "Special Teams", abbreviation: "ST", weight: 800) #8
+
 (1..50).each do |u|
   user = User.create(email: "user#{u}@example.com", password: "secret")
   puts "User created: user#{u}@example.com"
@@ -93,11 +102,16 @@ end
 
 (1..200).each do |p|
   player_team_id = rand(1..100)
+  player_position_id = rand(1..6)
   date1 = "2013-01-01"
   date2 = "2013-12-31"
   game_date = Time.now
 
-  player = Player.create(first_name: "John#{p}", last_name: "Wilson#{p}", player_team_id: player_team_id)
+  player = Player.create(first_name: "John#{p}",
+    last_name: "Wilson#{p}",
+    player_team_id: player_team_id,
+    player_position_id: player_position_id
+  )
   puts "Player created: John#{p} Wilson#{p}, Player Team: #{player_team_id}"
 
   player_stat_career = PlayerStatCareer.create(player_id: player.id)
@@ -109,7 +123,13 @@ end
   end
 
   (1..15).each do |gs|
-    game_stat = PlayerStatGame.create(player_id: player.id, opponent_id: rand(1..100), game_date: game_date, season: "2013", week: gs)
+    game_stat = PlayerStatGame.create(
+      player_id: player.id,
+      opponent_id: rand(1..100),
+      game_date: game_date,
+      season: "2013",
+      week: gs
+    )
     puts "GameStat created: John#{p} Wilson#{p}, Team: #{player_team_id}"
     game_date + 7.days
   end

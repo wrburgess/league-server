@@ -20,7 +20,8 @@ class Api::V1::PlayersController < ApiController
     player = {
       first_name: params[:player][:first_name],
       last_name: params[:player][:last_name],
-      player_team_id: params[:player][:player_team_id]
+      player_team_id: params[:player][:player_team_id],
+      player_position_id: params[:player][:player_position_id]
     }
 
     @player = Player.create!(player)
@@ -33,7 +34,8 @@ class Api::V1::PlayersController < ApiController
     player = {
       first_name: params[:player][:first_name],
       last_name: params[:player][:last_name],
-      player_team_id: params[:player][:player_team_id]
+      player_team_id: params[:player][:player_team_id],
+      player_position_id: params[:player][:player_position_id]
     }
 
     @player = Player.find params[:id]
