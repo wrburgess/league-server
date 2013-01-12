@@ -1,24 +1,24 @@
-RosterSlotType.create(name: "Starter", abbreviation: "START") #1
-RosterSlotType.create(name: "Reserve", abbreviation: "RESV") #2
-RosterSlotType.create(name: "Injured", abbreviation: "INJ") #3
-RosterSlotType.create(name: "Suspended", abbreviation: "SUSP") #4
-RosterSlotType.create(name: "Redshirt", abbreviation: "RS") #5
+RosterSlotType.create(name: "Starter", abbreviation: "START", weight: 10)
+RosterSlotType.create(name: "Reserve", abbreviation: "RESV", weight: 20)
+RosterSlotType.create(name: "Injured", abbreviation: "INJ", weight: 30)
+RosterSlotType.create(name: "Suspended", abbreviation: "SUSP", weight: 40)
+RosterSlotType.create(name: "Redshirt", abbreviation: "RS", weight: 50)
 
-RosterSlotPosition.create(name: "Quarterback", abbreviation: "QB") #1
-RosterSlotPosition.create(name: "Running Back", abbreviation: "RB") #2
-RosterSlotPosition.create(name: "Wide Receiver", abbreviation: "WR") #3
-RosterSlotPosition.create(name: "Tight End", abbreviation: "TE") #4
-RosterSlotPosition.create(name: "Flex QB/RB", abbreviation: "QB/RB") #5
-RosterSlotPosition.create(name: "Flex QB/RB/WR", abbreviation: "QB/RB/WR") #6
-RosterSlotPosition.create(name: "Flex QB/RB/WR/TE", abbreviation: "QB/RB/WR/TE") #7
-RosterSlotPosition.create(name: "Flex RB/WR", abbreviation: "RB/WR") #8
-RosterSlotPosition.create(name: "Flex RB/TE", abbreviation: "RB/TE") #9
-RosterSlotPosition.create(name: "Flex RB/WR/TE", abbreviation: "RB/WR/TE") #10
-RosterSlotPosition.create(name: "Flex WR/TE", abbreviation: "WR/TE") #11
-RosterSlotPosition.create(name: "Placekicker", abbreviation: "PK") #12
-RosterSlotPosition.create(name: "Defensive/Special Team", abbreviation: "DFST") #13
-RosterSlotPosition.create(name: "Defensive Team", abbreviation: "DF") #14
-RosterSlotPosition.create(name: "Special Teams", abbreviation: "ST") #15
+RosterSlotPosition.create(name: "Quarterback", abbreviation: "QB", weight: 100)
+RosterSlotPosition.create(name: "Running Back", abbreviation: "RB", weight: 200)
+RosterSlotPosition.create(name: "Wide Receiver", abbreviation: "WR", weight: 300)
+RosterSlotPosition.create(name: "Tight End", abbreviation: "TE", weight: 400)
+RosterSlotPosition.create(name: "Flex QB/RB", abbreviation: "QB/RB", weight: 500)
+RosterSlotPosition.create(name: "Flex QB/RB/WR", abbreviation: "QB/RB/WR", weight: 510)
+RosterSlotPosition.create(name: "Flex QB/RB/WR/TE", abbreviation: "QB/RB/WR/TE", weight: 520)
+RosterSlotPosition.create(name: "Flex RB/WR", abbreviation: "RB/WR", weight: 530)
+RosterSlotPosition.create(name: "Flex RB/TE", abbreviation: "RB/TE", weight: 540)
+RosterSlotPosition.create(name: "Flex RB/WR/TE", abbreviation: "RB/WR/TE", weight: 550)
+RosterSlotPosition.create(name: "Flex WR/TE", abbreviation: "WR/TE", weight: 560)
+RosterSlotPosition.create(name: "Placekicker", abbreviation: "PK", weight: 600)
+RosterSlotPosition.create(name: "Defensive/Special Team", abbreviation: "DFST", weight: 710)
+RosterSlotPosition.create(name: "Defensive Team", abbreviation: "DF", weight: 820)
+RosterSlotPosition.create(name: "Special Teams", abbreviation: "ST", weight: 930)
 
 (1..50).each do |u|
   user = User.create(email: "user#{u}@example.com", password: "secret")
@@ -114,13 +114,13 @@ end
     game_date + 7.days
   end
 
-  (1..50).each do |roster|
-    (1..14).each do |week|
-      (1.15).each do |roster_slot_fill|
-        roster_slot = RosterSlot.create(season: 2013, week: 1, roster: roster, player_id: 1, roster_slot_type_id: roster_slot_fill, roster_slot_position_id: roster_slot_fill)
-      end
-    end
-  end
+  # (1..50).each do |roster|
+  #   (1..14).each do |week|
+  #     (1.15).each do |roster_slot_fill|
+  #       roster_slot = RosterSlot.create(season: 2013, week: 1, roster: roster, player_id: 1, roster_slot_type_id: roster_slot_fill, roster_slot_position_id: roster_slot_fill)
+  #     end
+  #   end
+  # end
 
 end
 
