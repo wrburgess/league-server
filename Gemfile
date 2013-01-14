@@ -5,7 +5,7 @@ ruby '1.9.3'
 gem 'rails', '3.2.11'
 
 # plugins
-gem 'devise', '~> 2.2.0'
+gem 'devise', '~> 2.2.1'
 gem 'haml-rails', '~> 0.3.5'
 gem 'json', '~> 1.7.6'
 gem 'omniauth', '1.1.1'
@@ -29,7 +29,7 @@ group :test, :development do
   gem 'debugger', '~> 1.2.3'
   gem 'factory_girl_rails', '~> 4.1.0'
   gem 'mail_view', '~> 1.0.3'
-  gem 'rspec-rails', '~> 2.12.1'
+  gem 'rspec-rails', '~> 2.12.2'
 end
 
 group :test do
