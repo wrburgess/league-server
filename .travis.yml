@@ -1,12 +1,16 @@
-language: ruby
+language:
+  - ruby
 rvm:
   - 1.9.3
 env:
   - RAILS=3.2.11
   - DB=postgresql
-before_script:
-  - psql -c "CREATE USER wrburgess WITH PASSWORD 'league';" -U postgres
-  - psql -c 'create database league_test' -U wrburgess
 branches:
   only:
     - master
+before_install:
+  - gem update --system
+  - gem --version
+before_script:
+  - psql -c 'create database league_test' -U postgres
+  - 'rake db:migrate'

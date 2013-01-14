@@ -1,17 +1,12 @@
 development:
   adapter: postgresql
   host: localhost
-  username: wrburgess
-  password:
+  username: postgres
   database: league_dev
   pool: 5
   timeout: 5000
 
 test:
   adapter: postgresql
-  host: localhost
-  username: wrburgess
-  password:
   database: league_test
-  pool: 5
-  timeout: 5000
+  username: postgres
