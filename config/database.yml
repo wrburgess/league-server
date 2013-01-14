@@ -10,25 +10,8 @@ development:
 test:
   adapter: postgresql
   host: localhost
-  username: wrburgess
+  username: postgres
   password:
   database: league_test
   pool: 5
   timeout: 5000
-
-sqlite: &sqlite
-  adapter: sqlite3
-  database: db/<%= Rails.env %>.sqlite3
-
-mysql: &mysql
-  adapter: mysql2
-  username: root
-  password:
-  database: league_<%= Rails.env %>
-
-postgresql: &postgresql
-  adapter: postgresql
-  username: postgres
-  password:
-  database: league_<%= Rails.env %>
-  min_messages: ERROR

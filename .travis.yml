@@ -1,21 +1,11 @@
-script:
-  - bundle exec rake test
-  - RAILS_ENV=test bundle exec rake --trace db:migrate test
 language: ruby
 rvm:
   - 1.9.3
-before_install:
-  - gem update --system
-  - gem --version
 env:
   - RAILS=3.2.11
-  - DB=sqlite
-  - DB=mysql
   - DB=postgresql
 before_script:
-  - psql -c "CREATE USER wrburgess WITH PASSWORD 'league';" -U postgres
-  - mysql -e 'create database league_test'
-  - psql -c 'create database league_test' -U postgres
+  - psql -c 'create database league_test;' -U postgres
 branches:
   only:
     - master
