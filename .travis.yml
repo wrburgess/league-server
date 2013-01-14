@@ -5,7 +5,8 @@ env:
   - RAILS=3.2.11
   - DB=postgresql
 before_script:
-  - psql -c 'create database league_test;' -U postgres
+  - psql -c "CREATE USER wrburgess WITH PASSWORD 'league';" -U postgres
+  - psql -c 'create database league_test' -U wrburgess
 branches:
   only:
     - master

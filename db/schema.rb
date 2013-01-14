@@ -87,7 +87,7 @@ ActiveRecord::Schema.define(:version => 20121215111111) do
   end
 
   create_table "player_stat_careers", :force => true do |t|
-    t.integer  "player_id"
+    t.integer  "player_id",                 :null => false
     t.integer  "pa_att",     :default => 0
     t.integer  "pa_comp",    :default => 0
     t.integer  "pa_td",      :default => 0
@@ -98,9 +98,9 @@ ActiveRecord::Schema.define(:version => 20121215111111) do
   end
 
   create_table "player_stat_games", :force => true do |t|
-    t.integer  "player_id"
-    t.integer  "season"
-    t.integer  "week"
+    t.integer  "player_id",                  :null => false
+    t.integer  "season",                     :null => false
+    t.integer  "week",                       :null => false
     t.date     "game_date"
     t.integer  "opponent_id"
     t.integer  "pa_att",      :default => 0
@@ -113,8 +113,8 @@ ActiveRecord::Schema.define(:version => 20121215111111) do
   end
 
   create_table "player_stat_seasons", :force => true do |t|
-    t.integer  "player_id"
-    t.integer  "season"
+    t.integer  "player_id",                 :null => false
+    t.integer  "season",                    :null => false
     t.integer  "pa_att",     :default => 0
     t.integer  "pa_comp",    :default => 0
     t.integer  "pa_td",      :default => 0

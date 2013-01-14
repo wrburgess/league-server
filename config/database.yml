@@ -10,7 +10,7 @@ development:
 test:
   adapter: postgresql
   host: localhost
-  username: postgres
+  username: wrburgess
   password:
   database: league_test
   pool: 5
