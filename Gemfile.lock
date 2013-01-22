@@ -84,7 +84,7 @@ GEM
     mocha (0.10.5)
       metaclass (~> 0.0.1)
     multi_json (1.5.0)
-    newrelic_rpm (3.5.4.34)
+    newrelic_rpm (3.5.5.38)
     omniauth (1.1.1)
       hashie (~> 1.2)
       rack
@@ -192,7 +192,7 @@ DEPENDENCIES
   haml-rails (= 0.3.5)
   json (= 1.7.6)
   mail_view (= 1.0.3)
-  newrelic_rpm (= 3.5.4.34)
+  newrelic_rpm (= 3.5.5.38)
   omniauth (= 1.1.1)
   pg (= 0.14.1)
   rabl (= 0.7.9)
