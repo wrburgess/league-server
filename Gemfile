@@ -27,7 +27,7 @@ group :test, :development do
   gem 'better_errors', '0.3.2'
   gem 'binding_of_caller', '0.6.8'
   gem 'debugger', '1.2.4'
-  gem 'factory_girl_rails', '4.1.0'
+  gem 'factory_girl_rails', '4.2.0'
   gem 'mail_view', '1.0.3'
   gem 'rspec-rails', '2.12.2'
 end
