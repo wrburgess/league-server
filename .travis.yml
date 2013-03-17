@@ -8,9 +8,6 @@ env:
 branches:
   only:
     - master
-before_install:
-  - gem update --system
-  - gem --version
 before_script:
   - psql -c 'create database league_test' -U postgres
   - 'rake db:migrate'
