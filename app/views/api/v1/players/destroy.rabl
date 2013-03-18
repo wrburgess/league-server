@@ -1,1 +1,0 @@
-node(:message)  { "Player deleted" }
