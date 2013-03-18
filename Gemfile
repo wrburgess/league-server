@@ -20,8 +20,6 @@ group :assets do
 end
 
 group :test, :development do
-  gem "better_errors", "0.7.2"
-  gem "binding_of_caller", "0.7.1"
   gem "debugger", "1.5.0"
   gem "factory_girl_rails", "4.2.1"
   gem "mail_view", "1.0.3"
