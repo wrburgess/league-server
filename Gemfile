@@ -26,5 +26,5 @@ end
 group :test do
   gem 'factory_girl_rails', '4.2.1'
   gem 'rspec-rails', '2.13.0'
-  gem 'shoulda', '3.4.0'
+  gem 'shoulda', '3.3.2'
 end
