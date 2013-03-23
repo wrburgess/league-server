@@ -21,11 +21,7 @@ end
 group :test, :development do
   gem 'debugger', '1.5.0'
   gem 'mail_view', '1.0.3'
-end
-
-group :test do
   gem 'factory_girl_rails', '4.2.1'
-  gem 'rspec', '2.13.0'
   gem 'rspec-rails', '2.13.0'
-  gem 'shoulda', '3.4.0'
+  gem 'shoulda-matchers', '1.5.4'
 end
