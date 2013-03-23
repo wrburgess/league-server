@@ -10,7 +10,7 @@ gem 'newrelic_rpm', '3.6.0.78'
 gem 'pg', '0.14.1'
 gem 'resque', '1.24.0', :require => 'resque/server'
 gem 'settingslogic', '2.0.9'
-gem 'thin', '1.5.0'
+gem 'thin', '1.5.1'
 
 group :assets do
   gem 'haml-rails', '0.4.0'
