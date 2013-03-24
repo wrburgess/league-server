@@ -63,7 +63,10 @@ module League
     # For Devise
     config.assets.initialize_on_precompile = false
 
-    #For jQuery-Rails
+    # For jQuery-Rails
     config.action_view.javascript_expansions[:defaults] = %w(jquery rails)
+
+    # For Unicorn and logging to work
+    config.logger = Logger.new(STDOUT)
   end
 end
