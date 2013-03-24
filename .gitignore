@@ -20,3 +20,4 @@ dump.rdb
 league-server.sublime-workspace
 league-server.sublime-project
 .powrc
+.env
