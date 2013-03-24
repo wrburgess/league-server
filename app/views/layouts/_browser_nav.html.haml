@@ -1,0 +1,88 @@
+.navbar
+  .navbar-inner
+    %a.brand{ href: "#{@group_id}", title: "League Home" }
+      Pre Pro East
+    %ul.nav
+      %li.dropdown
+        %a.dropdown-toggle{ href: "#", "data-toggle" => "dropdown" }
+          League
+          %b.caret
+        %ul.dropdown-menu
+          %li
+            %a{ href: "leagues/1", title: "Teams & Rosters" }
+              Teams/Rosters
+          %li
+            %a{ href: "leagues/1/standings", title: "League Standings" }
+              Standings
+          %li
+            %a{ href: "leagues/1/transactions", title: "League Transactions" }
+              Transactions
+          %li
+            %a{ href: "leagues/1/draft", title: "Draft Room" }
+              Draft
+      %li.dropdown
+        %a.dropdown-toggle{ href: "#", "data-toggle" => "dropdown" }
+          Team
+          %b.caret
+        %ul.dropdown-menu
+          %li
+            %a{ href: "/team", title: "Roster Management" }
+              Roster
+          %li
+            %a{ href: "/add", title: "Add/Drop" }
+              Add/Drop
+          %li
+            %a{ href: "/trades", title: "Trading Desk" }
+              Trades
+      %li.dropdown
+        %a.dropdown-toggle{ href: "#", "data-toggle" => "dropdown" }
+          Games
+          %b.caret
+        %ul.dropdown-menu
+          %li
+            %a{ href: "/scoreboard", title: "Scoreboard" }
+              Scoreboard
+          %li
+            %a{ href: "/schedule", title: "League and Team Schedules" }
+              Schedule
+      %li.dropdown
+        %a.dropdown-toggle{ href: "#", "data-toggle" => "dropdown" }
+          Players
+          %b.caret
+        %ul.dropdown-menu
+          %li
+            %a{ href: "players" }
+              Search
+          %li
+            %a{ href: "/players/stats" }
+              Stats
+          %li
+            %a{ href: "/players/trends" }
+              Trends
+      %li.dropdown
+        %a.dropdown-toggle{ href: "#", "data-toggle" => "dropdown" }
+          Account
+          %b.caret
+        %ul.dropdown-menu
+          %li
+            %a{ href: "user/settings" }
+              %i.icon-wrench
+              Settings
+          %li
+            %a{ href: "/players/notifications" }
+              %i.icon-envelope
+              Alerts/Emails
+          %li
+            %a{ href: "/players/trends" }
+              %i.icon-off
+              Logout
+      #form.navbar-search.pull-left
+        %input#nav-search.search-query{ type: "text", placeholder: "Player Search" }
+      %a.brand.pull-right{ href: "/" }
+        NGN
+- [:notice, :error, :alert].each do |level|
+  - unless flash[level].blank?
+    .alert{:class => "#{flash_class(level)}"}
+      %a.close{ href: "#" }
+        x
+      = content_tag :p, flash[level]
