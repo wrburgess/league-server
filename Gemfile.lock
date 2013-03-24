@@ -46,6 +46,9 @@ GEM
       railties (~> 3.1)
       warden (~> 1.2.1)
     diff-lcs (1.2.1)
+    dotenv (0.6.0)
+    dotenv-rails (0.6.0)
+      dotenv (= 0.6.0)
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
@@ -175,6 +178,7 @@ PLATFORMS
 DEPENDENCIES
   debugger (= 1.5.0)
   devise (= 2.2.3)
+  dotenv-rails (= 0.6.0)
   factory_girl_rails (= 4.2.1)
   haml-rails (= 0.4.0)
   jquery-rails (= 2.2.1)
