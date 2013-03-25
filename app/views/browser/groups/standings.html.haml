@@ -22,13 +22,13 @@
         %td
           = roster.name
         %td
-          = roster.roster_stat_seasons.where(season: Settings.app_season).first.wins
+          = roster.roster_stat_seasons.where(season: AppSettings.app_season).first.wins
         %td
-          = roster.roster_stat_seasons.where(season: Settings.app_season).first.losses
+          = roster.roster_stat_seasons.where(season: AppSettings.app_season).first.losses
         %td
-          = roster.roster_stat_seasons.where(season: Settings.app_season).first.ties
+          = roster.roster_stat_seasons.where(season: AppSettings.app_season).first.ties
         %td
-          = roster.roster_stat_seasons.where(season: Settings.app_season).first.points_for
+          = roster.roster_stat_seasons.where(season: AppSettings.app_season).first.points_for
         %td
-          = roster.roster_stat_seasons.where(season: Settings.app_season).first.points_against
+          = roster.roster_stat_seasons.where(season: AppSettings.app_season).first.points_against
 

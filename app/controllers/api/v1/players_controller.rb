@@ -62,8 +62,8 @@ class Api::V1::PlayersController < ApiController
   end
 
   def response_header
-    response.headers["X-LS-Application"] = Settings.app_name
-    response.headers["X-LS-License"] = Settings.app_license
+    response.headers["X-LS-Application"] = AppSettings.app_name
+    response.headers["X-LS-License"] = AppSettings.app_license
   end
 
 end

@@ -7,7 +7,7 @@ class GroupMailer < ActionMailer::Base
     mail(
       charset:       "utf-8",
       content_type:  "text/html",
-      from:          Settings.mailer_from,
+      from:          AppSettings.mailer_from,
       subject:       "Group Weekly Review",
       to:            user.email
     )
