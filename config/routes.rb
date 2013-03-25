@@ -5,6 +5,9 @@ League::Application.routes.draw do
   devise_for :users
 
   namespace :admin do
+
+    root :to => 'static#admin'
+
     resources :players do
       get 'players' => 'players#index'
       get 'players/:id' => 'players#show'
