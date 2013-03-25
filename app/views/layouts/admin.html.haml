@@ -9,7 +9,7 @@
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
     = csrf_meta_tags
-  %body{ id: "#{@body_id}", class: "#{@body_class}" }
+  %body{ id: "#{@body_id}", class: "admin #{@body_class}" }
     #wrapper
       %header
         = render :partial => 'layouts/admin_nav'

@@ -3,7 +3,8 @@
  *= require bootstrap
  *= require bootstrap-responsive
  *= require fonts
- *= require style
+ *= require browser
+ *= require admin
  */
 
 
