@@ -5,8 +5,7 @@ League::Application.routes.draw do
   devise_for :users
 
   namespace :admin do
-
-    root :to => 'static#admin'
+    root :to => 'static#index'
 
     resources :players do
       get 'players' => 'players#index'

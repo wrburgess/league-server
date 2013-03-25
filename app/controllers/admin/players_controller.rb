@@ -1,4 +1,4 @@
-class Admin::PlayersController < ApplicationController
+class Admin::PlayersController < AdminController
   protect_from_forgery
 
   def index

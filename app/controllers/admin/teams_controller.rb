@@ -1,4 +1,4 @@
-class Admin::TeamsController < ApplicationController
+class Admin::TeamsController < AdminController
   protect_from_forgery
 
   def index

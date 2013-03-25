@@ -1,9 +1,9 @@
 ActionMailer::Base.smtp_settings = {
-  address:              Settings.mailer_address,
-  port:                 Settings.mailer_port,
-  domain:               Settings.mailer_domain,
-  user_name:            Settings.mailer_user_name,
-  password:             Settings.mailer_password,
-  authentication:       Settings.mailer_authentication,
-  enable_starttls_auto: Settings.mailer_enable_starttls_auto
+  address:              AppSettings.mailer_address,
+  port:                 AppSettings.mailer_port,
+  domain:               AppSettings.mailer_domain,
+  user_name:            AppSettings.mailer_user_name,
+  password:             AppSettings.mailer_password,
+  authentication:       AppSettings.mailer_authentication,
+  enable_starttls_auto: AppSettings.mailer_enable_starttls_auto
 }
