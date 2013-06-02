@@ -5,6 +5,12 @@ A fantasy sports league engine
 [![Build Status](https://travis-ci.org/wrburgess/league-server.png)](https://travis-ci.org/wrburgess/league-server)
 [![Dependency Status](https://gemnasium.com/wrburgess/league-server.png)](https://gemnasium.com/wrburgess/league-server)
 
+## Rake Tasks
+
+* ls:rebuild** - calls ```db:drop, db:create, db:migrate, db:seed, db:test:prepare```
+* deploy:staging** - deploys to Heroku staging
+* deploy:production** - deploys to Heroku production
+
 ## 0.8 Features
 
 * Standings
@@ -18,45 +24,23 @@ A fantasy sports league engine
 * Stats Loader
 * Scoring
 
-## Models
+## Basketball Roster Slot Structure
 
-* Player
-* Team
-* GameStat
-* SeasonStat
-* CareerStat
-* Actions
-  * adds
-  * drops
-  * reserves
-  * starts
-  * suspends 
-  * injury reserves 
-  * redshirts 
-  * trades in 
-  * trades out
-* User
-* Roster
-* RosterUser
-* Group
-* GroupUser
+name: "Starter", abbreviation: "START"  
+name: "Reserve", abbreviation: "RESV"  
+name: "Injured", abbreviation: "INJ"   
+name: "Suspended", abbreviation: "SUSP"    
+name: "Redshirt", abbreviation: "RS"  
 
-## Tools
+name: "Guard", abbreviation: "G"  
+name: "Point Guard", abbreviation: "PG"  
+name: "Shooting Guard", abbreviation: "SG"   
+name: "Center", abbreviation: "C"  
+name: "Forward", abbreviation: "F"  
+name: "Power Forward", abbreviation: "PF"  
+name: "Small Forward", abbreviation: "SF"  
 
-* [Ruby](http://ruby-lang.org) - *language*
-* [Ruby on Rails](http://rubyonrails.org) - *framework*
-* [PostgreSQL](http://www.postgresql.org) - *database*
-* [Heroku](http://heroku.com) - *hosting*
-* [Haml](http://haml.info) - *markup*
-* [Sass](http://sass-lang.com/) - *styling*
-
-## Rake Tasks
-
-* **ls:rebuild** - calls ```db:drop, db:create, db:migrate, db:seed, db:test:prepare```
-* **deploy:staging** - deploys to Heroku staging
-* **deploy:production** - deploys to Heroku production
-
-## Roster Slot Structure
+## American Football Roster Slot Structure
 
 name: "Starter", abbreviation: "START" #1  
 name: "Reserve", abbreviation: "RESV" #2  

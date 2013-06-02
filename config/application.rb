@@ -67,6 +67,6 @@ module League
     config.action_view.javascript_expansions[:defaults] = %w(jquery rails)
 
     # For Unicorn and logging to work
-    config.logger = Logger.new(STDOUT)
+    # config.logger = Logger.new(STDOUT)
   end
 end
