@@ -1,5 +1,4 @@
 FactoryGirl.define do
-
   factory :group_log do
     transaction_id 1
     group_id 1
@@ -9,5 +8,4 @@ FactoryGirl.define do
     group_owner false
     note "here's a note"
   end
-
 end

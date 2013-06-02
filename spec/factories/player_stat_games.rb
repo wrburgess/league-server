@@ -1,5 +1,4 @@
 FactoryGirl.define do
-
   factory :player_stat_game do
     player_id 1
     opponent_id 1
@@ -12,5 +11,4 @@ FactoryGirl.define do
     pa_td 4
     pa_int 5
   end
-
 end
