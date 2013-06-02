@@ -4,7 +4,7 @@ ruby '2.0.0'
 gem 'rails', '3.2.13'
 
 gem 'devise', '2.2.4'
-gem 'json', '1.7.7'
+gem 'json', '1.8.0'
 gem 'jquery-rails', '3.0.0'
 gem 'newrelic_rpm', '3.6.3.104'
 gem 'pg', '0.15.1'
