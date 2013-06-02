@@ -1,28 +1,28 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-ruby '2.0.0'
-gem 'rails', '3.2.13'
+ruby "2.0.0"
+gem "rails", "3.2.13"
 
-gem 'devise', '2.2.4'
-gem 'json', '1.8.0'
-gem 'jquery-rails', '3.0.0'
-gem 'newrelic_rpm', '3.6.3.104'
-gem 'pg', '0.15.1'
-gem 'resque', '1.24.1', :require => 'resque/server'
-gem 'settingslogic', '2.0.9'
-gem 'unicorn', '4.6.2'
+gem "devise", "2.2.4"
+gem "json", "1.8.0"
+gem "jquery-rails", "3.0.0"
+gem "newrelic_rpm", "3.6.3.104"
+gem "pg", "0.15.1"
+gem "resque", "1.24.1", :require => "resque/server"
+gem "settingslogic", "2.0.9"
+gem "unicorn", "4.6.2"
 
 group :assets do
-  gem 'haml-rails', '0.4.0'
-  gem 'sass-rails', '3.2.6'
-  gem 'uglifier', '2.1.1'
+  gem "haml-rails", "0.4.0"
+  gem "sass-rails", "3.2.6"
+  gem "uglifier", "2.1.1"
 end
 
 group :test, :development do
-  gem 'debugger', '1.6.0'
-  gem 'dotenv-rails', '0.7.0'
-  gem 'factory_girl_rails', '4.2.1'
-  gem 'mail_view', '1.0.3'
-  gem 'rspec-rails', '2.13.2'
-  gem 'shoulda-matchers', '2.1.0'
+  gem "debugger", "1.6.0"
+  gem "dotenv-rails", "0.7.0"
+  gem "factory_girl_rails", "4.2.1"
+  gem "mail_view", "1.0.3"
+  gem "rspec-rails", "2.13.2"
+  gem "shoulda-matchers", "2.1.0"
 end
