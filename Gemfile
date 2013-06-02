@@ -4,6 +4,7 @@ ruby "2.0.0"
 gem "rails", "3.2.13"
 
 gem "devise", "2.2.4"
+gem "faker", "1.1.2"
 gem "json", "1.8.0"
 gem "jquery-rails", "3.0.0"
 gem "newrelic_rpm", "3.6.3.104"
@@ -19,6 +20,7 @@ group :assets do
 end
 
 group :test, :development do
+  gem "database_cleaner", "1.0.1"
   gem "debugger", "1.6.0"
   gem "dotenv-rails", "0.7.0"
   gem "factory_girl_rails", "4.2.1"
