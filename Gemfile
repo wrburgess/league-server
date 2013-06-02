@@ -24,5 +24,5 @@ group :test, :development do
   gem 'factory_girl_rails', '4.2.1'
   gem 'mail_view', '1.0.3'
   gem 'rspec-rails', '2.13.2'
-  gem 'shoulda-matchers', '2.0.0'
+  gem 'shoulda-matchers', '2.1.0'
 end
