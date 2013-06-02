@@ -23,6 +23,6 @@ group :test, :development do
   gem 'dotenv-rails', '0.6.0'
   gem 'factory_girl_rails', '4.2.1'
   gem 'mail_view', '1.0.3'
-  gem 'rspec-rails', '2.13.0'
+  gem 'rspec-rails', '2.13.2'
   gem 'shoulda-matchers', '2.0.0'
 end
