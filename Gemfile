@@ -5,7 +5,7 @@ gem 'rails', '3.2.13'
 
 gem 'devise', '2.2.3'
 gem 'json', '1.7.7'
-gem 'jquery-rails', '2.2.1'
+gem 'jquery-rails', '3.0.0'
 gem 'newrelic_rpm', '3.6.0.83'
 gem 'pg', '0.15.1'
 gem 'resque', '1.24.1', :require => 'resque/server'
