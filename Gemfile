@@ -19,7 +19,7 @@ group :assets do
 end
 
 group :test, :development do
-  gem 'debugger', '1.5.0'
+  gem 'debugger', '1.6.0'
   gem 'dotenv-rails', '0.6.0'
   gem 'factory_girl_rails', '4.2.1'
   gem 'mail_view', '1.0.3'
