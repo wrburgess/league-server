@@ -1,4 +1,4 @@
-namespace :ls do
+namespace :league do
   task :rebuild => :environment do
     input = ''
     STDOUT.puts "Drop, recreate, and seed database? y[es] or n[o]"
