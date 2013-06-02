@@ -20,7 +20,7 @@ end
 
 group :test, :development do
   gem 'debugger', '1.6.0'
-  gem 'dotenv-rails', '0.6.0'
+  gem 'dotenv-rails', '0.7.0'
   gem 'factory_girl_rails', '4.2.1'
   gem 'mail_view', '1.0.3'
   gem 'rspec-rails', '2.13.2'
