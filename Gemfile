@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 gem 'rails', '3.2.13'
 
-gem 'devise', '2.2.3'
+gem 'devise', '2.2.4'
 gem 'json', '1.7.7'
 gem 'jquery-rails', '3.0.0'
 gem 'newrelic_rpm', '3.6.0.83'
