@@ -2,37 +2,44 @@ League::Application.routes.draw do
 
   mount Resque::Server, :at => "/resque"
 
-  devise_for :users
+  devise_for :users 
+
+  namespace :users do
+    get 'alerts' => 'users#alerts'
+    get 'settings' => 'users#settings'
+  end
 
   namespace :admin do
     root :to => 'static#index'
-
-    resources :players do
-      get 'players' => 'players#index'
-      get 'players/:id' => 'players#show'
-    end
-
-    resources :teams do
-      get 'teams' => 'teams#index'
-    end
-
-    resources :users do
-      get 'users' => 'users#index'
-      get 'users/:id' => 'users#show'
-    end
+    resources :players
+    resources :teams
+    resources :users
   end
 
   scope :module => "browser", defaults: { format: 'html' } do
     root :to => 'static#index'
-    get 'leagues' => 'groups#index'
-    get 'league/:group_id' => 'groups#show'
-    get 'league/:group_id/draft' => 'groups#draft'
-    get 'league/:group_id/standings' => 'groups#standings'
-    get 'league/:group_id/transactions' => 'groups#transactions'
-    get 'league/:group_id/scoreboard' => 'games#scoreboard'
-    get 'league/:group_id/schedule' => 'games#schedule'
-    get 'league/:group_id/team' => 'rosters#show'
-    get 'league/:group_id/team/:team_id' => 'rosters#show'
+
+    resources :leagues do
+      get 'draft' => 'groups#draft'
+      get 'news' => 'players#news'
+      get 'rules' => 'groups#rules'
+      get 'schedule' => 'groups#schedule'
+      get 'scores' => 'groups#scores'
+      get 'search' => 'players#search'
+      get 'standings' => 'groups#standings'
+      get 'stats' => 'players#stats'
+      get 'transactions' => 'groups#transactions'
+
+      resources :players
+
+      resources :teams do
+        get 'moves' => 'team#moves'
+        get 'trades' => 'teams#trades'
+      end
+    end
+
+    resources :users do
+    end
   end
 
   if Rails.env.development?

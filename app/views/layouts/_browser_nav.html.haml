@@ -1,7 +1,6 @@
-.navbar
+.navbar.navbar-inverse
   .navbar-inner
-    %a.brand{ href: "#{@group_id}", title: "League Home" }
-      Pre Pro East
+    = link_to "Browser Nav", league_path(1), class: "brand"
     %ul.nav
       %li.dropdown
         %a.dropdown-toggle{ href: "#", "data-toggle" => "dropdown" }
@@ -9,77 +8,59 @@
           %b.caret
         %ul.dropdown-menu
           %li
-            %a{ href: "leagues/1", title: "Teams & Rosters" }
-              Teams/Rosters
+            = link_to "Teams", league_path(1)
           %li
-            %a{ href: "leagues/1/standings", title: "League Standings" }
-              Standings
+            = link_to "Standings", league_standings_path(1)
           %li
-            %a{ href: "leagues/1/transactions", title: "League Transactions" }
-              Transactions
+            = link_to "Transactions", league_transactions_path(1)
           %li
-            %a{ href: "leagues/1/draft", title: "Draft Room" }
-              Draft
+            = link_to "Draft", league_draft_path(1)
+          %li
+            = link_to "Rules", league_rules_path(1)
       %li.dropdown
         %a.dropdown-toggle{ href: "#", "data-toggle" => "dropdown" }
           Team
           %b.caret
         %ul.dropdown-menu
           %li
-            %a{ href: "/team", title: "Roster Management" }
-              Roster
+            = link_to "Roster", league_team_path(1, 1)
           %li
-            %a{ href: "/add", title: "Add/Drop" }
-              Add/Drop
+            = link_to "Moves", league_team_moves_path(1, 1)
           %li
-            %a{ href: "/trades", title: "Trading Desk" }
-              Trades
+            = link_to "Trades", league_team_trades_path(1, 1)
       %li.dropdown
         %a.dropdown-toggle{ href: "#", "data-toggle" => "dropdown" }
           Games
           %b.caret
         %ul.dropdown-menu
           %li
-            %a{ href: "/scoreboard", title: "Scoreboard" }
-              Scoreboard
+            = link_to "Scores", league_scores_path(1)
           %li
-            %a{ href: "/schedule", title: "League and Team Schedules" }
-              Schedule
+            = link_to "Schedule", league_schedule_path(1)
       %li.dropdown
         %a.dropdown-toggle{ href: "#", "data-toggle" => "dropdown" }
           Players
           %b.caret
         %ul.dropdown-menu
           %li
-            %a{ href: "players" }
-              Search
+            = link_to "Search", league_search_path(1)
           %li
-            %a{ href: "/players/stats" }
-              Stats
+            = link_to "Stats", league_stats_path(1)
           %li
-            %a{ href: "/players/trends" }
-              Trends
+            = link_to "News", league_news_path(1)
       %li.dropdown
         %a.dropdown-toggle{ href: "#", "data-toggle" => "dropdown" }
           Account
           %b.caret
         %ul.dropdown-menu
           %li
-            %a{ href: "user/settings" }
-              %i.icon-wrench
-              Settings
+            = link_to "Settings", users_settings_path
           %li
-            %a{ href: "/players/notifications" }
-              %i.icon-envelope
-              Alerts/Emails
+            = link_to "Alerts", users_alerts_path
           %li
-            %a{ href: "/players/trends" }
-              %i.icon-off
-              Logout
+            = link_to "Logout", destroy_user_session_path
       #form.navbar-search.pull-left
         %input#nav-search.search-query{ type: "text", placeholder: "Player Search" }
-      %a.brand.pull-right{ href: "/" }
-        NGN
 - [:notice, :error, :alert].each do |level|
   - unless flash[level].blank?
     .alert{:class => "#{flash_class(level)}"}
