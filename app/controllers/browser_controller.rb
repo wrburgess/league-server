@@ -12,7 +12,7 @@ class BrowserController < ApplicationController
 
   def load_group_and_roster
     @group = Group.find(params[:group_id]) || 5
-    @roster = Roster.find(params[:roster_id]) || 3
+    @roster = Roster.find(1)
   end
 
 end

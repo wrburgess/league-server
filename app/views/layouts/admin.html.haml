@@ -12,7 +12,7 @@
   %body{ id: "#{@body_id}", class: "admin #{@body_class}" }
     #wrapper
       %header
-        = render :partial => 'layouts/admin_nav'
+        = render :partial => 'shared/admin/admin_nav'
       #content
         = yield
       %footer
