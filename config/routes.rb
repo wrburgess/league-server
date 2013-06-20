@@ -22,7 +22,6 @@ League::Application.routes.draw do
     resources :groups do
       get "draft" => "groups#draft"
       get "news" => "players#news"
-      get "rosters" => "groups#rosters"
       get "rules" => "groups#rules"
       get "schedule" => "groups#schedule"
       get "scores" => "groups#scores"

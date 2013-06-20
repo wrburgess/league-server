@@ -9,4 +9,8 @@ class Browser::RostersController < BrowserController
     @body_class = "page"
   end
 
+  def index
+
+  end
+
 end
