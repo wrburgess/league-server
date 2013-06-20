@@ -19,12 +19,20 @@ group :assets do
   gem "uglifier", "2.1.1"
 end
 
-group :test, :development do
+group :development do
+  gem "better_errors", "0.9.0"
+  gem "binding_of_caller", "0.7.2"
+end
+
+group :development, :test do
   gem "database_cleaner", "1.0.1"
   gem "debugger", "1.6.0"
   gem "dotenv-rails", "0.8.0"
   gem "factory_girl_rails", "4.2.1"
+  gem "faker", "1.1.2"
   gem "mail_view", "1.0.3"
+  gem "pry-rails", "0.3.1"
+  gem "pry-remote", "0.1.7"
   gem "rspec-rails", "2.13.2"
-  gem "shoulda-matchers", "2.2.0"
+  gem "shoulda", "3.5.0"
 end

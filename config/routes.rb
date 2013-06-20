@@ -19,7 +19,7 @@ League::Application.routes.draw do
   scope :module => "browser", defaults: { format: 'html' } do
     root :to => 'static#index'
 
-    resources :leagues do
+    resources :groups do
       get 'draft' => 'groups#draft'
       get 'news' => 'players#news'
       get 'rules' => 'groups#rules'

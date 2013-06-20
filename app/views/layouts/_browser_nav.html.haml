@@ -1,6 +1,6 @@
 .navbar.navbar-inverse
   .navbar-inner
-    = link_to "Browser Nav", league_path(1), class: "brand"
+    = link_to "Browser Nav", group_path(@group), class: "brand"
     %ul.nav
       %li.dropdown
         %a.dropdown-toggle{ href: "#", "data-toggle" => "dropdown" }
@@ -8,46 +8,46 @@
           %b.caret
         %ul.dropdown-menu
           %li
-            = link_to "Teams", league_path(1)
+            = link_to "Teams", group_path(@group)
           %li
-            = link_to "Standings", league_standings_path(1)
+            = link_to "Standings", group_standings_path(@group)
           %li
-            = link_to "Transactions", league_transactions_path(1)
+            = link_to "Transactions", group_transactions_path(@group)
           %li
-            = link_to "Draft", league_draft_path(1)
+            = link_to "Draft", group_draft_path(@group)
           %li
-            = link_to "Rules", league_rules_path(1)
+            = link_to "Rules", group_rules_path(@group)
       %li.dropdown
         %a.dropdown-toggle{ href: "#", "data-toggle" => "dropdown" }
           Team
           %b.caret
         %ul.dropdown-menu
           %li
-            = link_to "Roster", league_team_path(1, 1)
+            = link_to "Roster", group_team_path(@group, @roster)
           %li
-            = link_to "Moves", league_team_moves_path(1, 1)
+            = link_to "Moves", group_team_moves_path(@group, @roster)
           %li
-            = link_to "Trades", league_team_trades_path(1, 1)
+            = link_to "Trades", group_team_trades_path(@group, @roster)
       %li.dropdown
         %a.dropdown-toggle{ href: "#", "data-toggle" => "dropdown" }
           Games
           %b.caret
         %ul.dropdown-menu
           %li
-            = link_to "Scores", league_scores_path(1)
+            = link_to "Scores", group_scores_path(@group)
           %li
-            = link_to "Schedule", league_schedule_path(1)
+            = link_to "Schedule", group_schedule_path(@group)
       %li.dropdown
         %a.dropdown-toggle{ href: "#", "data-toggle" => "dropdown" }
           Players
           %b.caret
         %ul.dropdown-menu
           %li
-            = link_to "Search", league_search_path(1)
+            = link_to "Search", group_search_path(@group)
           %li
-            = link_to "Stats", league_stats_path(1)
+            = link_to "Stats", group_stats_path(@group)
           %li
-            = link_to "News", league_news_path(1)
+            = link_to "News", group_news_path(@group)
       %li.dropdown
         %a.dropdown-toggle{ href: "#", "data-toggle" => "dropdown" }
           Account
