@@ -9,7 +9,7 @@ League::Application.routes.draw do
     get 'settings' => 'users#settings'
   end
 
-  namespace :admin do
+  namespace :admin, defaults: { format: 'html' } do
     root :to => 'static#index'
     resources :players
     resources :teams
@@ -30,11 +30,20 @@ League::Application.routes.draw do
       get 'stats' => 'players#stats'
       get 'transactions' => 'groups#transactions'
 
+      namespace :settings do
+        root :to => 'groups#settings'
+        get 'scoring' => 'groups#scoring'
+      end
+
       resources :players
 
-      resources :teams do
+      resources :rosters do
         get 'moves' => 'team#moves'
         get 'trades' => 'teams#trades'
+
+        namespace :settings do
+          root :to => 'rosters#settings'
+        end
       end
     end
 

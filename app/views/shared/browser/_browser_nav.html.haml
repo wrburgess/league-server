@@ -17,17 +17,21 @@
             = link_to "Draft", group_draft_path(@group)
           %li
             = link_to "Rules", group_rules_path(@group)
+          %li
+            = link_to "Settings", group_settings_root_path(@group)
       %li.dropdown
         %a.dropdown-toggle{ href: "#", "data-toggle" => "dropdown" }
           Team
           %b.caret
         %ul.dropdown-menu
           %li
-            = link_to "Roster", group_team_path(@group, @roster)
+            = link_to "Roster", group_roster_path(@group, @roster)
           %li
-            = link_to "Moves", group_team_moves_path(@group, @roster)
+            = link_to "Moves", group_roster_moves_path(@group, @roster)
           %li
-            = link_to "Trades", group_team_trades_path(@group, @roster)
+            = link_to "Trades", group_roster_trades_path(@group, @roster)
+          %li
+            = link_to "Settings", group_roster_settings_root_path(@group, @roster)
       %li.dropdown
         %a.dropdown-toggle{ href: "#", "data-toggle" => "dropdown" }
           Games
