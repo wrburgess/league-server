@@ -4,7 +4,6 @@ ruby "2.0.0"
 gem "rails", "3.2.13"
 
 gem "devise", "2.2.4"
-gem "faker", "1.1.2"
 gem "json", "1.8.0"
 gem "jquery-rails", "3.0.1"
 gem "newrelic_rpm", "3.6.4.122"
@@ -25,6 +24,7 @@ group :development do
 end
 
 group :development, :test do
+  gem "capybara", "2.1.0"
   gem "database_cleaner", "1.0.1"
   gem "debugger", "1.6.0"
   gem "dotenv-rails", "0.8.0"

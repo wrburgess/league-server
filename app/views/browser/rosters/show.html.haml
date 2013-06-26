@@ -9,9 +9,9 @@
       %th
         Player
   %tbody
-    - @roster.each do |roster|
+    - @roster.players.each do |player|
       %tr
         %td
           Slot
         %td
-          = roster.player.full_name
+          = player.full_name

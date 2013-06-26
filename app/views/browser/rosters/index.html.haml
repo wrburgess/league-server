@@ -1,0 +1,17 @@
+%h1
+  League Teams
+
+%table
+  %thead
+    %tr
+      %th
+        Helmet
+      %th
+        Team
+  %tbody
+    - @group.rosters.each do |roster|
+      %tr
+        %td
+          Helmet
+        %td
+          = roster.name

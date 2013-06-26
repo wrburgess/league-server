@@ -2,6 +2,7 @@ class Browser::GroupsController < BrowserController
   protect_from_forgery
 
   def draft
+    @group = Group.find(params[:group_id])
 
     @page_title = "Draft Room"
     @body_id = "group_draft"
@@ -28,7 +29,7 @@ class Browser::GroupsController < BrowserController
     @group = Group.find(params[:group_id])
 
     @page_title = "Standings"
-    @body_id = "standings"
+    @body_id = "group_standings"
     @body_class = "page"
   end
 
@@ -36,7 +37,7 @@ class Browser::GroupsController < BrowserController
     @group = Group.find(params[:group_id])
 
     @page_title = "Transactions"
-    @body_id = "transactions"
+    @body_id = "group_transactions"
     @body_class = "page"
   end
 
