@@ -9,18 +9,10 @@ class Browser::GroupsController < BrowserController
     @body_class = "page"
   end
 
-  def index
-    @groups = Group.all
-
-    @page_title = "Leagues"
-    @body_id = "group_index"
-    @body_class = "page"
-  end
-
   def show
     @group = Group.find(params[:group_id])
 
-    @page_title = "Home"
+    @page_title = "League Home"
     @body_id = "group_show"
     @body_class = "page"
   end

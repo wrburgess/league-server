@@ -20,13 +20,10 @@ describe Browser::GroupsController do
       response.should render_template :draft
       response.should render_template layout: "layouts/browser"
     end
-  end
 
-  describe "#index" do
-    it "renders the 'index' template under the 'browser' layout" do
-      get :index, group_id: @group, id: @roster1
-      response.should render_template :index
-      response.should render_template layout: "layouts/browser"
+    it "assigns the requested group to @group" do
+      get :draft, group_id: @group, id: @roster1
+      expect(assigns(:group)).to eq @group
     end
   end
 
@@ -36,6 +33,11 @@ describe Browser::GroupsController do
       response.should render_template :show
       response.should render_template layout: "layouts/browser"
     end
+
+    it "assigns the requested group to @group" do
+      get :show, group_id: @group, id: @roster1
+      expect(assigns(:group)).to eq @group
+    end
   end
 
   describe "#standings" do
@@ -44,6 +46,11 @@ describe Browser::GroupsController do
       response.should render_template :standings
       response.should render_template layout: "layouts/browser"
     end
+
+    it "assigns the requested group to @group" do
+      get :standings, group_id: @group, id: @roster1
+      expect(assigns(:group)).to eq @group
+    end
   end
 
   describe "#transactions" do
@@ -51,6 +58,11 @@ describe Browser::GroupsController do
       get :transactions, group_id: @group, id: @roster1
       response.should render_template :transactions
       response.should render_template layout: "layouts/browser"
+    end
+
+    it "assigns the requested group to @group" do
+      get :transactions, group_id: @group, id: @roster1
+      expect(assigns(:group)).to eq @group
     end
   end
 
