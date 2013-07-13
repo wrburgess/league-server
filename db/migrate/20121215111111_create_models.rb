@@ -32,6 +32,13 @@ class CreateModels < ActiveRecord::Migration
       t.datetime "updated_at",    :null => false
     end
 
+    create_table "player_conferences", :force => true do |t|
+      t.string   "name"
+      t.string   "abbreviation",  :null => false
+      t.datetime "created_at",    :null => false
+      t.datetime "updated_at",    :null => false
+    end
+
     create_table "player_stat_games", :force => true do |t|
       t.integer  "player_id",  :null => false
       t.integer  "season",  :null => false

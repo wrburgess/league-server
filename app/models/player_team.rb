@@ -8,6 +8,8 @@ class PlayerTeam < ActiveRecord::Base
   has_many :group_player_teams
   has_many :groups, :through => :group_player_teams
 
+  belongs_to :player_conference
+
   def full_name
     "#{location_name} #{nickname}"
   end

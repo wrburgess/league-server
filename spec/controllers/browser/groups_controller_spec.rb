@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Browser::GroupsController do
+describe Browser::GroupsController, :type => :controller do
 
   before do
     @group = FactoryGirl.create(:group)
@@ -28,6 +28,12 @@ describe Browser::GroupsController do
   end
 
   describe "#show" do
+    
+    it "should respond with status code 200" do
+      subject { get :show, group_id: @group, id: @roster1 }
+      response.should respond_with 200
+    end
+
     it "renders the 'show' template under the 'browser' layout" do
       get :show, group_id: @group, id: @roster1
       response.should render_template :show

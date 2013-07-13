@@ -4,47 +4,36 @@ RosterSlotType.create(name: "Injured", abbreviation: "INJ", weight: 30)
 RosterSlotType.create(name: "Suspended", abbreviation: "SUSP", weight: 40)
 RosterSlotType.create(name: "Redshirt", abbreviation: "RS", weight: 50)
 
-RosterSlotPosition.create(name: "Quarterback", abbreviation: "QB", weight: 100)
-RosterSlotPosition.create(name: "Running Back", abbreviation: "RB", weight: 200)
-RosterSlotPosition.create(name: "Wide Receiver", abbreviation: "WR", weight: 300)
-RosterSlotPosition.create(name: "Tight End", abbreviation: "TE", weight: 400)
-RosterSlotPosition.create(name: "Flex QB/RB", abbreviation: "QB/RB", weight: 500)
-RosterSlotPosition.create(name: "Flex QB/RB/WR", abbreviation: "QB/RB/WR", weight: 510)
-RosterSlotPosition.create(name: "Flex QB/RB/WR/TE", abbreviation: "QB/RB/WR/TE", weight: 520)
-RosterSlotPosition.create(name: "Flex RB/WR", abbreviation: "RB/WR", weight: 530)
-RosterSlotPosition.create(name: "Flex RB/TE", abbreviation: "RB/TE", weight: 540)
-RosterSlotPosition.create(name: "Flex RB/WR/TE", abbreviation: "RB/WR/TE", weight: 550)
-RosterSlotPosition.create(name: "Flex WR/TE", abbreviation: "WR/TE", weight: 560)
-RosterSlotPosition.create(name: "Placekicker", abbreviation: "PK", weight: 600)
-RosterSlotPosition.create(name: "Defensive/Special Team", abbreviation: "DFST", weight: 710)
-RosterSlotPosition.create(name: "Defensive Team", abbreviation: "DF", weight: 820)
-RosterSlotPosition.create(name: "Special Teams", abbreviation: "ST", weight: 930)
+RosterSlotPosition.create(name: "Guard", abbreviation: "GRD", weight: 100)
+RosterSlotPosition.create(name: "Forward", abbreviation: "FWD", weight: 200)
+RosterSlotPosition.create(name: "Center", abbreviation: "CNT", weight: 300)
 
-PlayerPosition.create(name: "Quarterback", abbreviation: "QB", weight: 100) #1
-PlayerPosition.create(name: "Running Back", abbreviation: "RB", weight: 200) #2
-PlayerPosition.create(name: "Wide Receiver", abbreviation: "WR", weight: 300) #3
-PlayerPosition.create(name: "Tight End", abbreviation: "TE", weight: 400) #4
-PlayerPosition.create(name: "Placekicker", abbreviation: "PK", weight: 500) #5
-PlayerPosition.create(name: "Defensive/Special Team", abbreviation: "DFST", weight: 600) #6
-PlayerPosition.create(name: "Defensive Team", abbreviation: "DF", weight: 700) #7
-PlayerPosition.create(name: "Special Teams", abbreviation: "ST", weight: 800) #8
+PlayerPosition.create(name: "Guard", abbreviation: "GRD", weight: 100) #1
+PlayerPosition.create(name: "Forward", abbreviation: "FWD", weight: 200) #2
+PlayerPosition.create(name: "Center", abbreviation: "CNT", weight: 300) #3
 
 (1..50).each do |u|
-  user = User.create(email: "user#{u}@example.com", password: "secret")
-  puts "User created: user#{u}@example.com"
+  user = User.create(email: Faker.email, password: "secret")
 end
+puts "Users created: 50"
 
 admin_user = User.create(email: "wrburgess@wrburgess.com", password: "secret")
+puts "Admin user created: 1"
+
+CSV.foreach("#{Rails.root}/db/fill/player_teams.csv") do |row|
+  Conference.create!(id: row["id"], name: row["name"], abbreviation: row["abbreviation"])
+end
+puts "Conferences created"
 
 CSV.foreach("#{Rails.root}/db/fill/player_teams.csv") do |row|
   PlayerTeam.create!(location_name: row[0], nickname: row[1], abbreviation: row[2])
   puts "PlayerTeam created: #{row[0]}, #{row[1]}, #{row[2]}"
 end
 
-CSV.foreach("#{Rails.root}/db/fill/groups.csv", :headers => :first_row) do |row|
-  Group.create!(name: row[0], abbreviation: row[1])
-  puts "Roster created: #{row[0]}, #{row[1]}"
+(1..15).each_with_index do |league, index|
+  Group.create!(name: "League #{index}", abbreviation: "L#{index}")
 end
+puts "15 leagues created"
 
 CSV.foreach("#{Rails.root}/db/fill/rosters.csv", :headers => :first_row) do |row|
   roster = Roster.create!(name: row[0], abbreviation: row[1])
