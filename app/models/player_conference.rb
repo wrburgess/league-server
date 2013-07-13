@@ -7,6 +7,6 @@ class PlayerConference < ActiveRecord::Base
   has_many :players, :through => :player_teams
 
   def full_name
-    "#{name} (#{abbreviation}"
+    "#{name} Conference (#{abbreviation})"
   end
 end

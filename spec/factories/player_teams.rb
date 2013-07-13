@@ -3,5 +3,6 @@ FactoryGirl.define do
     location_name "Georgia"
     nickname "Bulldogs"
     abbreviation "GA"
+    player_conference
   end
 end

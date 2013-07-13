@@ -13,51 +13,49 @@ PlayerPosition.create(name: "Forward", abbreviation: "FWD", weight: 200) #2
 PlayerPosition.create(name: "Center", abbreviation: "CNT", weight: 300) #3
 
 (1..50).each do |u|
-  user = User.create(email: Faker.email, password: "secret")
+  user = User.create(email: Faker::Internet.email, password: "secret")
 end
-puts "Users created: 50"
+puts "Users created"
 
 admin_user = User.create(email: "wrburgess@wrburgess.com", password: "secret")
-puts "Admin user created: 1"
+puts "Admin User created"
 
-CSV.foreach("#{Rails.root}/db/fill/player_teams.csv") do |row|
-  Conference.create!(id: row["id"], name: row["name"], abbreviation: row["abbreviation"])
+CSV.foreach("#{Rails.root}/db/fill/player_conferences.csv", :headers => :first_row) do |row|
+  PlayerConference.create!(id: row["id"], name: row["name"], abbreviation: row["abbreviation"])
 end
-puts "Conferences created"
+puts "PlayerConferences created"
 
-CSV.foreach("#{Rails.root}/db/fill/player_teams.csv") do |row|
+CSV.foreach("#{Rails.root}/db/fill/player_teams.csv", :headers => :first_row) do |row|
   PlayerTeam.create!(location_name: row[0], nickname: row[1], abbreviation: row[2])
-  puts "PlayerTeam created: #{row[0]}, #{row[1]}, #{row[2]}"
 end
+puts "PlayerTeams created"
 
 (1..15).each_with_index do |league, index|
   Group.create!(name: "League #{index}", abbreviation: "L#{index}")
 end
-puts "15 leagues created"
+puts "Groups created"
 
 CSV.foreach("#{Rails.root}/db/fill/rosters.csv", :headers => :first_row) do |row|
   roster = Roster.create!(name: row[0], abbreviation: row[1])
 
   (1..15).each do |rsg|
     RosterStatGame.create!(roster_id: roster.id, season: 2012, week: rsg)
-    puts "RosterStatGame created"
   end
 
   (1..15).each do |rsg|
     RosterStatGame.create!(roster_id: roster.id, season: 2013, week: rsg)
-    puts "RosterStatGame created"
   end
 
   RosterStatSeason.create!(roster_id: roster.id, season: 2012)
-  puts "RosterStatSeason created"
   RosterStatSeason.create!(roster_id: roster.id, season: 2013)
-  puts "RosterStatSeason created"
-
   RosterStatCareer.create!(roster_id: roster.id)
-  puts "RosterStatCareer created"
 
   puts "Roster created: #{row[0]}, #{row[1]}"
 end
+
+puts "RosterStatGames created"
+puts "RosterStatSeasons created"
+puts "RosterStatCareers created"
 
 (1..8).each do |group|
   (1..50).each do |entry|
@@ -119,10 +117,10 @@ end
       season: "2013",
       week: gs
     )
-    puts "GameStat created: John#{p} Wilson#{p}, Team: #{player_team_id}"
     game_date + 7.days
   end
-
+  puts "GameStats created"
+  
   # (1..50).each do |roster|
   #   (1..14).each do |week|
   #     (1.15).each do |roster_slot_fill|
