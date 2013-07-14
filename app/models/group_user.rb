@@ -1,5 +1,5 @@
 class GroupUser < ActiveRecord::Base
-  attr_accessible :group_id, :user_id, :founder, :owner, :viewer
+  # attr_accessible :group_id, :user_id, :founder, :owner, :viewer
 
   validates_presence_of :group_id, :user_id
   validates_inclusion_of :founder, :in => [true, false]

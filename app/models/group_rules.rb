@@ -1,5 +1,5 @@
 class GroupRule < ActiveRecord::Base
-  attr_accessible :group_id, :season
+  # attr_accessible :group_id, :season
 
   validates_presence_of :group_id, :season
 

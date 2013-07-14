@@ -1,5 +1,5 @@
 class GroupDivision < ActiveRecord::Base
-  attr_accessible :group_id, :name, :weight
+  # attr_accessible :group_id, :name, :weight
 
   validates_presence_of :group_id, :name, :weight
 

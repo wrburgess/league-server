@@ -1,5 +1,5 @@
 class PlayerTeam < ActiveRecord::Base
-  attr_accessible :location_name, :nickname, :abbreviation
+  # attr_accessible :location_name, :nickname, :abbreviation
 
   validates_presence_of :location_name, :nickname, :abbreviation
 

@@ -1,5 +1,5 @@
 class GroupPlayerTeam < ActiveRecord::Base
-  attr_accessible :group_id, :player_team_id
+  # attr_accessible :group_id, :player_team_id
 
   validates_presence_of :group_id, :player_team_id
 
