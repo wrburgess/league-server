@@ -3,7 +3,7 @@ language:
 rvm:
   - 2.0.0
 env:
-  - RAILS=3.2.13
+  - RAILS=4.0.0
   - DB=postgresql
 branches:
   only:
