@@ -4,6 +4,7 @@ A fantasy sports league engine
 
 [![Build Status](https://travis-ci.org/wrburgess/league-server.png)](https://travis-ci.org/wrburgess/league-server)
 [![Dependency Status](https://gemnasium.com/wrburgess/league-server.png)](https://gemnasium.com/wrburgess/league-server)
+[![Code Climate](https://codeclimate.com/github/wrburgess/league-server.png)](https://codeclimate.com/github/wrburgess/league-server)
 
 ## Rake Tasks
 
