@@ -3,12 +3,13 @@ source "https://rubygems.org"
 ruby "2.0.0"
 gem "rails", "4.0.0"
 
+gem "coveralls", "0.6.7", require: false
 gem "devise", "3.0.0"
 gem "json", "1.8.0"
 gem "jquery-rails", "3.0.4"
 gem "newrelic_rpm", "3.6.5.130"
 gem "pg", "0.15.1"
-gem "resque", "1.24.1", :require => "resque/server"
+gem "resque", "1.24.1", require: "resque/server"
 gem "settingslogic", "2.0.9"
 gem "unicorn", "4.6.3"
 
