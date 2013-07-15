@@ -1,249 +1,249 @@
-id,name,nickname,abbrev,conference_id,division_id,url
-1,Bye Week,No Game,Bye,BYE,None,-0
-2,NA,NA,NA,NA,None,NULL
-3,TBD,TBD,TBD,A,None,NULL
-4,Air Force,Falcons,AF,MWC,None,www.goairforcefalcons.com
-5,Arkansas-Pine Bluff,Arkies,AKPB,SWEST,None,www.ark.com
-6,Akron,Zips,AKRN,MAC,East,www.gozips.com
-7,Arkansas St,Indians,AKST,SUNB,None,www.asuindians.com
-8,Alabama,Tide,ALA,SEC,West,www.rolltide.com
-9,Alabama A&M,Snakes,ALAM,OTHER,None,none
-10,Albany,Great Danes,ALBAN,NEC,None,www.ualbanysports.com/
-11,Alcorn State,Braves,ALCR,SWEST,None,www.google.com
-12,Alabama State,Hornets,ALST,SWEST,NULL,none
-13,Appalachian State,Mountaineers,APST,SOCON,None,www.goasu.com
-14,Arkansas,Razorbacks,ARK,SEC,West,www.hogwired.com
-15,Army,Cadets,ARMY,IND,None,www.goarmysports.com
-16,Arizona,Wildcats,ARZ,PAC10,None,www.arizonaathletics.com
-17,Auburn,Tigers,AUB,SEC,West,www.auburntigers.com
-18,Austin Peay,Governors,AUPY,OVC,None,www.apsu.edu/letsgopeay
-19,Arizona St,Sun Devils,AZST,PAC10,None,www.thesundevils.com
-20,Baylor,Bears,BAY,BIG12,South,www.baylorbears.com
-21,Boston College,Eagles,BC,ACC,Atlantic,www.bceagles.com
-22,Bucknell,Bison,BCKNL,PATRT,NULL,none
-23,Bethune-Cookman,Wildcats,BECK,MDEAS,None,www4.cookman.edu/athletics/
-24,Bowling Green,Falcons,BGSU,MAC,East,www.bgsufalcons.com
-25,Ball State,Cardinals,BLST,MAC,West,www.ballstatesports.com
-26,Boise State,Broncos,BOST,WAC,None,www.broncosports.com
-27,Brown,Bears,BROWN,IVY,NULL,none
-28,Buffalo,Bulls,BUFF,MAC,East,www.ubathletics.buffalo.edu
-29,Butler,Bulldogs,BUTLR,PIONF,NULL,NULL
-30,Brigham Young,Cougars,BYU,MWC,None,www.byucougars.com
-31,California,Bears,CAL,PAC10,None,www.calbears.com
-32,UC Davis,Aggies,CALD,OTHER,None,www.ucdavisaggies.com
-33,Campbell,Fighting Camels,CAMPB,PIONF,NULL,NULL
-34,Central Arkansas,Bears,CARK,STHLN,None,-0
-35,Central Conn. State,Blue Devils,CCST,NEC,NULL,NULL
-36,Central Florida,Knights,CFLA,CUSA,East,www.ucfathletics.com
-37,Charleston Southern,Buccaneers,CHASO,BIGSO,None,NULL
-38,Tenn-Chattanooga,Mocs,CHATT,SOCON,None,www.gomocs.com
-39,College of Charleston,Cougars,CHRLS,SOCON,None,www.cofcsports.com
-40,Cincinnati,Bearcats,CIN,BIGE,None,www.ucbearcats.com
-41,Citadel,Bulldogs,CIT,SOCON,None,www.citadelsports.com
-42,Clemson,Tigers,CLEM,ACC,Atlantic,www.clemsontigers.com
-43,Central Michigan,Chippewas,CMCH,MAC,West,www.cmuchippewas.com
-44,Coastal Carolina,Chanticleers,COCAR,BIGSO,None,NULL
-45,Colorado,Buffaloes,COL,BIG12,North,www.cubuffs.com
-46,Colgate,Raiders,COLGT,PATRT,NULL,NULL
-47,Columbia,Lions,COLUM,IVY,NULL,NULL
-48,Cornell,Big Red,CORNL,IVY,NULL,NULL
-49,Colorado St,Rams,COST,MWC,None,www.csurams.com
-50,CalPoly,Mustangs,CPOLY,OTHER,None,www.calpolymustangs.com
-51,Dartmouth,Big Green,DART,IVY,NULL,NULL
-52,Davidson,Wildcats,DAVD,PIONF,None,www2.davidson.edu/athletics/ath_home.asp
-53,Dayton,Flyers,DAYTN,PIONF,NULL,NULL
-54,Delaware,Blue Hens,DEL,COL,None,NULL
-55,Delaware State,Hornets,DEST,MDEAS,None,NULL
-56,Drake,Bulldogs,DRAKE,PIONF,NULL,NULL
-57,Duke,Blue Devils,DUKE,ACC,Coastal,www.goduke.com
-58,Duquesne,Dukes,DUQNE,NEC,NULL,NULL
-59,East Carolina,Pirates,ECU,CUSA,East,www.ecupirates.com
-60,Eastern Illinois,Panthers,EILL,OVC,None,www.eiu.edu/~sprtinfo/welcome.htm
-61,Eastern Kentucky,Colonels,EKY,OVC,None,www.ekusports.com
-62,Elon,Phoenix,ELON,SOCON,None,-0
-63,Eastern Michigan,Eagles,EMCH,MAC,West,www.emueagles.com
-64,Eastern Washington,Eagles,EWASH,BIGSK,None,www.ewu.edu/x355.xml
-65,FLA Atlantic,Owls,FAU,SUNB,None,www.FAUSports.com
-66,FLA Intl,Panthers,FIU,SUNB,None,www.fiusports.com
-67,Florida,Gators,FLA,SEC,East,www.gatorzone.com
-68,Florida A&M,Rattlers,FLAM,MDEAS,None,-0
-69,Fordham,Rams,FORDH,PATRT,NULL,NULL
-70,Fresno State,Bulldogs,FRST,WAC,None,www.gobulldogs.com
-71,Florida State,Seminoles,FSU,ACC,Atlantic,www.seminoles.com
-72,Furman,Paladins,FUR,SOCON,None,www.google.com
-73,Georgia,Bulldogs,GA,SEC,East,www.georgiadogs.com
-74,Georgia Southern,Eagles,GASO,SOCON,None,-0
-75,Gardner-Webb,Runnin' Bulldogs,GAWB,BIGSO,None,-0
-76,Georgetown,Hoyas,GEORG,PATRT,NULL,NULL
-77,Grambling,Bulldogs,GRMBL,SWEST,None,-0
-78,Georgia Tech,Jackets,GTCH,ACC,Coastal,www.ramblinwreck.com
-79,Hampton,Pirates,HAMP,MDEAS,None,www.hamptonpirates.com
-80,Harvard,Crimson,HARV,IVY,NULL,NULL
-81,Hawaii,Warriors,HAW,WAC,None,www.hawaiiathletics.com
-82,Hofstra,Pride,HOFS,COL,None,www.google.com
-83,Holy Cross,Crusaders,HOLCR,PATRT,NULL,NULL
-84,Houston,Cougars,HOU,CUSA,West,www.uhcougars.com
-85,Howard,Bisons,HOW,MDEAS,None,www.bisonmania.com
-86,Idaho,Vandals,IDAH,WAC,None,www.govandals.com
-87,Idaho State,Bengals,IDST,BIGSK,None,www.isubengals.com
-88,Illinois,Illini,ILL,BIG10,None,www.fightingillini.com
-89,Illinois State,Redbirds,ILLST,MVC,None,-0
-90,Indiana,Hoosiers,IND,BIG10,None,www.iuhoosiers.com
-91,Indiana State,Sycamores,INST,MVC,None,-0
-92,Iona,Gaels,IONA,OTHER,NULL,NULL
-93,Iowa,Hawkeyes,IOWA,BIG10,None,www.hawkeyesports.com
-94,Iowa State,Cyclones,IWST,BIG12,North,www.cyclones.com
-95,Jackson State,Tigers,JACK,SWEST,NULL,NULL
-96,Jacksonville,Dolphins,JAX,PIONF,NULL,NULL
-97,Jacksonville St,Gamecocks,JAXST,OVC,None,www.jsugamecocksports.com
-98,James Madison,Madisons,JMAD,COL,None,www.jamesmadison.edu
-99,Kansas,Jayhawks,KAN,BIG12,North,www.kuathletics.com
-100,Kent State,Golden Flashes,KENT,MAC,East,www.kentstatesports.com
-101,Kansas State,Wildcats,KNST,BIG12,North,www.kstatesports.com
-102,Kentucky,Wildcats,KTKY,SEC,East,www.ukathletics.com
-103,Lafayette,Leopards,LAF,PATRT,NULL,NULL
-104,La-Lafayette,Cajuns,LALF,SUNB,None,www.ragincajuns.com
-105,La-Monroe,Warhawks,LAMO,SUNB,None,www.ulmathletics.com
-106,Lousiana Tech,Bulldogs,LATC,WAC,None,www.latechsports.com
-107,Lehigh,Mountain Hawks,LEHGH,PATRT,NULL,NULL
-108,Liberty,Flames,LIB,BIGSO,None,-0
-109,Louisville,Cardinals,LOU,BIGE,None,www.uoflsports.com
-110,LSU,Tigers,LSU,SEC,West,www.lsusports.net
-111,Maine,Black Bears,MAINE,COL,None,http://www.goblackbears.com/
-112,Marist,Red Foxes,MARST,OTHER,NULL,NULL
-113,Massachusettes,Minutemen,MASS,COL,None,www.google.com
-114,McNeese State,Cowboys,MCNS,STHLN,None,www.mcneesesports.com
-115,Mid Tenn,Raiders,MDTN,SUNB,None,www.goblueraiders.com
-116,Memphis,Tigers,MEM,CUSA,East,www.gotigersgo.com
-117,Morgan State,Bears,MGST,MDEAS,None,www.morganstatebears.com
-118,Miami (FL),Hurricanes,MIA,ACC,Coastal,www.hurricanesports.com
-119,Michigan,Wolverines,MICH,BIG10,None,www.mgoblue.com
-120,Minnesota,Gophers,MINN,BIG10,None,www.gophersports.com
-121,Miami (OH),RedHawks,MIOH,MAC,East,www.muredhawks.com
-122,Ole Miss,Rebels,MISS,SEC,West,www.olemisssports.com
-123,Michigan St,Spartans,MIST,BIG10,None,www.msuspartans.com
-124,Missouri,Tigers,MO,BIG12,North,mutigers.cstv.com
-125,Monmouth,Hawks,MONMT,NEC,NULL,NULL
-126,Montana St,Bobcats,MONST,BIGSK,None,-0
-127,Montana,Grizzlies,MONT,BIGSK,None,-0
-128,Missouri St,Bears,MOST,MVC,None,-0
-129,Marshall,Herd,MRSH,CUSA,East,www.herdzone.com
-130,Morehead State,Eagles,MRST,PIONF,None,www.msueagles.com
-131,Miss State,Bulldogs,MSU,SEC,West,www.mstateathletics.com
-132,Murray State,Racers,MURST,OVC,None,www.goracers.com
-133,Miss. Valley St.,Delta Devils,MVSU,SWEST,NULL,NULL
-134,Maryland,Terrapins,MYLD,ACC,Atlantic,www.umterps.com
-135,Navy,Midshipmen,NAVY,IND,None,www.navysports.com
-136,North Carolina A&T,Aggies,NCAT,MDEAS,None,www.ncataggies.com
-137,North Carolina Central,Humans,NCCEN,OTHER,None,www.google.com
-138,Northern Colorado,Bears,NCOL,BIGSK,None,www.google.com
-139,NC State,Wolfpack,NCST,ACC,Atlantic,www.gopack.com
-140,Notre Dame,Irish,ND,IND,None,www.und.com
-141,North Dakota,Bisons,NDAK,GWC,None,NULL
-142,North Dakota State,Bison,NDKST,MVC,None,www.nmnathletics.com
-143,Northeastern,Huskies,NEAST,COL,None,www.gonu.com
-144,Nebraska,Cornhuskers,NEB,BIG12,North,www.huskers.com
-145,Nevada,Wolfpack,NEV,WAC,None,www.nevadawolfpack.com
-146,Norfolk State,Spartans,NFST,MDEAS,None,www.nsu.edu/athletics/
-147,New Hampshire,Wildcats,NHMP,COL,None,www.unhwildcats.com/
-148,Nicholls State,Colonels,NICST,STHLN,None,www.colonelsports.com
-149,Northern Iowa,Panthers,NIOWA,MVC,None,-0
-150,Northern Illinois,Huskies,NIU,MAC,West,www.niuhuskies.com
-151,New Mexico,Lobos,NMEX,MWC,None,www.golobos.com
-152,New Mexico St,Aggies,NMSU,WAC,None,www.nmstatesports.com
-153,Northern Arizona,Lumberjacks,NOAZ,BIGSK,None,-0
-154,North Texas,Mean Green,NOTX,SUNB,None,www.meangreensports.com
-155,Northwestern St,Demons,NWST,STHLN,None,www.nsudemons.com
-156,Northwestern,Wildcats,NWU,BIG10,None,www.nusports.com
-157,Ohio,Bobcats,OHIO,MAC,East,www.ohiobobcats.com
-158,Oklahoma,Sooners,OKLA,BIG12,South,www.soonersports.com
-159,Oklahoma St,Cowboys,OKST,BIG12,South,www.okstate.com
-160,Oregon,Ducks,ORE,PAC10,None,www.goducks.com
-161,Oregon State,Beavers,ORST,PAC10,None,www.osubeavers.com
-162,Ohio State,Buckeyes,OSU,BIG10,None,www.ohiostatebuckeyes.com
-163,Penn,Quakers,PENN,IVY,NULL,NULL
-164,Pittsburgh,Panthers,PITT,BIGE,None,www.pittsburghpanthers.com
-165,Presbyterian,Blue Hose,PRBYT,BIGSO,None,NULL
-166,Princeton,Tigers,PRCTN,IVY,NULL,NULL
-167,Portland State,Vikings,PRTST,BIGSK,None,www.goviks.com
-168,Penn State,Nittany Lions,PSU,BIG10,None,www.gopsusports.com
-169,Purdue,Boilermakers,PUR,BIG10,None,www.purduesports.com
-170,Prarie View A&M,Panthers,PVAM,SWEST,NULL,NULL
-171,Rhode Island,Rams,RI,COL,None,www.google.com
-172,Rice,Owls,RICE,CUSA,West,www.riceowls.com
-173,Richmond,Spiders,RICH,COL,None,-0
-174,Robert Morris,Colonials,ROBMO,NEC,NULL,NULL
-175,Rutgers,Scarlet Knights,RUT,BIGE,None,www.scarletknights.com
-176,Sacremento State,Wildcats,SACST,BIGSK,None,www.google.com
-177,Sacred Heart,Pioneers,SAHRT,NEC,NULL,NULL
-178,Samford,Bulldogs,SAMF,SOCON,None,www.samfordsports.com
-179,Savannah State,Tigers,SAVST,OTHER,NULL,NULL
-180,South Carolina State,Bulldogs,SCST,MDEAS,None,www.scsusports.com
-181,South Dakota State,Jacks,SDKST,MVC,None,www.gojacks.com
-182,San Diego St,Aztecs,SDST,MWC,None,www.goaztecs.com
-183,SE Louisiana,Lions,SELA,STHLN,None,www.lionsports.net
-184,SE Missouri St,Redhawks,SEMO,OVC,None,www.gosoutheast.com
-185,Stephen Austin,Lumberjacks,SFA,STHLN,None,www.sfajacks.com
-186,Sam Houston State,Bearkats,SHST,STHLN,None,www.gobearkats.com
-187,San Jose St,Spartans,SJST,WAC,None,www.sjsuspartans.com
-188,Southern Miss,Eagles,SMISS,CUSA,East,www.southernmiss.com
-189,SMU,Mustangs,SMU,CUSA,West,www.smumustangs.com
-190,San Diego,Toreros,SNDGO,PIONF,NULL,NULL
-191,South Carolina,Gamecocks,SOCAR,SEC,East,www.uscsports.com
-192,South Florida,Bulls,SOFL,BIGE,None,www.gousfbulls.com
-193,Southern Illinois,Salukis,SOILL,MVC,None,www.google.com
-194,Southern,Snakes,SOUTH,SWEST,None,-0
-195,Stanford,Cardinal,STAN,PAC10,None,www.gostanford.com
-196,Stony Brook,Seawolves,STBRK,BIGSO,None,http://www.goseawolves.org/
-197,St. Francis,Red Flash,STFRN,NEC,NULL,NULL
-198,Southern Utah,Thunderbirds,SUTAH,OTHER,None,www.suu.edu/athletics
-199,Syracuse,Orangemen,SYR,BIGE,None,www.suathletics.com
-200,TCU,Frogs,TCU,MWC,None,www.gofrogs.com
-201,Temple,Owls,TEMP,MAC,East,www.owlsports.com
-202,Tennessee,Volunteers,TENN,SEC,East,www.utsports.com
-203,Texas,Longhorns,TEX,BIG12,South,www.texassports.com
-204,Tennessee-Martin,Skyhawks,TNMAR,OVC,None,www.utmsports.com
-205,Tennessee State,Tigers,TNST,OVC,None,www.tsutigers.com
-206,Tennessee Tech,Golden Eagles,TNTC,OVC,None,www.ttusports.com
-207,Toledo,Rockets,TOL,MAC,West,www.utrockets.com
-208,Towson,Snakes,TOWS,COL,None,-0
-209,Troy,Trojans,TROY,SUNB,None,www.troytrojans.com
-210,Tulane,Green Wave,TUL,CUSA,West,www.tulanegreenwave.com
-211,Tulsa,Hurricanes,TULSA,CUSA,West,www.tulsahurricane.com
-212,Texas A&M,Aggies,TXAM,BIG12,South,www.aggieathletics.com
-213,Texas Southern,Tigers,TXSO,SWEST,None,-0
-214,Texas State,Bobcats,TXST,STHLN,None,www.txstatebobcats.com
-215,Texas Tech,Red Raiders,TXTC,BIG12,South,www.texastech.com
-216,UAB,Blazers,UAB,CUSA,East,www.uabsports.com
-217,UCLA,Bruins,UCLA,PAC10,None,www.uclabruins.com
-218,Connecticut,Huskies,UCONN,BIGE,None,www.uconnhuskies.com
-219,Maryland Eastern Shore,Hawks,UMES,MEAC,None,www.umeshawks.com
-220,North Carolina,Tar Heels,UNC,ACC,Coastal,www.tarheelblue.com
-221,UNLV,Rebels,UNLV,MWC,None,www.unlvrebels.com
-222,USC,Trojans,USC,PAC10,None,www.usctrojans.com
-223,Utah,Utes,UTAH,MWC,None,www.utahutes.com
-224,UTEP,Miners,UTEP,CUSA,West,www.utepathletics.com
-225,Utah St,Aggies,UTST,WAC,None,www.utahstateaggies.com
-226,Virginia,Cavaliers,VA,ACC,Coastal,www.virginiasports.com
-227,Valparaiso,Crusaders,VALPO,PIONF,NULL,NULL
-228,Virginia Tech,Hokies,VATC,ACC,Coastal,www.hokiesports.com
-229,Villinova,Wildcats,VILL,COL,None,-0
-230,VMI,Keydets,VMI,BIGSO,None,-0
-231,Vanderbilt,Commodores,VNDY,SEC,East,www.vucommodores.com
-232,Wagner,Seahawks,WAGNR,NEC,NULL,NULL
-233,Washington,Huskies,WASH,PAC10,None,www.gohuskies.com
-234,Wash State,Cougars,WAST,PAC10,None,www.wsucougars.com
-235,Western Carolina,Catamounts,WCAR,SOCON,None,-0
-236,Webster St,Wildcats,WEBST,BIGSK,None,-0
-237,Wake Forest,Deacons,WFST,ACC,Atlantic,www.wakeforestsports.com
-238,Western Illinois,Leathernecks,WILL,MVC,NULL,NULL
-239,Wisconsin,Badgers,WIS,BIG10,None,www.uwbadgers.com
-240,Western Kentucky,Hilltoppers,WKTY,SUNB,None,www.wkusports.com
-241,William & Mary,Tribe,WMARY,COL,None,-0
-242,Western Mich,Broncos,WMCH,MAC,West,www.wmubroncos.com
-243,Wofford,Terriers,WOFF,SOCON,None,-0
-244,West Virginia Tech,Humans,WVTC,OTHER,None,www.google.com
-245,West Virginia,Mountaineers,WVU,BIGE,None,www.msnsportsnet.com
-246,Wyoming,Cowboys,WY,MWC,None,www.wyomingathletics.com
-247,Yale,Bulldogs,YALE,IVY,NULL,NULL
-248,Youngstown St,Penguins,YNGST,MVC,None,-0
+id,name,nickname,abbrev,conference_name,conference_id,division_id,url
+1,Bye Week,No Game,Bye,BYE,1,None,none
+2,NA,NA,NA,NA,1,None,none
+3,TBD,TBD,TBD,A,1,None,none
+4,Air Force,Falcons,AF,MWC,17,None,www.goairforcefalcons.com
+5,Arkansas-Pine Bluff,Arkies,AKPB,SWEST,25,None,www.ark.com
+6,Akron,Zips,AKRN,MAC,14,East,www.gozips.com
+7,Arkansas St,Indians,AKST,SUNB,24,None,www.asuindians.com
+8,Alabama,Tide,ALA,SEC,6,West,www.rolltide.com
+9,Alabama A&M,Snakes,ALAM,OTHER,1,None,none
+10,Albany,Great Danes,ALBAN,NEC,18,None,www.ualbanysports.com/
+11,Alcorn State,Braves,ALCR,SWEST,25,None,www.google.com
+12,Alabama State,Hornets,ALST,SWEST,25,NULL,none
+13,Appalachian State,Mountaineers,APST,SOCON,22,None,www.goasu.com
+14,Arkansas,Razorbacks,ARK,SEC,6,West,www.hogwired.com
+15,Army,Cadets,ARMY,IND,8,None,www.goarmysports.com
+16,Arizona,Wildcats,ARZ,PAC12,7,None,www.arizonaathletics.com
+17,Auburn,Tigers,AUB,SEC,6,West,www.auburntigers.com
+18,Austin Peay,Governors,AUPY,OVC,19,None,www.apsu.edu/letsgopeay
+19,Arizona St,Sun Devils,AZST,PAC12,7,None,www.thesundevils.com
+20,Baylor,Bears,BAY,BIG12,5,South,www.baylorbears.com
+21,Boston College,Eagles,BC,ACC,3,Atlantic,www.bceagles.com
+22,Bucknell,Bison,BCKNL,PATRT,19,NULL,none
+23,Bethune-Cookman,Wildcats,BECK,MDEAS,15,None,www4.cookman.edu/athletics/
+24,Bowling Green,Falcons,BGSU,MAC,14,East,www.bgsufalcons.com
+25,Ball State,Cardinals,BLST,MAC,14,West,www.ballstatesports.com
+26,Boise State,Broncos,BOST,MWC,17,None,www.broncosports.com
+27,Brown,Bears,BROWN,IVY,13,NULL,none
+28,Buffalo,Bulls,BUFF,MAC,14,East,www.ubathletics.buffalo.edu
+29,Butler,Bulldogs,BUTLR,PIONF,21,NULL,none
+30,Brigham Young,Cougars,BYU,MWC,17,None,www.byucougars.com
+31,California,Bears,CAL,PAC12,7,None,www.calbears.com
+32,UC Davis,Aggies,CALD,OTHER,1,None,www.ucdavisaggies.com
+33,Campbell,Fighting Camels,CAMPB,PIONF,21,NULL,none
+34,Central Arkansas,Bears,CARK,STHLN,23,None,none
+35,Central Conn. State,Blue Devils,CCST,NEC,18,NULL,none
+36,Central Florida,Knights,CFLA,CUSA,12,East,www.ucfathletics.com
+37,Charleston Southern,Buccaneers,CHASO,BIGSO,10,None,none
+38,Tenn-Chattanooga,Mocs,CHATT,SOCON,22,None,www.gomocs.com
+39,College of Charleston,Cougars,CHRLS,SOCON,22,None,www.cofcsports.com
+40,Cincinnati,Bearcats,CIN,AAC,2,None,www.ucbearcats.com
+41,Citadel,Bulldogs,CIT,SOCON,22,None,www.citadelsports.com
+42,Clemson,Tigers,CLEM,ACC,3,Atlantic,www.clemsontigers.com
+43,Central Michigan,Chippewas,CMCH,MAC,14,West,www.cmuchippewas.com
+44,Coastal Carolina,Chanticleers,COCAR,BIGSO,10,None,none
+45,Colorado,Buffaloes,COL,BIG12,5,North,www.cubuffs.com
+46,Colgate,Raiders,COLGT,PATRT,19,NULL,none
+47,Columbia,Lions,COLUM,IVY,13,NULL,none
+48,Cornell,Big Red,CORNL,IVY,13,NULL,none
+49,Colorado St,Rams,COST,MWC,17,None,www.csurams.com
+50,CalPoly,Mustangs,CPOLY,OTHER,1,None,www.calpolymustangs.com
+51,Dartmouth,Big Green,DART,IVY,13,NULL,none
+52,Davidson,Wildcats,DAVD,PIONF,21,None,www2.davidson.edu/athletics/ath_home.asp
+53,Dayton,Flyers,DAYTN,PIONF,21,NULL,none
+54,Delaware,Blue Hens,DEL,COL,11,None,none
+55,Delaware State,Hornets,DEST,MDEAS,15,None,none
+56,Drake,Bulldogs,DRAKE,PIONF,21,NULL,none
+57,Duke,Blue Devils,DUKE,ACC,3,Coastal,www.goduke.com
+58,Duquesne,Dukes,DUQNE,NEC,18,NULL,none
+59,East Carolina,Pirates,ECU,CUSA,12,East,www.ecupirates.com
+60,Eastern Illinois,Panthers,EILL,OVC,19,None,www.eiu.edu/~sprtinfo/welcome.htm
+61,Eastern Kentucky,Colonels,EKY,OVC,19,None,www.ekusports.com
+62,Elon,Phoenix,ELON,SOCON,22,None,none
+63,Eastern Michigan,Eagles,EMCH,MAC,14,West,www.emueagles.com
+64,Eastern Washington,Eagles,EWASH,BIGSK,9,None,www.ewu.edu/x355.xml
+65,FLA Atlantic,Owls,FAU,SUNB,24,None,www.FAUSports.com
+66,FLA Intl,Panthers,FIU,SUNB,24,None,www.fiusports.com
+67,Florida,Gators,FLA,SEC,6,East,www.gatorzone.com
+68,Florida A&M,Rattlers,FLAM,MDEAS,15,None,none
+69,Fordham,Rams,FORDH,PATRT,19,NULL,none
+70,Fresno State,Bulldogs,FRST,MWC,17,None,www.gobulldogs.com
+71,Florida State,Seminoles,FSU,ACC,3,Atlantic,www.seminoles.com
+72,Furman,Paladins,FUR,SOCON,22,None,www.google.com
+73,Georgia,Bulldogs,GA,SEC,6,East,www.georgiadogs.com
+74,Georgia Southern,Eagles,GASO,SOCON,22,None,none
+75,Gardner-Webb,Runnin' Bulldogs,GAWB,BIGSO,10,None,none
+76,Georgetown,Hoyas,GEORG,PATRT,19,NULL,none
+77,Grambling,Bulldogs,GRMBL,SWEST,25,None,none
+78,Georgia Tech,Jackets,GTCH,ACC,3,Coastal,www.ramblinwreck.com
+79,Hampton,Pirates,HAMP,MDEAS,15,None,www.hamptonpirates.com
+80,Harvard,Crimson,HARV,IVY,13,NULL,none
+81,Hawaii,Warriors,HAW,MWC,17,None,www.hawaiiathletics.com
+82,Hofstra,Pride,HOFS,COL,11,None,www.google.com
+83,Holy Cross,Crusaders,HOLCR,PATRT,19,NULL,none
+84,Houston,Cougars,HOU,CUSA,12,West,www.uhcougars.com
+85,Howard,Bisons,HOW,MDEAS,15,None,www.bisonmania.com
+86,Idaho,Vandals,IDAH,MWC,17,None,www.govandals.com
+87,Idaho State,Bengals,IDST,BIGSK,9,None,www.isubengals.com
+88,Illinois,Illini,ILL,BIG10,4,None,www.fightingillini.com
+89,Illinois State,Redbirds,ILLST,MVC,16,None,none
+90,Indiana,Hoosiers,IND,BIG10,4,None,www.iuhoosiers.com
+91,Indiana State,Sycamores,INST,MVC,16,None,none
+92,Iona,Gaels,IONA,OTHER,1,NULL,none
+93,Iowa,Hawkeyes,IOWA,BIG10,4,None,www.hawkeyesports.com
+94,Iowa State,Cyclones,IWST,BIG12,5,North,www.cyclones.com
+95,Jackson State,Tigers,JACK,SWEST,25,NULL,none
+96,Jacksonville,Dolphins,JAX,PIONF,21,NULL,none
+97,Jacksonville St,Gamecocks,JAXST,OVC,19,None,www.jsugamecocksports.com
+98,James Madison,Madisons,JMAD,COL,11,None,www.jamesmadison.edu
+99,Kansas,Jayhawks,KAN,BIG12,5,North,www.kuathletics.com
+100,Kent State,Golden Flashes,KENT,MAC,14,East,www.kentstatesports.com
+101,Kansas State,Wildcats,KNST,BIG12,5,North,www.kstatesports.com
+102,Kentucky,Wildcats,KTKY,SEC,6,East,www.ukathletics.com
+103,Lafayette,Leopards,LAF,PATRT,19,NULL,none
+104,La-Lafayette,Cajuns,LALF,SUNB,24,None,www.ragincajuns.com
+105,La-Monroe,Warhawks,LAMO,SUNB,24,None,www.ulmathletics.com
+106,Lousiana Tech,Bulldogs,LATC,MWC,17,None,www.latechsports.com
+107,Lehigh,Mountain Hawks,LEHGH,PATRT,19,NULL,none
+108,Liberty,Flames,LIB,BIGSO,10,None,none
+109,Louisville,Cardinals,LOU,AAC,2,None,www.uoflsports.com
+110,LSU,Tigers,LSU,SEC,6,West,www.lsusports.net
+111,Maine,Black Bears,MAINE,COL,11,None,http://www.goblackbears.com/
+112,Marist,Red Foxes,MARST,OTHER,1,NULL,none
+113,Massachusettes,Minutemen,MASS,COL,11,None,www.google.com
+114,McNeese State,Cowboys,MCNS,STHLN,23,None,www.mcneesesports.com
+115,Mid Tenn,Raiders,MDTN,SUNB,24,None,www.goblueraiders.com
+116,Memphis,Tigers,MEM,CUSA,12,East,www.gotigersgo.com
+117,Morgan State,Bears,MGST,MDEAS,15,None,www.morganstatebears.com
+118,Miami (FL),Hurricanes,MIA,ACC,3,Coastal,www.hurricanesports.com
+119,Michigan,Wolverines,MICH,BIG10,4,None,www.mgoblue.com
+120,Minnesota,Gophers,MINN,BIG10,4,None,www.gophersports.com
+121,Miami (OH),RedHawks,MIOH,MAC,14,East,www.muredhawks.com
+122,Ole Miss,Rebels,MISS,SEC,6,West,www.olemisssports.com
+123,Michigan St,Spartans,MIST,BIG10,4,None,www.msuspartans.com
+124,Missouri,Tigers,MO,BIG12,5,North,mutigers.cstv.com
+125,Monmouth,Hawks,MONMT,NEC,18,NULL,none
+126,Montana St,Bobcats,MONST,BIGSK,9,None,none
+127,Montana,Grizzlies,MONT,BIGSK,9,None,none
+128,Missouri St,Bears,MOST,MVC,16,None,none
+129,Marshall,Herd,MRSH,CUSA,12,East,www.herdzone.com
+130,Morehead State,Eagles,MRST,PIONF,21,None,www.msueagles.com
+131,Miss State,Bulldogs,MSU,SEC,6,West,www.mstateathletics.com
+132,Murray State,Racers,MURST,OVC,19,None,www.goracers.com
+133,Miss. Valley St.,Delta Devils,MVSU,SWEST,25,NULL,none
+134,Maryland,Terrapins,MYLD,ACC,3,Atlantic,www.umterps.com
+135,Navy,Midshipmen,NAVY,IND,8,None,www.navysports.com
+136,North Carolina A&T,Aggies,NCAT,MDEAS,15,None,www.ncataggies.com
+137,North Carolina Central,Humans,NCCEN,OTHER,1,None,www.google.com
+138,Northern Colorado,Bears,NCOL,BIGSK,9,None,www.google.com
+139,NC State,Wolfpack,NCST,ACC,3,Atlantic,www.gopack.com
+140,Notre Dame,Irish,ND,IND,8,None,www.und.com
+141,North Dakota,Bisons,NDAK,GWC,,None,none
+142,North Dakota State,Bison,NDKST,MVC,16,None,www.nmnathletics.com
+143,Northeastern,Huskies,NEAST,COL,11,None,www.gonu.com
+144,Nebraska,Cornhuskers,NEB,BIG12,5,North,www.huskers.com
+145,Nevada,Wolfpack,NEV,MWC,17,None,www.nevadawolfpack.com
+146,Norfolk State,Spartans,NFST,MDEAS,15,None,www.nsu.edu/athletics/
+147,New Hampshire,Wildcats,NHMP,COL,11,None,www.unhwildcats.com/
+148,Nicholls State,Colonels,NICST,STHLN,23,None,www.colonelsports.com
+149,Northern Iowa,Panthers,NIOWA,MVC,16,None,none
+150,Northern Illinois,Huskies,NIU,MAC,14,West,www.niuhuskies.com
+151,New Mexico,Lobos,NMEX,MWC,17,None,www.golobos.com
+152,New Mexico St,Aggies,NMSU,MWC,17,None,www.nmstatesports.com
+153,Northern Arizona,Lumberjacks,NOAZ,BIGSK,9,None,none
+154,North Texas,Mean Green,NOTX,SUNB,24,None,www.meangreensports.com
+155,Northwestern St,Demons,NWST,STHLN,23,None,www.nsudemons.com
+156,Northwestern,Wildcats,NWU,BIG10,4,None,www.nusports.com
+157,Ohio,Bobcats,OHIO,MAC,14,East,www.ohiobobcats.com
+158,Oklahoma,Sooners,OKLA,BIG12,5,South,www.soonersports.com
+159,Oklahoma St,Cowboys,OKST,BIG12,5,South,www.okstate.com
+160,Oregon,Ducks,ORE,PAC12,7,None,www.goducks.com
+161,Oregon State,Beavers,ORST,PAC12,7,None,www.osubeavers.com
+162,Ohio State,Buckeyes,OSU,BIG10,4,None,www.ohiostatebuckeyes.com
+163,Penn,Quakers,PENN,IVY,13,NULL,none
+164,Pittsburgh,Panthers,PITT,AAC,2,None,www.pittsburghpanthers.com
+165,Presbyterian,Blue Hose,PRBYT,BIGSO,10,None,none
+166,Princeton,Tigers,PRCTN,IVY,13,NULL,none
+167,Portland State,Vikings,PRTST,BIGSK,9,None,www.goviks.com
+168,Penn State,Nittany Lions,PSU,BIG10,4,None,www.gopsusports.com
+169,Purdue,Boilermakers,PUR,BIG10,4,None,www.purduesports.com
+170,Prarie View A&M,Panthers,PVAM,SWEST,25,NULL,none
+171,Rhode Island,Rams,RI,COL,11,None,www.google.com
+172,Rice,Owls,RICE,CUSA,12,West,www.riceowls.com
+173,Richmond,Spiders,RICH,COL,11,None,none
+174,Robert Morris,Colonials,ROBMO,NEC,18,NULL,none
+175,Rutgers,Scarlet Knights,RUT,AAC,2,None,www.scarletknights.com
+176,Sacremento State,Wildcats,SACST,BIGSK,9,None,www.google.com
+177,Sacred Heart,Pioneers,SAHRT,NEC,18,NULL,none
+178,Samford,Bulldogs,SAMF,SOCON,22,None,www.samfordsports.com
+179,Savannah State,Tigers,SAVST,OTHER,1,NULL,none
+180,South Carolina State,Bulldogs,SCST,MDEAS,15,None,www.scsusports.com
+181,South Dakota State,Jacks,SDKST,MVC,16,None,www.gojacks.com
+182,San Diego St,Aztecs,SDST,MWC,17,None,www.goaztecs.com
+183,SE Louisiana,Lions,SELA,STHLN,23,None,www.lionsports.net
+184,SE Missouri St,Redhawks,SEMO,OVC,19,None,www.gosoutheast.com
+185,Stephen Austin,Lumberjacks,SFA,STHLN,23,None,www.sfajacks.com
+186,Sam Houston State,Bearkats,SHST,STHLN,23,None,www.gobearkats.com
+187,San Jose St,Spartans,SJST,MWC,17,None,www.sjsuspartans.com
+188,Southern Miss,Eagles,SMISS,CUSA,12,East,www.southernmiss.com
+189,SMU,Mustangs,SMU,CUSA,12,West,www.smumustangs.com
+190,San Diego,Toreros,SNDGO,PIONF,21,NULL,none
+191,South Carolina,Gamecocks,SOCAR,SEC,6,East,www.uscsports.com
+192,South Florida,Bulls,SOFL,AAC,2,None,www.gousfbulls.com
+193,Southern Illinois,Salukis,SOILL,MVC,16,None,www.google.com
+194,Southern,Snakes,SOUTH,SWEST,25,None,none
+195,Stanford,Cardinal,STAN,PAC12,7,None,www.gostanford.com
+196,Stony Brook,Seawolves,STBRK,BIGSO,10,None,http://www.goseawolves.org/
+197,St. Francis,Red Flash,STFRN,NEC,18,NULL,none
+198,Southern Utah,Thunderbirds,SUTAH,OTHER,1,None,www.suu.edu/athletics
+199,Syracuse,Orangemen,SYR,AAC,2,None,www.suathletics.com
+200,TCU,Frogs,TCU,MWC,17,None,www.gofrogs.com
+201,Temple,Owls,TEMP,MAC,14,East,www.owlsports.com
+202,Tennessee,Volunteers,TENN,SEC,6,East,www.utsports.com
+203,Texas,Longhorns,TEX,BIG12,5,South,www.texassports.com
+204,Tennessee-Martin,Skyhawks,TNMAR,OVC,19,None,www.utmsports.com
+205,Tennessee State,Tigers,TNST,OVC,19,None,www.tsutigers.com
+206,Tennessee Tech,Golden Eagles,TNTC,OVC,19,None,www.ttusports.com
+207,Toledo,Rockets,TOL,MAC,14,West,www.utrockets.com
+208,Towson,Snakes,TOWS,COL,11,None,none
+209,Troy,Trojans,TROY,SUNB,24,None,www.troytrojans.com
+210,Tulane,Green Wave,TUL,CUSA,12,West,www.tulanegreenwave.com
+211,Tulsa,Hurricanes,TULSA,CUSA,12,West,www.tulsahurricane.com
+212,Texas A&M,Aggies,TXAM,BIG12,5,South,www.aggieathletics.com
+213,Texas Southern,Tigers,TXSO,SWEST,25,None,none
+214,Texas State,Bobcats,TXST,STHLN,23,None,www.txstatebobcats.com
+215,Texas Tech,Red Raiders,TXTC,BIG12,5,South,www.texastech.com
+216,UAB,Blazers,UAB,CUSA,12,East,www.uabsports.com
+217,UCLA,Bruins,UCLA,PAC12,7,None,www.uclabruins.com
+218,Connecticut,Huskies,UCONN,AAC,2,None,www.uconnhuskies.com
+219,Maryland Eastern Shore,Hawks,UMES,MEAC,15,None,www.umeshawks.com
+220,North Carolina,Tar Heels,UNC,ACC,3,Coastal,www.tarheelblue.com
+221,UNLV,Rebels,UNLV,MWC,17,None,www.unlvrebels.com
+222,USC,Trojans,USC,PAC12,7,None,www.usctrojans.com
+223,Utah,Utes,UTAH,MWC,17,None,www.utahutes.com
+224,UTEP,Miners,UTEP,CUSA,12,West,www.utepathletics.com
+225,Utah St,Aggies,UTST,MWC,17,None,www.utahstateaggies.com
+226,Virginia,Cavaliers,VA,ACC,3,Coastal,www.virginiasports.com
+227,Valparaiso,Crusaders,VALPO,PIONF,21,NULL,none
+228,Virginia Tech,Hokies,VATC,ACC,3,Coastal,www.hokiesports.com
+229,Villinova,Wildcats,VILL,COL,11,None,none
+230,VMI,Keydets,VMI,BIGSO,10,None,none
+231,Vanderbilt,Commodores,VNDY,SEC,6,East,www.vucommodores.com
+232,Wagner,Seahawks,WAGNR,NEC,18,NULL,none
+233,Washington,Huskies,WASH,PAC12,7,None,www.gohuskies.com
+234,Wash State,Cougars,WAST,PAC12,7,None,www.wsucougars.com
+235,Western Carolina,Catamounts,WCAR,SOCON,22,None,none
+236,Webster St,Wildcats,WEBST,BIGSK,9,None,none
+237,Wake Forest,Deacons,WFST,ACC,3,Atlantic,www.wakeforestsports.com
+238,Western Illinois,Leathernecks,WILL,MVC,16,NULL,none
+239,Wisconsin,Badgers,WIS,BIG10,4,None,www.uwbadgers.com
+240,Western Kentucky,Hilltoppers,WKTY,SUNB,24,None,www.wkusports.com
+241,William & Mary,Tribe,WMARY,COL,11,None,none
+242,Western Mich,Broncos,WMCH,MAC,14,West,www.wmubroncos.com
+243,Wofford,Terriers,WOFF,SOCON,22,None,none
+244,West Virginia Tech,Humans,WVTC,OTHER,1,None,www.google.com
+245,West Virginia,Mountaineers,WVU,AAC,2,None,www.msnsportsnet.com
+246,Wyoming,Cowboys,WY,MWC,17,None,www.wyomingathletics.com
+247,Yale,Bulldogs,YALE,IVY,13,NULL,none
+248,Youngstown St,Penguins,YNGST,MVC,16,None,none

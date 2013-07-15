@@ -9,9 +9,9 @@ A fantasy sports league engine
 
 ## Rake Tasks
 
-* ls:rebuild** - calls ```db:drop, db:create, db:migrate, db:test:prepare```
-* deploy:staging** - deploys to Heroku staging
-* deploy:production** - deploys to Heroku production
+* **ls:rebuild** - calls ```db:drop, db:create, db:migrate, db:test:prepare```
+* **deploy:staging** - deploys to Heroku staging
+* **deploy:production** - deploys to Heroku production
 
 ## Release Features
 
@@ -40,4 +40,5 @@ name: "Center", abbreviation: "C"
 name: "Forward", abbreviation: "F" 
 
 ## Schedule
+
 * 11/01/2013 - 02/28/2014   

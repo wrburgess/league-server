@@ -3,14 +3,17 @@ RosterSlotType.create(name: "Reserve", abbreviation: "RESV", weight: 20)
 RosterSlotType.create(name: "Injured", abbreviation: "INJ", weight: 30)
 RosterSlotType.create(name: "Suspended", abbreviation: "SUSP", weight: 40)
 RosterSlotType.create(name: "Redshirt", abbreviation: "RS", weight: 50)
+puts "RosterSlotTypes created"
 
-RosterSlotPosition.create(name: "Guard", abbreviation: "GRD", weight: 100)
-RosterSlotPosition.create(name: "Forward", abbreviation: "FWD", weight: 200)
-RosterSlotPosition.create(name: "Center", abbreviation: "CNT", weight: 300)
+RosterSlotPosition.create(name: "Guard", abbreviation: "G", weight: 100)
+RosterSlotPosition.create(name: "Forward", abbreviation: "F", weight: 200)
+RosterSlotPosition.create(name: "Center", abbreviation: "C", weight: 300)
+puts "RosterSlotPositions created"
 
-PlayerPosition.create(name: "Guard", abbreviation: "GRD", weight: 100) #1
-PlayerPosition.create(name: "Forward", abbreviation: "FWD", weight: 200) #2
-PlayerPosition.create(name: "Center", abbreviation: "CNT", weight: 300) #3
+PlayerPosition.create(name: "Guard", abbreviation: "G", weight: 100) #1
+PlayerPosition.create(name: "Forward", abbreviation: "F", weight: 200) #2
+PlayerPosition.create(name: "Center", abbreviation: "C", weight: 300) #3
+puts "PlayerPositions created"
 
 (1..50).each do |u|
   user = User.create(email: Faker::Internet.email, password: "secret")
@@ -120,7 +123,7 @@ end
     game_date + 7.days
   end
   puts "GameStats created"
-  
+
   # (1..50).each do |roster|
   #   (1..14).each do |week|
   #     (1.15).each do |roster_slot_fill|
