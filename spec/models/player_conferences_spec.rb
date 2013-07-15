@@ -23,7 +23,7 @@ describe PlayerConference do
 
   describe "#full_name" do
     it 'sets full_name from name and abbreviation' do
-      FactoryGirl.create(:player_conference).full_name.should == 'Southeastern (SEC)'
+      FactoryGirl.create(:player_conference).full_name.should == 'Southeastern Conference (SEC)'
     end
   end
 

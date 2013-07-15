@@ -67,4 +67,7 @@ League::Application.configure do
 
   # For Devise
   config.action_mailer.default_url_options = { :host => 'something heroku?' }
+
+  # For Rails 4
+  config.eager_load = true
 end
