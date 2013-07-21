@@ -7,9 +7,9 @@ A fantasy sports league engine
 [![Code Climate](https://codeclimate.com/github/wrburgess/league-server.png)](https://codeclimate.com/github/wrburgess/league-server)
 [![Coverage Status](https://coveralls.io/repos/wrburgess/league-server/badge.png)](https://coveralls.io/r/wrburgess/league-server)
 
-## Rake Tasks
+## Custom Rake Tasks
 
-* **ls:rebuild** - calls ```db:drop, db:create, db:migrate, db:test:prepare```
+* **ls:rebuild** - calls ```db:drop, db:create, db:migrate, db:test:prepare``` (dev only)
 * **deploy:staging** - deploys to Heroku staging
 * **deploy:production** - deploys to Heroku production
 
