@@ -13,15 +13,16 @@ A fantasy sports league engine
 * **deploy:staging** - deploys to Heroku staging
 * **deploy:production** - deploys to Heroku production
 
-## Local and Heroku Config
+## Local and Heroku Configuration Variables/Settings
 
-1. We use the ```dotenv-rails``` gem and .env file to specify environment variables that require security access  
-2. We use the ```settingslogic``` gem for variables that don't require security access, with the file located at ```config/app_settings.yml```  
-3. Create environment variables on your heroku environments:   
+1) We use the ```dotenv-rails``` gem and .env file to specify environment variables that require security access  
+2) We use the ```settingslogic``` gem for variables that don't require security access, with the file located at ```config/app_settings.yml```  
+3) Create environment variables on your heroku environments:   
 
-```heroku config:set SECRET_KEY_BASE=1c6187ccc16 --remote staging```  
+```heroku config:set SECRET_KEY_BASE=1c6187ccc16 --remote staging``` 
+```heroku config:set SECRET_KEY_BASE=1c6187ccc16 --remote production```  
 
-4. List of configs settings you'll need to check (matches local .env file, which is not in source control):  
+4) List of configs settings you'll need to check (matches local .env file, which is not in source control):  
 
 ```
 MANDRILL_APIKEY:            xxxx
@@ -41,11 +42,11 @@ REDIS_PORT:                 xxxx
 SECRET_KEY_BASE:            xxxx
 ```
 
-5. How to retrieve SettingsLogic variables:  
+5) How to retrieve SettingsLogic variables:  
 
 ```AppSettings.[variable_name]``` or ```AppSettings.app_name```
 
-6. How to retrieve Environment variables:  
+6) How to retrieve Environment variables:  
 
 ```ENV["variable_name"]``` or ```ENV["SECRET_KEY_BASE"]```
 
