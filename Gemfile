@@ -16,6 +16,10 @@ gem "settingslogic", "2.0.9"
 gem "uglifier", "2.1.2"
 gem "unicorn", "4.6.3"
 
+group :production do
+  gem "rails_12factor", "0.0.2"
+end
+
 group :development do
   gem "better_errors", "0.9.0"
   gem "binding_of_caller", "0.7.2"
