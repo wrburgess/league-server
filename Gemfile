@@ -5,6 +5,7 @@ gem "rails", "4.0.0"
 
 gem "coveralls", "0.6.7", require: false
 gem "devise", "3.0.0"
+gem "faker", "1.1.2"
 gem "haml-rails", "0.4.0"
 gem "jquery-rails", "3.0.4"
 gem "json", "1.8.0"
@@ -31,7 +32,6 @@ group :development, :test do
   gem "debugger", "1.6.1"
   gem "dotenv-rails", "0.8.0"
   gem "factory_girl_rails", "4.2.1"
-  gem "faker", "1.1.2"
   gem "mail_view", "1.0.3"
   gem "pry-rails", "0.3.1"
   gem "pry-remote", "0.1.7"

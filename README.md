@@ -16,11 +16,13 @@ A fantasy sports league engine
 ## Local and Heroku Configuration Variables/Settings
 
 1) We use the ```dotenv-rails``` gem and .env file to specify environment variables that require security access  
+
 2) We use the ```settingslogic``` gem for variables that don't require security access, with the file located at ```config/app_settings.yml```  
+
 3) Create environment variables on your heroku environments:   
 
-```heroku config:set SECRET_KEY_BASE=1c6187ccc16 --remote staging``` 
-```heroku config:set SECRET_KEY_BASE=1c6187ccc16 --remote production```  
+```heroku config:set SECRET_KEY_BASE=[key] --remote staging``` 
+```heroku config:set SECRET_KEY_BASE=[key] --remote production```  
 
 4) List of configs settings you'll need to check (matches local .env file, which is not in source control):  
 
