@@ -16,39 +16,34 @@ League::Application.routes.draw do
     resources :users
   end
 
-  scope :module => "browser", defaults: { format: "html" } do
-    root :to => "static#index"
+  root :to => "static#index"
 
-    resources :groups do
-      get "draft" => "groups#draft"
-      get "news" => "players#news"
-      get "rules" => "groups#rules"
-      get "schedule" => "groups#schedule"
-      get "scores" => "groups#scores"
-      get "search" => "players#search"
-      get "standings" => "groups#standings"
-      get "stats" => "players#stats"
-      get "transactions" => "groups#transactions"
+  resources :groups do
+    get "draft" => "groups#draft"
+    get "news" => "players#news"
+    get "rules" => "groups#rules"
+    get "schedule" => "groups#schedule"
+    get "scores" => "groups#scores"
+    get "search" => "players#search"
+    get "standings" => "groups#standings"
+    get "stats" => "players#stats"
+    get "transactions" => "groups#transactions"
 
-      namespace :settings do
-        root :to => "groups#settings"
-        get "scoring" => "groups#scoring"
-      end
-
-      resources :players
-
-      resources :rosters do
-        root :to => "rosters#index"
-        get "moves" => "rosters#moves"
-        get "trades" => "rosters#trades"
-
-        namespace :settings do
-          root :to => "rosters#settings"
-        end
-      end
+    namespace :settings do
+      root :to => "groups#settings"
+      get "scoring" => "groups#scoring"
     end
 
-    resources :users do
+    resources :players
+
+    resources :rosters do
+      root :to => "rosters#index"
+      get "moves" => "rosters#moves"
+      get "trades" => "rosters#trades"
+
+      namespace :settings do
+        root :to => "rosters#settings"
+      end
     end
   end
 

@@ -1,4 +1,4 @@
-class Browser::GamesController < BrowserController
+class GamesController < ApplicationController
   protect_from_forgery
 
   def scoreboard

@@ -1,4 +1,4 @@
-class Browser::GroupsController < BrowserController
+class GroupsController < ApplicationController
   protect_from_forgery
 
   def draft

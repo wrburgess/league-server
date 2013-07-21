@@ -12,7 +12,7 @@
   %body{ id: "#{@body_id}", class: "browser #{@body_class}" }
     #wrapper
       %header
-        = render :partial => 'shared/browser/browser_nav'
+        = render 'shared/browser_nav'
       #content
         = yield
       %footer

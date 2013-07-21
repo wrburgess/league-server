@@ -42,13 +42,24 @@ REDIS_PORT:                 xxxx
 SECRET_KEY_BASE:            xxxx
 ```
 
-5) How to retrieve SettingsLogic variables:  
+5) Using a CI system such as Travis or Codeship will requires some config. For Travis in the ```.travis.yml``` file:  
+
+```
+env:
+  global: 
+    - RAILS=4.0.0
+    - DB=postgresql
+    - SECRET_KEY_BASE='[key]'
+```
+
+6) How to retrieve SettingsLogic variables:  
 
 ```AppSettings.[variable_name]``` or ```AppSettings.app_name```
 
-6) How to retrieve Environment variables:  
+7) How to retrieve environment variables:  
 
 ```ENV["variable_name"]``` or ```ENV["SECRET_KEY_BASE"]```
+
 
 ## Release Features
 

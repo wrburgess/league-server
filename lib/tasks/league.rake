@@ -1,4 +1,5 @@
 namespace :league do
+  desc "Rebuild db with drop, create, migrate, test:prepare"
   task :rebuild => :environment do
     input = ''
     STDOUT.puts "Drop, recreate, and migrate league app database? y[es] or n[o]"

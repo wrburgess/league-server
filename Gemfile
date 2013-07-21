@@ -5,19 +5,16 @@ gem "rails", "4.0.0"
 
 gem "coveralls", "0.6.7", require: false
 gem "devise", "3.0.0"
-gem "json", "1.8.0"
+gem "haml-rails", "0.4.0"
 gem "jquery-rails", "3.0.4"
+gem "json", "1.8.0"
 gem "newrelic_rpm", "3.6.5.130"
 gem "pg", "0.15.1"
 gem "resque", "1.24.1", require: "resque/server"
+gem "sass-rails", "4.0.0"
 gem "settingslogic", "2.0.9"
+gem "uglifier", "2.1.2"
 gem "unicorn", "4.6.3"
-
-group :assets do
-  gem "haml-rails", "0.4.0"
-  gem "sass-rails", "4.0.0"
-  gem "uglifier", "2.1.2"
-end
 
 group :development do
   gem "better_errors", "0.9.0"

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Browser::GroupsController, :type => :controller do
+describe GroupsController, :type => :controller do
 
   before do
     @group = FactoryGirl.create(:group)

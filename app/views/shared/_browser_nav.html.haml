@@ -63,7 +63,7 @@
             = link_to "Alerts", users_alerts_path
           %li
             = link_to "Logout", destroy_user_session_path
-          = render "shared/browser/user_groups"
+          = render "shared/user_groups"
       #form.navbar-search.pull-left
         %input#nav-search.search-query{ type: "text", placeholder: "Player Search" }
 - [:notice, :error, :alert].each do |level|

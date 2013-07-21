@@ -29,7 +29,7 @@ end
 puts "PlayerConferences created"
 
 CSV.foreach("#{Rails.root}/db/fill/player_teams.csv", :headers => :first_row) do |row|
-  PlayerTeam.create!(location_name: row[0], nickname: row[1], abbreviation: row[2])
+  PlayerTeam.create!(location_name: row["name"], nickname: row["nickname"], abbreviation: row["abbrev"], player_conference_id: "conference_id")
 end
 puts "PlayerTeams created"
 
