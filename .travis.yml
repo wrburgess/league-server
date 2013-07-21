@@ -3,10 +3,9 @@ language:
 rvm:
   - 2.0.0
 env:
-  - RAILS=4.0.0
-  - DB=postgresql
-  - SECRET_KEY_BASE='travis-secret-key'
   global: 
+    - RAILS=4.0.0
+    - DB=postgresql
     - SECRET_KEY_BASE='travis-secret-key'
 branches:
   only:
