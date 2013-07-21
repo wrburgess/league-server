@@ -49,9 +49,6 @@ module League
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
-    # For Devise
-    config.assets.initialize_on_precompile = false
-
     # For jQuery-Rails
     # config.action_view.javascript_expansions[:defaults] = %w(jquery rails)
 
