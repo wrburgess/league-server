@@ -13,6 +13,42 @@ A fantasy sports league engine
 * **deploy:staging** - deploys to Heroku staging
 * **deploy:production** - deploys to Heroku production
 
+## Local and Heroku Config
+
+1. We use the ```dotenv-rails``` gem and .env file to specify environment variables that require security access  
+2. We use the ```settingslogic``` gem for variables that don't require security access, with the file located at ```config/app_settings.yml```  
+3. Create environment variables on your heroku environments:   
+
+```heroku config:set SECRET_KEY_BASE=1c6187ccc16 --remote staging```  
+
+4. List of configs settings you'll need to check (matches local .env file, which is not in source control):  
+
+```
+MANDRILL_APIKEY:            xxxx
+MANDRILL_USERNAME:          xxxx
+NEW_RELIC_APP_NAME:         league-server-staging
+NEW_RELIC_ID:               xxxx
+NEW_RELIC_LICENSE_KEY:      xxxx
+NEW_RELIC_LOG:              stdout
+PAPERTRAIL_API_TOKEN:       xxxx
+PATH:                       xxxx
+PGBACKUPS_URL:              xxxx
+RACK_ENV:                   staging
+RAILS_ENV:                  staging
+REDIS_HOST:                 xxxx
+REDIS_PASSWORD:             xxxx
+REDIS_PORT:                 xxxx
+SECRET_KEY_BASE:            xxxx
+```
+
+5. How to retrieve SettingsLogic variables:  
+
+```AppSettings.[variable_name]``` or ```AppSettings.app_name```
+
+6. How to retrieve Environment variables:  
+
+```ENV["variable_name"]``` or ```ENV["SECRET_KEY_BASE"]```
+
 ## Release Features
 
 * User Management
