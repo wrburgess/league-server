@@ -70,4 +70,7 @@ League::Application.configure do
 
   # For Rails 4
   config.eager_load = true
+
+  # Compress JavaScripts and CSS for Rails 4
+  config.assets.js_compressor = :uglifier
 end
