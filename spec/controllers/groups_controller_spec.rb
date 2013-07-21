@@ -28,7 +28,6 @@ describe GroupsController, :type => :controller do
   end
 
   describe "#show" do
-    
     xit "should respond with status code 200" do
       subject { get :show, group_id: @group, id: @roster1 }
       response.should respond_with 200
