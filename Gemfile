@@ -15,6 +15,7 @@ gem "pg", "0.15.1"
 gem "resque", "1.24.1", require: "resque/server"
 gem "sass-rails", "4.0.0"
 gem "settingslogic", "2.0.9"
+gem "simple_form", "3.0.0.rc"
 gem "uglifier", "2.1.2"
 gem "unicorn", "4.6.3"
 
