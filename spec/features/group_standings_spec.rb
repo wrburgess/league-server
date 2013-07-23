@@ -16,7 +16,7 @@ describe "Group Standings Page" do
 
   it "has the correct default elements" do
     visit group_standings_url(@group)
-    page.should have_css("body#group_standings")
+    page.should have_css("body.standings")
     page.should have_css("h1", :text => "Standings")
   end
 
