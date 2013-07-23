@@ -1,7 +1,7 @@
 .navbar.navbar-inverse
   .navbar-inner
     %a.brand{ href: "/admin", title: "League Admin" }
-      League Admin
+      Admin
     %ul.nav
       %li.dropdown
         %a.dropdown-toggle{ href: "#", "data-toggle" => "dropdown" }
@@ -9,11 +9,9 @@
           %b.caret
         %ul.dropdown-menu
           %li
-            %a{ href: "leagues/1", title: "Teams & Rosters" }
-              Teams/Rosters
+            = link_to "Players", admin_players_path
           %li
-            %a{ href: "leagues/1/standings", title: "League Standings" }
-              Standings
+            = link_to "Real Teams", admin_player_teams_path
           %li
             %a{ href: "leagues/1/transactions", title: "League Transactions" }
               Transactions

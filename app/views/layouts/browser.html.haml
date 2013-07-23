@@ -5,11 +5,11 @@
     %meta{ 'http-equiv' => 'X-UA-Compatible', content: 'IE=edge,chrome=1' }
     %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1' }
     %meta{ content: "#{@page_desc}", name: 'description' }
-    %title= "#{@page_title} | #{AppSettings.app_name}"
+    %title= "#{AppSettings.app_name}"
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
     = csrf_meta_tags
-  %body{ id: "#{@body_id}", class: "browser #{@body_class}" }
+  %body{ class: "#{params[:controller]} #{params[:action]}" }
     #wrapper
       %header
         = render 'shared/browser_nav'
