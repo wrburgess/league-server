@@ -4,4 +4,6 @@
 = simple_form_for @player do |f|
   = f.input :first_name
   = f.input :last_name
+  = f.association :player_team, label_method: :abbreviation, value_method: :id
+  = f.association :player_position, label_method: :abbreviation, value_method: :id
   = f.button :submit
