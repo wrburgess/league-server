@@ -1,4 +1,4 @@
-class Browser::RostersController < BrowserController
+class RostersController < BrowserController
   protect_from_forgery
 
   def show
