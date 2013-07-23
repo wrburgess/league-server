@@ -1,3 +1,31 @@
-%ul
-- @players.each do |player|
-  %li= link_to player.full_name, admin_player_path(player)
+%h1 
+  Manage Players
+
+%table
+  %caption 
+    Players
+  %thead
+    %tr
+      %th 
+        ID
+      %th 
+        First Name
+      %th 
+        Last Name
+      %th 
+        View
+      %th 
+        Edit
+  %tbody
+    - @players.each do |player|
+      %tr
+        %td
+          = player.id
+        %td
+          = player.first_name
+        %td
+          = player.last_name
+        %td
+          = link_to "View", admin_player_path(player)
+        %td
+          = link_to "Edit", edit_admin_player_path(player)
