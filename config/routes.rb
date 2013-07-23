@@ -4,7 +4,9 @@ League::Application.routes.draw do
 
   mount Resque::Server, :at => "/resque"
 
-  devise_for :users 
+  devise_for :users
+
+  resources :players
 
   namespace :users do
     get "alerts" => "users#alerts"
