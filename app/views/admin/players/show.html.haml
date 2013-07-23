@@ -1,8 +1,17 @@
 #h1
   = @player.full_name
+
 %ul
-- @player.game_stats.each do |game_stat|
   %li
-    PaComp: 
-    = game_stat.pa_comp
-    = game_stat.game_date
+    = @player.player_team.abbreviation
+  %li
+    = @player.player_position.name
+
+%ul
+  %li
+    = link_to "Edit", edit_admin_player_path(@player)
+  %li
+    = link_to "Delete", player_path(@player), method: :delete
+
+
+

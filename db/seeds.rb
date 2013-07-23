@@ -91,7 +91,7 @@ puts "GroupUsers created"
 
 (1..200).each do |p|
   player_team_id = rand(1..100)
-  player_position_id = rand(1..6)
+  player_position_id = rand(1..3)
   date1 = "2013-01-01"
   date2 = "2013-12-31"
   game_date = Time.now
