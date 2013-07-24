@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe PlayersController do
+describe Admin::PlayersController do
   
   describe "#create" do
     it "adds a new player to the database" do
