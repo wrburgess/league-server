@@ -31,6 +31,17 @@ describe Admin::PlayersController do
   end
 
   describe "#destroy" do
+    it "deletes a player record from the database" do
+      player = FactoryGirl.create(:player)
+      post :destroy, id: player, method: :delete
+      expect { player.reload }.to raise_error(ActiveRecord::RecordNotFound) 
+    end
+
+    it "redirects to the Admin Player show view" do
+      player = FactoryGirl.create(:player)
+      post :destroy, id: player, method: :delete
+      expect(response).to redirect_to admin_players_path
+    end
 
   end
 
