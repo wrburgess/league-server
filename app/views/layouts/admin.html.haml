@@ -9,7 +9,7 @@
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
     = csrf_meta_tags
-  %body{ class: "#{params[:controller]} #{params[:action]}" }
+  %body{ class: "#{controller.controller_name} #{params[:action]}" }
     #wrapper
       %header
         = render :partial => 'shared/admin/admin_nav'

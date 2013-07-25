@@ -3,24 +3,41 @@ require 'spec_helper'
 describe Admin::PlayersController do
 
   describe "#index" do
+    before do
+      @player1 = FactoryGirl.create(:player)
+      @player2 = FactoryGirl.create(:player)
+      @player3 = FactoryGirl.create(:player)
+      @players = Player.all
+    end
+
     it "renders the Admin Player index view" do
-      player1 = FactoryGirl.create(:player)
-      player2 = FactoryGirl.create(:player)
-      player3 = FactoryGirl.create(:player)
       get :index
       response.should render_template :index
       response.should render_template layout: "layouts/admin"
     end
+
+    it "assigns the requested players to @players" do
+      get :index
+      expect(assigns(:players)).to eq @players
+    end
   end
 
   describe "#show" do
+    before do
+      @player1 = FactoryGirl.create(:player)
+      @player2 = FactoryGirl.create(:player)
+      @player3 = FactoryGirl.create(:player)
+    end
+
     it "renders the Admin Player show view" do
-      player1 = FactoryGirl.create(:player)
-      player2 = FactoryGirl.create(:player)
-      player3 = FactoryGirl.create(:player)
-      get :show, id: player2
+      get :show, id: @player2
       response.should render_template :show
       response.should render_template layout: "layouts/admin"
+    end
+
+    it "assigns the requested player to @player" do
+      get :show, id: @player2
+      expect(assigns(:player)).to eq @player2
     end
   end
   
