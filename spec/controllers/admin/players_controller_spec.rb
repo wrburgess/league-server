@@ -1,6 +1,28 @@
 require 'spec_helper'
 
 describe Admin::PlayersController do
+
+  describe "#index" do
+    it "renders the Admin Player index view" do
+      player1 = FactoryGirl.create(:player)
+      player2 = FactoryGirl.create(:player)
+      player3 = FactoryGirl.create(:player)
+      get :index
+      response.should render_template :index
+      response.should render_template layout: "layouts/admin"
+    end
+  end
+
+  describe "#show" do
+    it "renders the Admin Player show view" do
+      player1 = FactoryGirl.create(:player)
+      player2 = FactoryGirl.create(:player)
+      player3 = FactoryGirl.create(:player)
+      get :show, id: player2
+      response.should render_template :show
+      response.should render_template layout: "layouts/admin"
+    end
+  end
   
   describe "#create" do
     it "adds a new player to the database" do
@@ -42,7 +64,6 @@ describe Admin::PlayersController do
       post :destroy, id: player, method: :delete
       expect(response).to redirect_to admin_players_path
     end
-
   end
 
 end
