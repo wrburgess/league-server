@@ -1,7 +1,7 @@
 %h1
   = "Edit #{@player.full_name}"
 
-= simple_form_for @player do |f|
+= simple_form_for @player, url: admin_player_path(@player), method: :patch do |f|
   = f.input :first_name
   = f.input :last_name
   = f.association :player_team, label_method: :abbreviation, value_method: :id

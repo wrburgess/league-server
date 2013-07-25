@@ -1,7 +1,7 @@
 %h1
   = "Create Player"
 
-= simple_form_for @player do |f|
+= simple_form_for @player, url: admin_players_path, method: :post do |f|
   = f.input :first_name
   = f.input :last_name
   = f.association :player_team, label_method: :abbreviation, value_method: :id

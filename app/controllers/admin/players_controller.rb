@@ -8,23 +8,23 @@ class Admin::PlayersController < AdminController
     @player = Player.find_by_id(params[:id])
   end
 
-  def edit
-    @player = Player.find_by_id(params[:id])
-  end
-
   def new
     @player = Player.new
   end
 
   def create
     player = Player.create!(player_params)
-    redirect_to admin_players_path(player)
+    redirect_to admin_player_path(player)
+  end
+
+  def edit
+    @player = Player.find_by_id(params[:id])
   end
 
   def update
     player = Player.find(params[:id])
     player.update_attributes!(player_params)
-    redirect_to admin_players_path(player)
+    redirect_to admin_player_path(player)
   end
 
   def destroy
