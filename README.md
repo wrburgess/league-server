@@ -7,11 +7,17 @@ A fantasy sports league engine
 [![Code Climate](https://codeclimate.com/github/wrburgess/league-server.png)](https://codeclimate.com/github/wrburgess/league-server)
 [![Coverage Status](https://coveralls.io/repos/wrburgess/league-server/badge.png)](https://coveralls.io/r/wrburgess/league-server)
 
+## Development Startup
+
+* You need redis and resque install on your development environment
+* The ```foreman``` gem will work with the ```Procfile.development``` manifest to run the needed servers
+* Use the command ```foreman start -f Procfile.development``` to execute the services
+
 ## Custom Rake Tasks
 
-* **ls:rebuild** - calls ```db:drop, db:create, db:migrate, db:test:prepare``` (dev only)
-* **deploy:staging** - deploys to Heroku staging
-* **deploy:production** - deploys to Heroku production
+* ls:rebuild - calls ```db:drop, db:create, db:migrate, db:test:prepare``` (dev only)
+* deploy:staging - deploys to Heroku staging
+* deploy:production - deploys to Heroku production
 
 ## Local and Heroku Configuration Variables/Settings
 

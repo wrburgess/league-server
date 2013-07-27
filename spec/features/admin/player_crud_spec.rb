@@ -34,6 +34,12 @@ feature "Admin Player CRUD" do
       expect(current_path).to eq new_admin_player_path
     end
 
+    it "redirects to admin_player show view" do
+      visit admin_players_path
+      find("tr.row-#{player3.id} .show a").click
+      expect(current_path).to eq admin_player_path player3
+    end
+
     it "redirects to admin_player edit view" do
       visit admin_players_path
       find("tr.row-#{player2.id} .edit a").click
