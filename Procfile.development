@@ -1,3 +1,4 @@
 redis: redis-server
 worker: env QUEUE=* bundle exec rake environment resque:work
 web: rails server
+test: zeus start
