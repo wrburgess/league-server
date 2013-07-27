@@ -22,7 +22,7 @@ feature "Admin Player CRUD" do
       expect(page).to have_content "Ward"
       expect(page).to have_content "Keith"
       expect(page).to have_content "Marshall"
-      expect(page).to have_content "Bob"
+      expect(page).to_not have_content "Bob"
     end
   end
 
