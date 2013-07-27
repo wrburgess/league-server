@@ -2,6 +2,11 @@ require 'spec_helper'
 
 feature "Admin Player CRUD" do
 
+  let(:player1) { FactoryGirl.create(:player) }
+  let(:player2) { FactoryGirl.create(:player) }
+  let(:player3) { FactoryGirl.create(:player) }
+  let(:player4) { FactoryGirl.create(:player) }
+
   before do
     player_position1 = FactoryGirl.create(:player_position, name: "Guard", abbreviation: "G")
     player_position2 = FactoryGirl.create(:player_position, name: "Center", abbreviation: "C")
@@ -9,10 +14,6 @@ feature "Admin Player CRUD" do
     player_team1 = FactoryGirl.create(:player_team, location_name: "Georgia", abbreviation: "GA")
     player_team2 = FactoryGirl.create(:player_team, location_name: "Florida", abbreviation: "FLA")
     player_team3 = FactoryGirl.create(:player_team, location_name: "Alabama", abbreviation: "ALA")
-    @player1 = FactoryGirl.create(:player)
-    @player2 = FactoryGirl.create(:player)
-    @player3 = FactoryGirl.create(:player)
-    @player4 = FactoryGirl.create(:player)
   end
 
   describe "#index" do
@@ -24,7 +25,7 @@ feature "Admin Player CRUD" do
 
   describe "#show" do
     it "has the correct default elements" do
-      visit admin_player_path(@player1)
+      visit admin_player_path(player1)
       page.should have_css("body.players.show")
     end
   end
@@ -50,23 +51,23 @@ feature "Admin Player CRUD" do
 
   describe "#edit" do
     it "has the correct default elements" do
-      visit edit_admin_player_path(@player1)
+      visit edit_admin_player_path(player1)
       page.should have_css("body.players.edit")
     end
 
     it "edits an existing player, redirects to admin_player show view" do
-      visit edit_admin_player_path(@player1)
+      visit edit_admin_player_path(player1)
       fill_in "player[first_name]", with: "Aaron"
       fill_in "player[last_name]", with: "Murray"
       select "ALA", from: "player[player_team_id]"
       select "G", from: "player[player_position_id]"
       click_button "Update Player"
-      @player1.reload
-      expect(@player1.first_name).to eq("Aaron")
-      expect(@player1.last_name).to eq("Murray")
-      expect(@player1.player_position.abbreviation).to eq("G")
-      expect(@player1.player_team.abbreviation).to eq("ALA")
-      current_path.should == admin_player_path(@player1)
+      player1.reload
+      expect(player1.first_name).to eq("Aaron")
+      expect(player1.last_name).to eq("Murray")
+      expect(player1.player_position.abbreviation).to eq("G")
+      expect(player1.player_team.abbreviation).to eq("ALA")
+      current_path.should == admin_player_path(player1)
     end
   end
 
