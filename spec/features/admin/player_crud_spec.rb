@@ -22,7 +22,7 @@ feature "Admin Player CRUD" do
       expect(page).to have_content "Ward"
       expect(page).to have_content "Keith"
       expect(page).to have_content "Marshall"
-      expect(page).to_not have_content "Bob"
+      expect(page).to have_content "Bob"
     end
   end
 
@@ -49,7 +49,6 @@ feature "Admin Player CRUD" do
       select "G", from: "player[player_position_id]"
       click_button "Create Player"
       player = Player.where(first_name: "Todd", last_name: "Gurley")
-
       expect(player.count).to eq 1
       expect(current_path).to eq admin_player_path player.first
     end
@@ -59,14 +58,13 @@ feature "Admin Player CRUD" do
     it "edits an existing player, redirects to admin_player show view" do
       visit edit_admin_player_path player1
       expect(page).to have_css "body.players.edit"
-      
+
       fill_in "player[first_name]", with: "Aaron"
       fill_in "player[last_name]", with: "Murray"
       select "ALA", from: "player[player_team_id]"
       select "G", from: "player[player_position_id]"
       click_button "Update Player"
       player1.reload
-
       expect(player1.first_name).to eq "Aaron"
       expect(player1.last_name).to eq "Murray"
       expect(player1.player_position.abbreviation).to eq "G"
