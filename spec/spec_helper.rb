@@ -11,7 +11,7 @@ Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
 DatabaseCleaner.strategy = :truncation
 
-# Coveralls.wear!
+Coveralls.wear!
 
 RSpec.configure do |config|
   config.use_transactional_fixtures = false
@@ -28,6 +28,6 @@ RSpec.configure do |config|
   end
 
   config.treat_symbols_as_metadata_keys_with_true_values = true
-  config.filter_run focus: true
-  config.run_all_when_everything_filtered = true
+  # config.filter_run focus: true
+  # config.run_all_when_everything_filtered = true
 end

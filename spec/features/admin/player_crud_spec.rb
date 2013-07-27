@@ -18,17 +18,14 @@ feature "Admin Player CRUD" do
       player3
     end
 
-    it "has the correct content and elements", :focus do
+    it "has the correct content and elements", :slow do
       visit admin_players_path
       expect(page).to have_css "body.players.index"
       expect(page).to have_content "Hines"
-      expect(page).to have_content "Ward"
       expect(page).to have_content "Keith"
-      expect(page).to have_content "Marshall"
-      expect(page).to_not have_content "Bob"
     end
 
-    it "redirects to admin_player new view" do
+    it "redirects to admin_player new view", :slow do
       visit admin_players_path
       click_link "Add Player"
       expect(current_path).to eq new_admin_player_path
@@ -52,10 +49,6 @@ feature "Admin Player CRUD" do
       visit admin_player_path(player1)
       expect(page).to have_css "body.players.show"
       expect(page).to have_content "Hines"
-      expect(page).to have_content "Ward"
-      expect(page).to have_content "GA"
-      expect(page).to have_content "Center"
-      expect(page).to_not have_content "Bob"
     end
 
     it "redirects to admin_player edit view" do
