@@ -14,6 +14,7 @@ class Admin::PlayersController < AdminController
 
   def create
     player = Player.create!(player_params)
+    flash[:notice] = "Player created."
     redirect_to admin_player_path(player)
   end
 
@@ -24,11 +25,13 @@ class Admin::PlayersController < AdminController
   def update
     player = Player.find(params[:id])
     player.update_attributes!(player_params)
+    flash[:notice] = "Player updated."
     redirect_to admin_player_path(player)
   end
 
   def destroy
     Player.find(params[:id]).destroy
+    flash[:notice] = "Player deleted."
     redirect_to admin_players_path
   end
 
