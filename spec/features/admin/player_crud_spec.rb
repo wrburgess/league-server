@@ -12,10 +12,13 @@ feature "Admin Player CRUD" do
   let(:player3) { FactoryGirl.create(:player, first_name: "Keith", last_name: "Marshall") }
 
   describe "#index" do
-    it "has the correct content and elements" do
+    before do
       player1
       player2
       player3
+    end
+
+    it "has the correct content and elements" do
       visit admin_players_path
       expect(page).to have_css "body.players.index"
       expect(page).to have_content "Hines"
@@ -29,6 +32,12 @@ feature "Admin Player CRUD" do
       visit admin_players_path
       click_link "Add Player"
       expect(current_path).to eq new_admin_player_path
+    end
+
+    it "redirects to admin_player edit view" do
+      visit admin_players_path
+      find("tr.row-#{player2.id} .edit a").click
+      expect(current_path).to eq edit_admin_player_path player2
     end
   end
 

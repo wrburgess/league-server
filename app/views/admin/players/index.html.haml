@@ -9,26 +9,26 @@
     Players
   %thead
     %tr
-      %th 
+      %th.player-id
         ID
-      %th 
+      %th.first-name 
         First Name
-      %th 
+      %th.last-name
         Last Name
-      %th 
+      %th.view 
         View
-      %th 
+      %th.edit 
         Edit
   %tbody
     - @players.each do |player|
-      %tr
-        %td
+      %tr{ class: "row-#{player.id}"}
+        %td.player-id
           = player.id
-        %td
+        %td.first-name
           = player.first_name
-        %td
+        %td.last-name
           = player.last_name
-        %td
+        %td.view
           = link_to "View", admin_player_path(player)
-        %td
+        %td.edit
           = link_to "Edit", edit_admin_player_path(player)
