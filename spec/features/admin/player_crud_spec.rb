@@ -24,6 +24,12 @@ feature "Admin Player CRUD" do
       expect(page).to have_content "Marshall"
       expect(page).to_not have_content "Bob"
     end
+
+    it "redirects to admin_player new view" do
+      visit admin_players_path
+      click_link "Add Player"
+      expect(current_path).to eq new_admin_player_path
+    end
   end
 
   describe "#show" do
