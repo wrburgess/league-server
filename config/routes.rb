@@ -6,8 +6,6 @@ League::Application.routes.draw do
 
   devise_for :users
 
-  resources :players
-
   namespace :users do
     get "alerts" => "users#alerts"
     get "settings" => "users#settings"

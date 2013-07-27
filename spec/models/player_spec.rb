@@ -1,21 +1,22 @@
 require 'spec_helper'
 
 describe Player do
+  let(:player) { FactoryGirl.create(:player) }
 
   it 'has a valid factory' do
-    FactoryGirl.create(:player).should be_valid
+    expect(player).to be_valid
   end
 
   it 'is invalid without a first_name' do
-    FactoryGirl.build(:player, first_name: nil).should_not be_valid
+    expect(FactoryGirl.build :player, first_name: nil).to_not be_valid
   end
 
   it 'is invalid without a last_name' do
-    FactoryGirl.build(:player, last_name: nil).should_not be_valid
+    expect(FactoryGirl.build :player, last_name: nil).to_not be_valid
   end
 
   it 'is invalid without a player_team' do
-    FactoryGirl.build(:player, player_team_id: nil).should_not be_valid
+    expect(FactoryGirl.build :player, player_team_id: nil).to_not be_valid
   end
 
   it { should belong_to(:player_team) }
@@ -31,7 +32,7 @@ describe Player do
   describe '#full_name' do
 
     it 'sets full_name from first_name and last_name' do
-      FactoryGirl.create(:player).full_name.should == 'Hines Ward'
+      expect(player.full_name).to eq "Hines Ward"
     end
 
   end
