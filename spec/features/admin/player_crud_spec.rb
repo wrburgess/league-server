@@ -36,6 +36,20 @@ feature "Admin Player CRUD" do
       expect(page).to have_content "Center"
       expect(page).to_not have_content "Bob"
     end
+
+    it "redirects to admin_player edit view" do
+      visit admin_player_path(player1)
+      click_link "Edit"
+      expect(current_path).to eq edit_admin_player_path player1
+    end
+
+    it "deletes existing player, redirects to admin_player index view" do
+      visit admin_player_path(player1)
+      click_link "Delete"
+      expect(current_path).to eq admin_players_path
+      expect(page).to have_content "Player deleted"
+      expect { player1.reload }.to raise_error ActiveRecord::RecordNotFound
+    end
   end
 
   describe "#new" do
@@ -72,16 +86,6 @@ feature "Admin Player CRUD" do
       expect(player1.player_team.abbreviation).to eq "ALA"
       expect(current_path).to eq admin_player_path player1
       expect(page).to have_content "Player updated"
-    end
-  end
-
-  describe "deleting player" do
-    it "edits an existing player, redirects to admin_player show view" do
-      visit admin_player_path(player1)
-      click_link "Delete"
-      expect(current_path).to eq admin_players_path
-      expect(page).to have_content "Player deleted"
-      expect { player1.reload }.to raise_error ActiveRecord::RecordNotFound
     end
   end
 
