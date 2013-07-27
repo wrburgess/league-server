@@ -18,7 +18,7 @@ feature "Admin Player CRUD" do
       player3
     end
 
-    it "has the correct content and elements" do
+    it "has the correct content and elements", :focus do
       visit admin_players_path
       expect(page).to have_css "body.players.index"
       expect(page).to have_content "Hines"
