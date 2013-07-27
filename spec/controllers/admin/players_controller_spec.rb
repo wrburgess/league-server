@@ -1,15 +1,12 @@
 require 'spec_helper'
 
 describe Admin::PlayersController do
+    let(:player1) { FactoryGirl.create(:player) }
+    let(:player2) { FactoryGirl.create(:player) }
+    let(:player3) { FactoryGirl.create(:player) }
+    let(:players) { Player.all }
 
   describe "#index" do
-    before do
-      @player1 = FactoryGirl.create(:player)
-      @player2 = FactoryGirl.create(:player)
-      @player3 = FactoryGirl.create(:player)
-      @players = Player.all
-    end
-
     it "renders the Admin Player index view" do
       get :index
       response.should render_template :index
@@ -18,26 +15,20 @@ describe Admin::PlayersController do
 
     it "assigns the requested players to @players" do
       get :index
-      expect(assigns(:players)).to eq @players
+      expect(assigns(players)).to eq @players
     end
   end
 
   describe "#show" do
-    before do
-      @player1 = FactoryGirl.create(:player)
-      @player2 = FactoryGirl.create(:player)
-      @player3 = FactoryGirl.create(:player)
-    end
-
     it "renders the Admin Player show view" do
-      get :show, id: @player2
+      get :show, id: player2
       response.should render_template :show
       response.should render_template layout: "layouts/admin"
     end
 
     it "assigns the requested player to @player" do
-      get :show, id: @player2
-      expect(assigns(:player)).to eq @player2
+      get :show, id: player2
+      expect(assigns(player2)).to eq @player2
     end
   end
   
@@ -56,29 +47,25 @@ describe Admin::PlayersController do
 
   describe "#update" do
     it "updates a player record in the database" do
-      player = FactoryGirl.create(:player)
-      post :update, id: player, :player => { first_name: "Phil" }, method: :patch
-      player.reload
-      expect(player.first_name).to eq("Phil")
+      post :update, id: player1, :player => { first_name: "Phil" }, method: :patch
+      player1.reload
+      expect(player1.first_name).to eq("Phil")
     end
 
     it "redirects to the Admin Player show view" do
-      player = FactoryGirl.create(:player)
-      post :update, id: player, :player => { first_name: "Bill" }, method: :patch
-      expect(response).to redirect_to admin_player_path(player)
+      post :update, id: player2, :player => { first_name: "Bill" }, method: :patch
+      expect(response).to redirect_to admin_player_path(player2)
     end
   end
 
   describe "#destroy" do
     it "deletes a player record from the database" do
-      player = FactoryGirl.create(:player)
-      post :destroy, id: player, method: :delete
-      expect { player.reload }.to raise_error(ActiveRecord::RecordNotFound) 
+      post :destroy, id: player3, method: :delete
+      expect { player3.reload }.to raise_error(ActiveRecord::RecordNotFound) 
     end
 
     it "redirects to the Admin Player show view" do
-      player = FactoryGirl.create(:player)
-      post :destroy, id: player, method: :delete
+      post :destroy, id: player1, method: :delete
       expect(response).to redirect_to admin_players_path
     end
   end
