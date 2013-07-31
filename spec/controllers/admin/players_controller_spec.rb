@@ -1,10 +1,10 @@
 require 'spec_helper'
 
 describe Admin::PlayersController do
-    let(:player1) { FactoryGirl.create(:player) }
-    let(:player2) { FactoryGirl.create(:player) }
-    let(:player3) { FactoryGirl.create(:player) }
-    let(:players) { Player.all }
+  let(:player1) { FactoryGirl.create(:player) }
+  let(:player2) { FactoryGirl.create(:player) }
+  let(:player3) { FactoryGirl.create(:player) }
+  let(:players) { Player.all }
 
   describe "#index" do
     it "renders the Admin Player index view" do

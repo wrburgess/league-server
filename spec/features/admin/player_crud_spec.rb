@@ -31,13 +31,13 @@ feature "Admin Player CRUD" do
       expect(current_path).to eq new_admin_player_path
     end
 
-    it "redirects to admin_player show view" do
+    it "redirects to admin_player show view", :slow do
       visit admin_players_path
       find("tr.row-#{player3.id} .show a").click
       expect(current_path).to eq admin_player_path player3
     end
 
-    it "redirects to admin_player edit view" do
+    it "redirects to admin_player edit view", :slow do
       visit admin_players_path
       find("tr.row-#{player2.id} .edit a").click
       expect(current_path).to eq edit_admin_player_path player2
@@ -45,19 +45,19 @@ feature "Admin Player CRUD" do
   end
 
   describe "#show" do
-    it "has the correct content and elements" do
+    it "has the correct content and elements", :slow do
       visit admin_player_path(player1)
       expect(page).to have_css "body.players.show"
       expect(page).to have_content "Hines"
     end
 
-    it "redirects to admin_player edit view" do
+    it "redirects to admin_player edit view", :slow do
       visit admin_player_path(player1)
       click_link "Edit"
       expect(current_path).to eq edit_admin_player_path player1
     end
 
-    it "deletes existing player, redirects to admin_player index view" do
+    it "deletes existing player, redirects to admin_player index view", :slow do
       visit admin_player_path(player1)
       click_link "Delete"
       expect(current_path).to eq admin_players_path
@@ -67,7 +67,7 @@ feature "Admin Player CRUD" do
   end
 
   describe "#new" do
-    it "adds a new player, redirects to admin_player show view" do
+    it "adds a new player, redirects to admin_player show view", :slow do
       visit new_admin_player_path
       expect(page).to have_css "body.players.new"
 
@@ -84,7 +84,7 @@ feature "Admin Player CRUD" do
   end
 
   describe "#edit" do
-    it "edits an existing player, redirects to admin_player show view" do
+    it "edits an existing player, redirects to admin_player show view", :slow do
       visit edit_admin_player_path player1
       expect(page).to have_css "body.players.edit"
 

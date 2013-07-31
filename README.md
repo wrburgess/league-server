@@ -15,6 +15,14 @@ A fantasy sports league engine
 * The ```foreman``` gem will work with the ```Procfile.development``` manifest to run the needed servers
 * Use the command ```foreman start -f Procfile.development``` to execute the services
 
+## Testing
+
+* We use RSpec for TDD
+* Specs that are time-intensive are tagged with ```:slow``` for filtering
+* To run all specs use the command ```rspec .```
+* To run only faster specs, use the command ```rspec . --tag ~@slow```
+* To run only slower specs, use the command ```rspec . --tag @slow```
+
 ## Custom Rake Tasks
 
 * ls:rebuild - calls ```db:drop, db:create, db:migrate, db:test:prepare``` (dev only)
