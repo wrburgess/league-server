@@ -4,7 +4,7 @@ ruby "2.0.0"
 gem "rails", "4.0.0"
 
 gem "coveralls", "0.6.7", require: false
-gem "devise", "3.0.0"
+gem "devise", "3.0.1"
 gem "faker", "1.1.2"
 gem "haml-rails", "0.4.0"
 gem "jquery-rails", "3.0.4"
