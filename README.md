@@ -43,6 +43,7 @@ A fantasy sports league engine
 4) List of configs settings you'll need to check (matches local .env file, which is not in source control):  
 
 ```
+APP_SECRET_KEY_BASE:        xxxx
 MANDRILL_APIKEY:            xxxx
 MANDRILL_USERNAME:          xxxx
 NEW_RELIC_APP_NAME:         league-server-staging
@@ -57,7 +58,6 @@ RAILS_ENV:                  staging
 REDIS_HOST:                 xxxx
 REDIS_PASSWORD:             xxxx
 REDIS_PORT:                 xxxx
-SECRET_KEY_BASE:            xxxx
 ```
 
 5) Using a CI system such as Travis or Codeship will requires some config. For Travis in the ```.travis.yml``` file:  
@@ -67,7 +67,7 @@ env:
   global: 
     - RAILS=4.0.0
     - DB=postgresql
-    - SECRET_KEY_BASE='[key]'
+    - APP_SECRET_KEY_BASE='[key]'
 ```
 
 6) How to retrieve SettingsLogic variables:  
@@ -76,7 +76,7 @@ env:
 
 7) How to retrieve environment variables:  
 
-```ENV["variable_name"]``` or ```ENV["SECRET_KEY_BASE"]```
+```ENV["variable_name"]``` or ```ENV["APP_SECRET_KEY_BASE"]```
 
 
 ## Release Features

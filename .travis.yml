@@ -6,7 +6,7 @@ env:
   global: 
     - RAILS=4.0.0
     - DB=postgresql
-    - SECRET_KEY_BASE='travis-secret-key'
+    - APP_SECRET_KEY_BASE='travis-secret-key'
 branches:
   only:
     - master
