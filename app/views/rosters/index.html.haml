@@ -4,10 +4,10 @@
 %table
   %thead
     %tr
-      %th
+      %th.name
         Team
   %tbody
     - @rosters.each do |roster|
-      %tr
-        %td
-          = roster.name
+      %tr{class: "row-#{roster.id}"}
+        %td.name
+          = link_to roster.name, group_roster_path(@group, roster)

@@ -139,7 +139,7 @@ id,name,nickname,abbrev,conference_name,conference_id,division_id,url
 138,Northern Colorado,Bears,NCOL,BIGSK,9,None,www.google.com
 139,NC State,Wolfpack,NCST,ACC,3,Atlantic,www.gopack.com
 140,Notre Dame,Irish,ND,IND,8,None,www.und.com
-141,North Dakota,Bisons,NDAK,GWC,,None,none
+141,North Dakota,Bisons,NDAK,GWC,1,None,none
 142,North Dakota State,Bison,NDKST,MVC,16,None,www.nmnathletics.com
 143,Northeastern,Huskies,NEAST,COL,11,None,www.gonu.com
 144,Nebraska,Cornhuskers,NEB,BIG12,5,North,www.huskers.com

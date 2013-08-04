@@ -1,11 +1,12 @@
 class RostersController < BrowserController
 
   def show
-    @roster = Roster.find(1)
+    @roster = Roster.find(params[:id])
   end
 
   def index
-    @rosters = Roster.where(group_id: params[:group_id])
+    @group = Group.find(params[:group_id])
+    @rosters = @group.rosters
   end
 
 end
