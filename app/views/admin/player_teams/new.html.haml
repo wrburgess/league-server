@@ -1,0 +1,9 @@
+%h1
+  = "Create School"
+
+= simple_form_for @player_team, url: admin_player_teams_path, method: :post do |f|
+  = f.input :location_name
+  = f.input :nickname
+  = f.input :abbreviation
+  = f.association :player_conference, label_method: :abbreviation, value_method: :id
+  = f.button :submit, "Create School"

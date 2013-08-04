@@ -52,7 +52,7 @@ describe Admin::PlayerConferencesController do
       expect(player_conference1.name).to eq "American Athletic"
     end
 
-    it "redirects to the Admin Player show view" do
+    it "redirects to the Admin PlayerConference show view" do
       post :update, id: player_conference2, :player_conference => { name: "American Athletic" }, method: :patch
       expect(response).to redirect_to admin_player_conference_path player_conference2
     end

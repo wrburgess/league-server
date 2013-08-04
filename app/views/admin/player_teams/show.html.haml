@@ -1,0 +1,18 @@
+#h1
+  = @player_team.full_name
+
+%ul
+  %li
+    = @player_team.location_name
+  %li
+    = @player_team.nickname
+  %li
+    = @player_team.abbreviation
+  %li
+    = @player_team.player_conference.abbreviation
+
+%ul
+  %li
+    = link_to "Edit", edit_player_team_path(@player_team)
+  %li
+    = link_to "Delete", admin_player_team_path(@player_team), method: :delete

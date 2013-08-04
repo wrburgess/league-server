@@ -1,0 +1,38 @@
+%h1 
+  Manage Schools
+
+.add-link
+  = link_to "Add School", new_admin_player_team_path 
+
+%table
+  %caption 
+    School
+  %thead
+    %tr
+      %th.id
+        ID
+      %th.location-name 
+        Location
+      %th.nickname
+        Nickname
+      %th.abbreviation
+        Abbrev
+      %th.view 
+        View
+      %th.edit 
+        Edit
+  %tbody
+    - @player_teams.each do |player_team|
+      %tr{ class: "row-#{player_team.id}"}
+        %td.id
+          = player_team.id
+        %td.location-name
+          = player_team.location_name
+        %td.nickname
+          = player_team.nickname
+        %td.abbreviation
+          = player_team.abbreviation
+        %td.show
+          = link_to "View", admin_player_team_path(player_team)
+        %td.edit
+          = link_to "Edit", edit_player_team_path(player_team)
