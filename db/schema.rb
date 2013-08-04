@@ -30,15 +30,14 @@ ActiveRecord::Schema.define(version: 20121215111111) do
   end
 
   create_table "group_logs", force: true do |t|
-    t.integer  "transaction_id", null: false
-    t.integer  "group_id",       null: false
-    t.integer  "roster_id",      null: false
+    t.integer  "group_id",    null: false
+    t.integer  "roster_id",   null: false
     t.integer  "player_id"
-    t.string   "action",         null: false
+    t.string   "action",      null: false
     t.boolean  "group_owner"
     t.string   "note"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "group_player_teams", force: true do |t|

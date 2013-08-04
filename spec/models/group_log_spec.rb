@@ -6,10 +6,6 @@ describe GroupLog do
     FactoryGirl.create(:group_log).should be_valid
   end
 
-  it 'is invalid without a transaction' do
-    FactoryGirl.build(:group_log, transaction_id: nil).should_not be_valid
-  end
-
   it 'is invalid without a group' do
     FactoryGirl.build(:group_log, group_id: nil).should_not be_valid
   end

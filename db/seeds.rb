@@ -62,7 +62,6 @@ puts "RosterStatCareers created"
 (1..8).each do |group|
   (1..50).each do |entry|
     GroupLog.create(
-      transaction_id: entry,
       group_id: group,
       roster_id: rand(1..50),
       player_id: rand(1..100),

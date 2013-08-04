@@ -103,7 +103,6 @@ class CreateModels < ActiveRecord::Migration
     end
 
     create_table "group_logs", :force => true do |t|
-      t.integer  "transaction_id", :null => false
       t.integer  "group_id",       :null => false
       t.integer  "roster_id",      :null => false
       t.integer  "player_id"
