@@ -28,7 +28,7 @@ class CreateModels < ActiveRecord::Migration
       t.string   "location_name"
       t.string   "nickname"
       t.string   "abbreviation",  :null => false
-      t.string   "player_conference_id", :null => false
+      t.integer  "player_conference_id", :null => false
       t.datetime "created_at",    :null => false
       t.datetime "updated_at",    :null => false
     end

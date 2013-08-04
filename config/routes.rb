@@ -14,8 +14,8 @@ League::Application.routes.draw do
   namespace :admin, defaults: { format: "html" } do
     root :to => "static#index"
     resources :players
+    resources :player_teams
     resources :player_conferences
-    resources :teams
     resources :users
   end
 
