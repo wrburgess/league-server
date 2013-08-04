@@ -18,7 +18,7 @@
         PA
   %tbody
     - @group.rosters.each do |roster|
-      %tr{class: "row-#{roster.id}"}
+      %tr{ class: "row-#{roster.id}" }
         %td.name
           = link_to roster.name, group_roster_path(@group, roster)
         %td.group-wins

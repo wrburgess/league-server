@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Player do
-  let(:player) { FactoryGirl.create(:player) }
+  let(:player) { FactoryGirl.create :player, first_name: "Hines", last_name: "Ward" }
 
   it 'has a valid factory' do
     expect(player).to be_valid

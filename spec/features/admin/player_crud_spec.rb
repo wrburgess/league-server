@@ -1,15 +1,15 @@
 require 'spec_helper'
 
 feature "Admin Player CRUD" do
-  let!(:player_position1) { FactoryGirl.create(:player_position, name: "Guard", abbreviation: "G") }
-  let!(:player_position2) { FactoryGirl.create(:player_position, name: "Center", abbreviation: "C") }
-  let!(:player_position3) { FactoryGirl.create(:player_position, name: "Forward", abbreviation: "F") }
-  let!(:player_team1) { FactoryGirl.create(:player_team, location_name: "Georgia", abbreviation: "GA") }
-  let!(:player_team2) { FactoryGirl.create(:player_team, location_name: "Florida", abbreviation: "FLA") }
-  let!(:player_team3) { FactoryGirl.create(:player_team, location_name: "Alabama", abbreviation: "ALA") }
-  let(:player1) { FactoryGirl.create(:player) }
-  let(:player2) { FactoryGirl.create(:player, first_name: "Todd", last_name: "Gurley") }
-  let(:player3) { FactoryGirl.create(:player, first_name: "Keith", last_name: "Marshall") }
+  let!(:player_position1) { FactoryGirl.create :player_position, name: "Guard", abbreviation: "G" }
+  let!(:player_position2) { FactoryGirl.create :player_position, name: "Center", abbreviation: "C" }
+  let!(:player_position3) { FactoryGirl.create :player_position, name: "Forward", abbreviation: "F" }
+  let!(:player_team1) { FactoryGirl.create :player_team, location_name: "Georgia", abbreviation: "GA" }
+  let!(:player_team2) { FactoryGirl.create :player_team, location_name: "Florida", abbreviation: "FLA" }
+  let!(:player_team3) { FactoryGirl.create :player_team, location_name: "Alabama", abbreviation: "ALA" }
+  let(:player1) { FactoryGirl.create :player, first_name: "Hines", last_name: "Ward" }
+  let(:player2) { FactoryGirl.create :player, first_name: "Todd", last_name: "Gurley" }
+  let(:player3) { FactoryGirl.create :player, first_name: "Keith", last_name: "Marshall" }
 
   describe "#index" do
     before do

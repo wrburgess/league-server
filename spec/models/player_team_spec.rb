@@ -26,7 +26,7 @@ describe PlayerTeam do
 
   describe "#full_name" do
     it 'sets full_name from location_name and nickname' do
-      FactoryGirl.create(:player_team).full_name.should == 'Georgia Bulldogs'
+      FactoryGirl.create(:player_team, location_name: "Georgia", nickname: "Bulldogs").full_name.should == 'Georgia Bulldogs'
     end
   end
 

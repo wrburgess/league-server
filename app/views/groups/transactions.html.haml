@@ -4,22 +4,22 @@
 %table
   %thead
     %tr
-      %th
+      %th.date
         Date
-      %th
+      %th.team-name
         Team
-      %th
+      %th.action
         Action
-      %th
+      %th.player-name
         Player
   %tbody
     - @group.group_logs.each do |log|
-      %tr
-        %td
+      %tr{ class: "row-#{log.id}" }
+        %td.date
           = log.created_at.strftime("%m-%d-%y %H:%M")
-        %td
+        %td.team-name
           = log.roster.name
-        %td
+        %td.action
           = log.action
-        %td
+        %td.player-name
           = log.player.full_name

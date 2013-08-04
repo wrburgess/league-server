@@ -1,9 +1,9 @@
 require 'spec_helper'
 
 feature "Admin PlayerConference CRUD" do
-  let(:player_conference1) { FactoryGirl.create(:player_conference) }
-  let(:player_conference2) { FactoryGirl.create(:player_conference, name: "Atlantic Coast", abbreviation: "ACC") }
-  let(:player_conference3) { FactoryGirl.create(:player_conference, name: "PAC 12", abbreviation: "PAC12") }
+  let(:player_conference1) { FactoryGirl.create :player_conference, name: "Southeeastern", abbreviation: "SEC" }
+  let(:player_conference2) { FactoryGirl.create :player_conference, name: "Atlantic Coast", abbreviation: "ACC" }
+  let(:player_conference3) { FactoryGirl.create :player_conference, name: "PAC 12", abbreviation: "PAC12" }
 
   describe "#index" do
     before do
