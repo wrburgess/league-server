@@ -49,7 +49,7 @@ describe Admin::PlayerTeamsController do
     it "updates a PlayerTeam record in the database" do
       post :update, id: player_team1, :player_team => { location_name: "Louisville" }, method: :patch
       player_team1.reload
-      expect(player_team1.name).to eq "Louisville"
+      expect(player_team1.location_name).to eq "Louisville"
     end
 
     it "redirects to the Admin PlayerTeam show view" do

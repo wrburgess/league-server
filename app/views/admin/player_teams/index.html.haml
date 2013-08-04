@@ -17,6 +17,8 @@
         Nickname
       %th.abbreviation
         Abbrev
+      %th.conference
+        Conference
       %th.view 
         View
       %th.edit 
@@ -32,7 +34,9 @@
           = player_team.nickname
         %td.abbreviation
           = player_team.abbreviation
+        %td.conference
+          = player_team.player_conference.abbreviation
         %td.show
           = link_to "View", admin_player_team_path(player_team)
         %td.edit
-          = link_to "Edit", edit_player_team_path(player_team)
+          = link_to "Edit", edit_admin_player_team_path(player_team)

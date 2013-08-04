@@ -8,19 +8,20 @@ feature "Admin PlayerTeam CRUD" do
   let(:player_team3) { FactoryGirl.create(:player_team, location_name: "LSU", nickname: "Tigers", abbreviation: "LSU", player_conference: player_conference1) }
 
   describe "#index" do
-    # before do
-    #   player_conference1
-    #   player_conference2
-    # end
+    before do
+      player_team1
+      player_team2
+      player_team3
+    end
 
     it "has the correct content and elements", :slow do
       visit admin_player_teams_path
-      expect(page).to have_css "body.player_conferences.index"
+      expect(page).to have_css "body.player_teams.index"
       expect(page).to have_content "Georgia"
       expect(page).to have_content "Florida State"
     end
 
-    it "redirects to admin_player_conference new view", :slow do
+    it "redirects to admin_player_team new view", :slow do
       visit admin_player_teams_path
       click_link "Add School"
       expect(current_path).to eq new_admin_player_team_path
@@ -47,7 +48,7 @@ feature "Admin PlayerTeam CRUD" do
     end
 
     it "redirects to admin_player_team edit view", :slow do
-      visit admin_player_conference_path(player_team1)
+      visit admin_player_team_path(player_team1)
       click_link "Edit"
       expect(current_path).to eq edit_admin_player_team_path player_team1
     end
@@ -83,7 +84,7 @@ feature "Admin PlayerTeam CRUD" do
       visit edit_admin_player_team_path player_team1
       expect(page).to have_css "body.player_teams.edit"
 
-      fill_in "player_team[name]", with: "Clemson"
+      fill_in "player_team[location_name]", with: "Clemson"
       fill_in "player_team[nickname]", with: "Tigers"
       fill_in "player_team[abbreviation]", with: "CLEM"
       select "ACC", from: "player_team[player_conference_id]"
@@ -92,7 +93,7 @@ feature "Admin PlayerTeam CRUD" do
       expect(player_team1.location_name).to eq "Clemson"
       expect(player_team1.nickname).to eq "Tigers"
       expect(player_team1.abbreviation).to eq "CLEM"
-      expect(player_team.player_conference.abbreviation).to eq "ACC"
+      expect(player_team1.player_conference.abbreviation).to eq "ACC"
       expect(current_path).to eq admin_player_team_path player_team1
       expect(page).to have_content "School updated"
     end
