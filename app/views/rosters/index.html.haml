@@ -1,0 +1,13 @@
+%h1
+  Rosters
+
+%table
+  %thead
+    %tr
+      %th
+        Team
+  %tbody
+    - @rosters.each do |roster|
+      %tr
+        %td
+          = roster.name

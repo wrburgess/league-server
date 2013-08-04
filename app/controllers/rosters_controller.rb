@@ -5,7 +5,7 @@ class RostersController < BrowserController
   end
 
   def index
-
+    @rosters = Roster.where(group_id: params[:group_id])
   end
 
 end
