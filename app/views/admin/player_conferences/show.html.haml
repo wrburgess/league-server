@@ -1,0 +1,14 @@
+#h1
+  = @player_conference.full_name
+
+%ul
+  %li
+    = @player_conference.name
+  %li
+    = @player_conference.abbreviation
+
+%ul
+  %li
+    = link_to "Edit", edit_admin_player_conference_path(@player_conference)
+  %li
+    = link_to "Delete", admin_player_conference_path(@player_conference), method: :delete

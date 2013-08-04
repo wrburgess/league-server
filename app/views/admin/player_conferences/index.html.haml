@@ -1,0 +1,34 @@
+%h1 
+  Manage Conferences
+
+.add-link
+  = link_to "Add Conference", new_admin_player_conference_path 
+
+%table.player-conference
+  %caption 
+    Conferences
+  %thead
+    %tr
+      %th.id
+        ID
+      %th.name 
+        Name
+      %th.abbreviation
+        Abbrev
+      %th.view 
+        View
+      %th.edit 
+        Edit
+  %tbody
+    - @player_conferences.each do |player_conference|
+      %tr{ class: "row-#{player_conference.id}"}
+        %td.id
+          = player_conference.id
+        %td.name
+          = player_conference.name
+        %td.abbreviation
+          = player_conference.abbreviation
+        %td.show
+          = link_to "View", admin_player_conference_path(player_conference)
+        %td.edit
+          = link_to "Edit", edit_admin_player_conference_path(player_conference)

@@ -1,0 +1,7 @@
+%h1
+  = "Edit #{@player_conference.full_name}"
+
+= simple_form_for @player_conference, url: admin_player_conference_path(@player_conference), method: :patch do |f|
+  = f.input :name
+  = f.input :abbreviation
+  = f.button :submit
