@@ -24,7 +24,7 @@ admin_user = User.create(email: "wrburgess@wrburgess.com", password: "secret")
 puts "Admin User created"
 
 CSV.foreach("#{Rails.root}/db/fill/player_conferences.csv", :headers => :first_row) do |row|
-  PlayerConference.create!(id: row["id"], name: row["name"], abbreviation: row["abbreviation"])
+  PlayerConference.create!(name: row["name"], abbreviation: row["abbreviation"])
 end
 puts "PlayerConferences created"
 

@@ -34,16 +34,16 @@ class CreateModels < ActiveRecord::Migration
     end
 
     create_table "player_conferences", :force => true do |t|
-      t.string   "name"
+      t.string   "name",          :null => false
       t.string   "abbreviation",  :null => false
       t.datetime "created_at",    :null => false
       t.datetime "updated_at",    :null => false
     end
 
     create_table "player_stat_games", :force => true do |t|
-      t.integer  "player_id",  :null => false
-      t.integer  "season",  :null => false
-      t.integer  "week",  :null => false
+      t.integer  "player_id",   :null => false
+      t.integer  "season",      :null => false
+      t.integer  "week",        :null => false
       t.date     "game_date"
       t.integer  "opponent_id"
       t.integer  "pa_att",      :default => 0
@@ -79,11 +79,11 @@ class CreateModels < ActiveRecord::Migration
     end
 
     create_table "groups", :force => true do |t|
-      t.string   "name",       :null => false
-      t.string   "abbreviation", :null => false
+      t.string   "name",          :null => false
+      t.string   "abbreviation",  :null => false
       t.integer  "divisions"
-      t.datetime "created_at", :null => false
-      t.datetime "updated_at", :null => false
+      t.datetime "created_at",    :null => false
+      t.datetime "updated_at",    :null => false
     end
 
     create_table "group_rosters", :force => true do |t|

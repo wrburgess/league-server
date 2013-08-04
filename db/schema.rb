@@ -82,7 +82,7 @@ ActiveRecord::Schema.define(version: 20121215111111) do
   end
 
   create_table "player_conferences", force: true do |t|
-    t.string   "name"
+    t.string   "name",         null: false
     t.string   "abbreviation", null: false
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
@@ -138,7 +138,7 @@ ActiveRecord::Schema.define(version: 20121215111111) do
     t.string   "location_name"
     t.string   "nickname"
     t.string   "abbreviation",         null: false
-    t.string   "player_conference_id", null: false
+    t.integer  "player_conference_id", null: false
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
   end
