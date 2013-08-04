@@ -12,14 +12,18 @@
         Action
       %th.player-name
         Player
+      %th.note
+        Notes
   %tbody
     - @group.group_logs.each do |log|
-      %tr{ class: "row-#{log.id}" }
+      %tr{ class: "row-#{log.id} #{commish_flag(log)}" }
         %td.date
           = log.created_at.strftime("%m-%d-%y %H:%M")
         %td.team-name
-          = log.roster.name
+          = link_to log.roster.name, group_roster_path(@group, log.roster)
         %td.action
           = log.action
         %td.player-name
-          = log.player.full_name
+          = link_to log.player.full_name, group_player_path(@group, log.player)  
+        %th.note
+          = log.note
