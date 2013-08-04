@@ -4,7 +4,7 @@ describe Admin::PlayerConferencesController do
   let(:player_conference1) { FactoryGirl.create(:player_conference) }
   let(:player_conference2) { FactoryGirl.create(:player_conference) }
   let(:player_conference3) { FactoryGirl.create(:player_conference) }
-  let(:player_conferences) { PlayerConferences.all }
+  let(:player_conferences) { PlayerConference.all }
 
   describe "#index" do
     it "renders the Admin PlayerConference index view" do
@@ -28,7 +28,7 @@ describe Admin::PlayerConferencesController do
 
     it "assigns the requested PlayerConference to @playerconference" do
       get :show, id: player_conference2
-      expect(assigns(playerconference2)).to eq @player_conference
+      expect(assigns(player_conference2)).to eq @player_conference
     end
   end
   
@@ -41,7 +41,7 @@ describe Admin::PlayerConferencesController do
     it "redirects to the Admin PlayerConference show view" do
       post :create, :player_conference => { name: "American Athletic", abbreviation: "AAC" }
       player_conference = PlayerConference.last
-      expect(response).to redirect_to admin_player_conference_path player
+      expect(response).to redirect_to admin_player_conference_path player_conference
     end
   end
 

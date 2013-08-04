@@ -40,9 +40,9 @@ feature "Admin PlayerConference CRUD" do
 
   describe "#show" do
     it "has the correct content and elements", :slow do
-      visit admin_player_path(player_conference1)
+      visit admin_player_conference_path(player_conference1)
       expect(page).to have_css "body.player_conferences.show"
-      expect(page).to have_content "ACC"
+      expect(page).to have_content "SEC"
     end
 
     it "redirects to admin_player_conference edit view", :slow do
@@ -52,7 +52,7 @@ feature "Admin PlayerConference CRUD" do
     end
 
     it "deletes existing player, redirects to admin_player index view", :slow do
-      visit admin_player_path(player_conference1)
+      visit admin_player_conference_path(player_conference1)
       click_link "Delete"
       expect(current_path).to eq admin_player_conferences_path
       expect(page).to have_content "Conference deleted"
@@ -70,7 +70,7 @@ feature "Admin PlayerConference CRUD" do
       click_button "Create Conference"
       player_conference = PlayerConference.where(name: "American Athletic", abbreviation: "AAC")
       expect(player_conference.count).to eq 1
-      expect(current_path).to eq admin_player_conference_path player.first
+      expect(current_path).to eq admin_player_conference_path player_conference.first
       expect(page).to have_content "Conference created"
     end
   end
