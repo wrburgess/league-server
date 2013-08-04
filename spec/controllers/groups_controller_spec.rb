@@ -47,13 +47,13 @@ describe GroupsController, :type => :controller do
 
   describe "#standings" do
     it "renders the 'standings' template under the 'browser' layout" do
-      get :standings, group_id: @group, id: @roster1
+      get :standings, group_id: @group
       response.should render_template :standings
       response.should render_template layout: "layouts/browser"
     end
 
     it "assigns the requested group to @group" do
-      get :standings, group_id: @group, id: @roster1
+      get :standings, group_id: @group
       expect(assigns(:group)).to eq @group
     end
   end

@@ -4,31 +4,31 @@
 %table
   %thead
     %tr
-      %th
+      %th.name
         Team
-      %th
+      %th.group-wins
         W
-      %th
+      %th.group-losses
         L
-      %th
+      %th.group-ties
         T
-      %th
+      %th.points-for
         PF
-      %th
+      %th.points-against
         PA
   %tbody
     - @group.rosters.each do |roster|
-      %tr
-        %td
-          = #roster.name
-        %td
-          = #roster.roster_stat_seasons.where(season: AppSettings.app_season).first.wins
-        %td
-          = #roster.roster_stat_seasons.where(season: AppSettings.app_season).first.losses
-        %td
-          = #roster.roster_stat_seasons.where(season: AppSettings.app_season).first.ties
-        %td
-          = #roster.roster_stat_seasons.where(season: AppSettings.app_season).first.points_for
-        %td
-          = #roster.roster_stat_seasons.where(season: AppSettings.app_season).first.points_against
+      %tr{class: "row-#{roster.id}"}
+        %td.name
+          = link_to roster.name, group_roster_path(@group, roster)
+        %td.group-wins
+          = "1" #roster.roster_stat_seasons.where(season: AppSettings.app_season).first.wins
+        %td.group-losses
+          = "2" #roster.roster_stat_seasons.where(season: AppSettings.app_season).first.losses
+        %td.group-ties
+          = "3" #roster.roster_stat_seasons.where(season: AppSettings.app_season).first.ties
+        %td.points-for
+          = "4" #roster.roster_stat_seasons.where(season: AppSettings.app_season).first.points_for
+        %td.points-against
+          = "5" #roster.roster_stat_seasons.where(season: AppSettings.app_season).first.points_against
 
