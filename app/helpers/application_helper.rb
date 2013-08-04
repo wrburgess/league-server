@@ -8,4 +8,8 @@ module ApplicationHelper
     end
   end
 
+  def commish_flag(log)
+    log.group_owner ? "commish-action" : ""
+  end
+
 end
