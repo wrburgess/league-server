@@ -15,7 +15,7 @@
       %th.note
         Notes
   %tbody
-    - @group.group_logs.each do |log|
+    - @group_logs.each do |log|
       %tr{ class: "row-#{log.id} #{commish_flag(log)}" }
         %td.date
           = log.created_at.strftime("%m-%d-%y %H:%M")
