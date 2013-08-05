@@ -26,6 +26,7 @@ end
 group :development do
   gem "better_errors", "0.9.0"
   gem "binding_of_caller", "0.7.2"
+  gem "tracer_bullets", "0.0.4"
 end
 
 group :development, :test do
