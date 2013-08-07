@@ -21,6 +21,8 @@ defaults: &defaults
   roster_alias: "team"
   player_team_alias: "school"
   player_conference_alias: "conference"
+  period_alias: "week"
+  season_alias: "season"
 
 test:
   <<: *defaults

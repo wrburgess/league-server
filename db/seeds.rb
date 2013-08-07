@@ -42,11 +42,11 @@ CSV.foreach("#{Rails.root}/db/fill/rosters.csv", :headers => :first_row) do |row
   roster = Roster.create!(name: row[0], abbreviation: row[1])
 
   (1..15).each do |rsg|
-    RosterStatGame.create!(roster_id: roster.id, season: 2012, week: rsg)
+    RosterStatGame.create!(roster_id: roster.id, season: 2012, period: rsg)
   end
 
   (1..15).each do |rsg|
-    RosterStatGame.create!(roster_id: roster.id, season: 2013, week: rsg)
+    RosterStatGame.create!(roster_id: roster.id, season: 2013, period: rsg)
   end
 
   RosterStatSeason.create!(roster_id: roster.id, season: 2012)
@@ -114,15 +114,15 @@ puts "GroupUsers created"
       opponent_id: rand(1..100),
       game_date: game_date,
       season: "2013",
-      week: gs
+      period: gs
     )
     game_date + 7.days
   end
 
   # (1..50).each do |roster|
-  #   (1..14).each do |week|
+  #   (1..14).each do |period|
   #     (1.15).each do |roster_slot_fill|
-  #       roster_slot = RosterSlot.create(season: 2013, week: 1, roster: roster, player_id: 1, roster_slot_type_id: roster_slot_fill, roster_slot_position_id: roster_slot_fill)
+  #       roster_slot = RosterSlot.create(season: 2013, period: 1, roster: roster, player_id: 1, roster_slot_type_id: roster_slot_fill, roster_slot_position_id: roster_slot_fill)
   #     end
   #   end
   # end

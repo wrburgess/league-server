@@ -25,7 +25,7 @@ League::Application.routes.draw do
     get "draft" => "groups#draft"
     get "news" => "players#news"
     get "rules" => "groups#rules"
-    get "schedule" => "groups#schedule"
+    get "games" => "groups#games"
     get "scores" => "groups#scores"
     get "search" => "players#search"
     get "standings" => "groups#standings"

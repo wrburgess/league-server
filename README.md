@@ -9,9 +9,8 @@ A fantasy sports league engine
 
 ## Development Startup
 
-* You need redis, resque, and zeus installed on your development environment
+* You need redis and resque installed on your development environment
 * TODO: Explain redis and resque install
-* Add zeus with ```gem install zeus``` to add to your app, not the Gemfile 
 * The ```foreman``` gem will work with the ```Procfile.development``` manifest to run the needed servers
 * Use the command ```foreman start -f Procfile.development``` to execute the services
 

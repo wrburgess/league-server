@@ -1,5 +1,4 @@
 class Group < ActiveRecord::Base
-  # attr_accessible :name, :abbreviation
 
   validates_presence_of :name, :abbreviation
 
@@ -15,9 +14,5 @@ class Group < ActiveRecord::Base
 
   has_many :group_rules
   has_many :group_logs
-
-  def send_weekly_review(user)
-    GroupMailer.weekly_review(user).deliver
-  end
 
 end
