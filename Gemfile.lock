@@ -1,10 +1,3 @@
-GIT
-  remote: git@github.com:n8/tracer_bullets.git
-  revision: e1a304940910b51f5029a7e83aee4e1dd29b7034
-  branch: master
-  specs:
-    tracer_bullets (0.0.5)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -217,6 +210,7 @@ GEM
     thread_safe (0.1.2)
       atomic
     tilt (1.4.1)
+    tracer_bullets (0.0.5)
     treetop (1.4.14)
       polyglot
       polyglot (>= 0.3.1)
@@ -267,6 +261,6 @@ DEPENDENCIES
   settingslogic (= 2.0.9)
   shoulda (= 3.5.0)
   simple_form (= 3.0.0.rc)
-  tracer_bullets!
+  tracer_bullets (= 0.0.5)
   uglifier (= 2.1.2)
   unicorn (= 4.6.3)

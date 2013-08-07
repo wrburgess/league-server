@@ -26,7 +26,7 @@ end
 group :development do
   gem "better_errors", "0.9.0"
   gem "binding_of_caller", "0.7.2"
-  gem "tracer_bullets", :git => "git@github.com:n8/tracer_bullets.git", :branch => "master"
+  gem "tracer_bullets", "0.0.5"
 end
 
 group :development, :test do
