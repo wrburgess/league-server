@@ -11,11 +11,13 @@
           %li
             = link_to "Players", admin_players_path
           %li
-            = link_to "Schools", admin_player_teams_path
+            = link_to "#{AppSettings.player_team_alias.capitalize.pluralize}", admin_player_teams_path
           %li
-            = link_to "Conferences", admin_player_conferences_path
+            = link_to "#{AppSettings.player_conference_alias.capitalize.pluralize}", admin_player_conferences_path
           %li
-            = link_to "Groups", admin_groups_path
+            = link_to "#{AppSettings.group_alias.capitalize.pluralize}", admin_groups_path
+          %li
+            = link_to "#{AppSettings.roster_alias.capitalize.pluralize}", admin_rosters_path
       %li.dropdown
         %a.dropdown-toggle{ href: "#", "data-toggle" => "dropdown" }
           Scoring

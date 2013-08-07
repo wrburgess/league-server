@@ -1,0 +1,12 @@
+#h1
+  = @roster.name
+
+%ul
+  %li
+    = @roster.name
+  %li
+    = @roster.abbreviation
+
+%ul
+  %li
+    = link_to "Edit", edit_admin_roster_path(@roster)

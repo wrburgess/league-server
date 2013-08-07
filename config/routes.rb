@@ -17,6 +17,7 @@ League::Application.routes.draw do
     resources :players
     resources :player_teams
     resources :player_conferences
+    resources :rosters
     resources :users
   end
 

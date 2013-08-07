@@ -1,9 +1,9 @@
 %h1 
-  = "Manage #{AppSettings.group_alias.capitalize}s"
+  = "Manage #{AppSettings.group_alias.capitalize.pluralize}"
 
 %table.group
   %caption 
-    = "#{AppSettings.group_alias.capitalize}s"
+    = "#{AppSettings.group_alias.capitalize.pluralize}"
   %thead
     %tr
       %th.id

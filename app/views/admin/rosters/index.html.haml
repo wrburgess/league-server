@@ -1,0 +1,31 @@
+%h1 
+  = "Manage #{AppSettings.roster_alias.capitalize.pluralize}"
+
+%table.group
+  %caption 
+    = "#{AppSettings.roster_alias.capitalize.pluralize}"
+  %thead
+    %tr
+      %th.id
+        ID
+      %th.name 
+        Name
+      %th.abbreviation
+        Abbrev
+      %th.view 
+        View
+      %th.edit 
+        Edit
+  %tbody
+    - @rosters.each do |roster|
+      %tr{ class: "row-#{roster.id}"}
+        %td.id
+          = roster.id
+        %td.name
+          = roster.name
+        %td.abbreviation
+          = roster.abbreviation
+        %td.show
+          = link_to "View", admin_roster_path(roster)
+        %td.edit
+          = link_to "Edit", edit_admin_roster_path(roster)
