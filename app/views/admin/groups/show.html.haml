@@ -1,0 +1,12 @@
+#h1
+  = @group.name
+
+%ul
+  %li
+    = @group.name
+  %li
+    = @group.abbreviation
+
+%ul
+  %li
+    = link_to "Edit", edit_admin_group_path(@group)

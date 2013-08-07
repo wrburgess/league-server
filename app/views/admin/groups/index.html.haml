@@ -1,0 +1,31 @@
+%h1 
+  = "Manage #{AppSettings.group_alias.capitalize}"
+
+%table.group
+  %caption 
+    = "#{AppSettings.group_alias.capitalize}s"
+  %thead
+    %tr
+      %th.id
+        ID
+      %th.name 
+        Name
+      %th.abbreviation
+        Abbrev
+      %th.view 
+        View
+      %th.edit 
+        Edit
+  %tbody
+    - @groups.each do |group|
+      %tr{ class: "row-#{group.id}"}
+        %td.id
+          = group.id
+        %td.name
+          = group.name
+        %td.abbreviation
+          = group.abbreviation
+        %td.show
+          = link_to "View", admin_group_path(group)
+        %td.edit
+          = link_to "Edit", edit_admin_group_path(group)

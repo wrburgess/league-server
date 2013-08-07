@@ -3,10 +3,6 @@ class Admin::TeamsController < AdminController
 
   def index
     @teams = Team.all
-
-    @page_title = "Team Index"
-    @body_id = "teams-index"
-    @body_class = "page"
   end
 
 end

@@ -1,7 +1,7 @@
 class GroupsController < BrowserController
 
   def draft
-    
+
   end
 
   def show
