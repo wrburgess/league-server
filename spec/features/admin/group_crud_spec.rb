@@ -53,12 +53,12 @@ feature "Admin Group CRUD" do
 
       fill_in "group[name]", with: "Pre Pro Hoops South"
       fill_in "group[abbreviation]", with: "PPHS"
-      click_button "Update #{AppSettings.group_alias.capitalize}"
+      click_button "Update #{AppSettings.app_alias_group.capitalize}"
       group1.reload
       expect(group1.name).to eq "Pre Pro Hoops South"
       expect(group1.abbreviation).to eq "PPHS"
       expect(current_path).to eq admin_group_path group1
-      expect(page).to have_content "#{AppSettings.group_alias.capitalize} updated"
+      expect(page).to have_content "#{AppSettings.app_alias_group.capitalize} updated"
     end
   end
 end

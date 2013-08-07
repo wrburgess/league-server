@@ -15,7 +15,7 @@ class Admin::GroupsController < AdminController
   def update
     group = Group.find(params[:id])
     group.update_attributes!(group_params)
-    flash[:notice] = "#{AppSettings.group_alias.capitalize} updated"
+    flash[:notice] = "#{AppSettings.app_alias_group.capitalize} updated"
     redirect_to admin_group_path(group)
   end
 

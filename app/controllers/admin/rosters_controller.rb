@@ -15,7 +15,7 @@ class Admin::RostersController < AdminController
   def update
     roster = Roster.find(params[:id])
     roster.update_attributes!(roster_params)
-    flash[:notice] = "#{AppSettings.roster_alias.capitalize} updated"
+    flash[:notice] = "#{AppSettings.app_alias_roster.capitalize} updated"
     redirect_to admin_roster_path(roster)
   end
 

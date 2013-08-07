@@ -10,8 +10,8 @@ describe PlayerStatGame do
     FactoryGirl.build(:player_stat_game, player_id: nil).should_not be_valid
   end
 
-  it 'is invalid without a week' do
-    FactoryGirl.build(:player_stat_game, week: nil).should_not be_valid
+  it 'is invalid without a period' do
+    FactoryGirl.build(:player_stat_game, period: nil).should_not be_valid
   end
 
   it 'is invalid without a season' do

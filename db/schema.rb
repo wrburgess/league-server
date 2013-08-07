@@ -29,6 +29,21 @@ ActiveRecord::Schema.define(version: 20121215111111) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "group_games", force: true do |t|
+    t.integer  "group_id"
+    t.integer  "season"
+    t.integer  "period"
+    t.boolean  "counts",                       default: false
+    t.integer  "away_roster_id"
+    t.integer  "away_roster_score",            default: 0
+    t.integer  "away_roster_score_adjustment", default: 0
+    t.integer  "home_roster_id"
+    t.integer  "home_roster_score",            default: 0
+    t.integer  "home_roster_score_adjustment", default: 0
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
+  end
+
   create_table "group_logs", force: true do |t|
     t.integer  "group_id",    null: false
     t.integer  "roster_id",   null: false
@@ -109,7 +124,7 @@ ActiveRecord::Schema.define(version: 20121215111111) do
   create_table "player_stat_games", force: true do |t|
     t.integer  "player_id",               null: false
     t.integer  "season",                  null: false
-    t.integer  "period",                    null: false
+    t.integer  "period",                  null: false
     t.date     "game_date"
     t.integer  "opponent_id"
     t.integer  "pa_att",      default: 0
@@ -169,7 +184,7 @@ ActiveRecord::Schema.define(version: 20121215111111) do
 
   create_table "roster_slots", force: true do |t|
     t.integer  "season",                  null: false
-    t.integer  "period",                    null: false
+    t.integer  "period",                  null: false
     t.integer  "roster_id",               null: false
     t.integer  "player_id",               null: false
     t.integer  "roster_slot_type_id",     null: false
@@ -200,8 +215,8 @@ ActiveRecord::Schema.define(version: 20121215111111) do
 
   create_table "roster_stat_games", force: true do |t|
     t.integer  "roster_id"
-    t.integer  "season",         null: false
-    t.integer  "period",         null: false
+    t.integer  "season",                     null: false
+    t.integer  "period",                     null: false
     t.integer  "win",            default: 0
     t.integer  "loss",           default: 0
     t.integer  "tie",            default: 0

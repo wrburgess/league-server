@@ -22,12 +22,12 @@ describe GroupGame do
     FactoryGirl.build(:group_game, group: nil).should_not be_valid
   end
 
-  it 'is invalid without an away team' do
-    FactoryGirl.build(:group_game, away_team: nil).should_not be_valid
+  it 'is invalid without an away roster' do
+    FactoryGirl.build(:group_game, away_roster: nil).should_not be_valid
   end
 
-  it 'is invalid without a home team' do
-    FactoryGirl.build(:group_game, home_team: nil).should_not be_valid
+  it 'is invalid without a home roster' do
+    FactoryGirl.build(:group_game, home_roster: nil).should_not be_valid
   end
 
   it { should belong_to(:group) }

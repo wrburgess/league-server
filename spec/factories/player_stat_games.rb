@@ -1,9 +1,9 @@
 FactoryGirl.define do
   factory :player_stat_game do
-    player_id 1
+    player
     opponent_id 1
     game_date "2012-09-09"
-    week 1
+    period 1
     season 1
     pa_att 2
     pa_comp 1

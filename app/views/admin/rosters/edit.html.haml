@@ -4,4 +4,4 @@
 = simple_form_for @roster, url: admin_roster_path(@roster), method: :patch do |f|
   = f.input :name
   = f.input :abbreviation
-  = f.button :submit, "Update #{AppSettings.roster_alias.capitalize}"
+  = f.button :submit, "Update #{AppSettings.app_alias_roster.capitalize}"

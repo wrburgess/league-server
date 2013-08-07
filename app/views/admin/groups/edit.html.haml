@@ -4,4 +4,4 @@
 = simple_form_for @group, url: admin_group_path(@group), method: :patch do |f|
   = f.input :name
   = f.input :abbreviation
-  = f.button :submit, "Update #{AppSettings.group_alias.capitalize}"
+  = f.button :submit, "Update #{AppSettings.app_alias_group.capitalize}"

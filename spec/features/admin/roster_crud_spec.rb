@@ -53,12 +53,12 @@ feature "Admin Roster CRUD" do
 
       fill_in "roster[name]", with: "East Cobb Cougars"
       fill_in "roster[abbreviation]", with: "ECB"
-      click_button "Update #{AppSettings.roster_alias.capitalize}"
+      click_button "Update #{AppSettings.app_alias_roster.capitalize}"
       roster1.reload
       expect(roster1.name).to eq "East Cobb Cougars"
       expect(roster1.abbreviation).to eq "ECB"
       expect(current_path).to eq admin_roster_path roster1
-      expect(page).to have_content "#{AppSettings.roster_alias.capitalize} updated"
+      expect(page).to have_content "#{AppSettings.app_alias_roster.capitalize} updated"
     end
   end
 end

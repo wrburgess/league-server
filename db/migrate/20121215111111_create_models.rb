@@ -102,7 +102,7 @@ class CreateModels < ActiveRecord::Migration
       t.datetime "updated_at",  null: false
     end
 
-    create_table "group_games", force: true do |f|
+    create_table "group_games", force: true do |t|
       t.integer  "group_id"
       t.integer  "season"
       t.integer  "period"

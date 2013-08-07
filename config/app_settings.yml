@@ -1,14 +1,17 @@
 defaults: &defaults
-  # app
   app_name: "league-server"
   app_server: "Default"
   app_license: "All Rights Reserved"
   app_season: 2013
-  # redis
+  app_alias_group: "league"
+  app_alias_roster: "team"
+  app_alias_player_team: "school"
+  app_alias_player_conference: "conference"
+  app_alias_period: "week"
+  app_alias_season: "season"
   redis_host: localhost
   redis_port: 6379
   redis_password:
-  # mailer
   mailer_from: "Randy Burgess <wrburgess@gmail.com>"
   mailer_address: "smtp.gmail.com"
   mailer_port: 587
@@ -17,12 +20,6 @@ defaults: &defaults
   mailer_password: <%= ENV["MAILER_PASSWORD"] %>
   mailer_authentication: "plain"
   mailer_enable_starttls_auto: true
-  group_alias: "league"
-  roster_alias: "team"
-  player_team_alias: "school"
-  player_conference_alias: "conference"
-  period_alias: "week"
-  season_alias: "season"
 
 test:
   <<: *defaults
