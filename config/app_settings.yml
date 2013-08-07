@@ -17,6 +17,10 @@ defaults: &defaults
   mailer_password: <%= ENV["MAILER_PASSWORD"] %>
   mailer_authentication: "plain"
   mailer_enable_starttls_auto: true
+  group_alias: "league"
+  roster_alias: "team"
+  player_team_alias: "school"
+  player_conference_alias: "conference"
 
 test:
   <<: *defaults
