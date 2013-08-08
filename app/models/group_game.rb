@@ -1,8 +1,8 @@
 class GroupGame < ActiveRecord::Base
-  validates_presence_of :group_id, :season, :period, :counts
-  validates_presence_of :away_roster, :home_roster
+  validates_presence_of :group_id, :season, :period
+  validates_presence_of :regular, :playoff, :final
 
   belongs_to :group
-  belongs_to :away_roster, class_name: "Roster"
-  belongs_to :home_roster, class_name: "Roster"
+  has_many :group_game_opponents
+  has_many :rosters, through: :group_game_opponents
 end

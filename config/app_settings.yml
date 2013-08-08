@@ -9,6 +9,8 @@ defaults: &defaults
   app_alias_player_conference: "conference"
   app_alias_period: "week"
   app_alias_season: "season"
+  app_alias_playoff: "playoff"
+  app_alias_final: "championship"
   redis_host: localhost
   redis_port: 6379
   redis_password:

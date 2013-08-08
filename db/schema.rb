@@ -215,11 +215,11 @@ ActiveRecord::Schema.define(version: 20121215111111) do
     t.integer  "playoff_ties",            default: 0
     t.integer  "playoff_points_for",      default: 0
     t.integer  "playoff_points_against",  default: 0
-    t.integer  "champ_wins",              default: 0
-    t.integer  "champ_losses",            default: 0
-    t.integer  "champ_ties",              default: 0
-    t.integer  "champ_points_for",        default: 0
-    t.integer  "champ_points_against",    default: 0
+    t.integer  "final_wins",              default: 0
+    t.integer  "final_losses",            default: 0
+    t.integer  "final_ties",              default: 0
+    t.integer  "final_points_for",        default: 0
+    t.integer  "final_points_against",    default: 0
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
   end
@@ -248,11 +248,11 @@ ActiveRecord::Schema.define(version: 20121215111111) do
     t.integer  "playoff_ties",            default: 0
     t.integer  "playoff_points_for",      default: 0
     t.integer  "playoff_points_against",  default: 0
-    t.integer  "champ_wins",              default: 0
-    t.integer  "champ_losses",            default: 0
-    t.integer  "champ_ties",              default: 0
-    t.integer  "champ_points_for",        default: 0
-    t.integer  "champ_points_against",    default: 0
+    t.integer  "final_wins",              default: 0
+    t.integer  "final_losses",            default: 0
+    t.integer  "final_ties",              default: 0
+    t.integer  "final_points_for",        default: 0
+    t.integer  "final_points_against",    default: 0
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
   end
@@ -280,11 +280,11 @@ ActiveRecord::Schema.define(version: 20121215111111) do
     t.integer  "playoff_ties",            default: 0
     t.integer  "playoff_points_for",      default: 0
     t.integer  "playoff_points_against",  default: 0
-    t.integer  "champ_wins",              default: 0
-    t.integer  "champ_losses",            default: 0
-    t.integer  "champ_ties",              default: 0
-    t.integer  "champ_points_for",        default: 0
-    t.integer  "champ_points_against",    default: 0
+    t.integer  "final_wins",              default: 0
+    t.integer  "final_losses",            default: 0
+    t.integer  "final_ties",              default: 0
+    t.integer  "final_points_for",        default: 0
+    t.integer  "final_points_against",    default: 0
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
   end

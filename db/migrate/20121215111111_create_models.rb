@@ -106,13 +106,16 @@ class CreateModels < ActiveRecord::Migration
       t.integer  "group_id"
       t.integer  "season"
       t.integer  "period"
-      t.boolean  "counts", default: false
-      t.integer  "away_roster_id" 
-      t.integer  "away_roster_score", default: 0
-      t.integer  "away_roster_score_adjustment", default: 0
-      t.integer  "home_roster_id"
-      t.integer  "home_roster_score", default: 0
-      t.integer  "home_roster_score_adjustment", default: 0
+      t.datetime "created_at",  null: false
+      t.datetime "updated_at",  null: false
+    end
+
+    create_table "group_game_opponents", force: true do |t|
+      t.integer  "group_game_id",  null: false
+      t.integer  "roster_id",  null: false
+      t.integer  "home_roster", default: false
+      t.integer  "calculated_score", default: 0
+      t.integer  "adjusted_score", default: 0
       t.datetime "created_at",  null: false
       t.datetime "updated_at",  null: false
     end
@@ -205,11 +208,11 @@ class CreateModels < ActiveRecord::Migration
       t.integer  "playoff_ties",        default: 0
       t.integer  "playoff_points_for",        default: 0
       t.integer  "playoff_points_against",        default: 0
-      t.integer  "champ_wins",        default: 0
-      t.integer  "champ_losses",        default: 0
-      t.integer  "champ_ties",        default: 0
-      t.integer  "champ_points_for",        default: 0
-      t.integer  "champ_points_against",        default: 0
+      t.integer  "final_wins",        default: 0
+      t.integer  "final_losses",        default: 0
+      t.integer  "final_ties",        default: 0
+      t.integer  "final_points_for",        default: 0
+      t.integer  "final_points_against",        default: 0
       t.integer  "overall_wins",        default: 0
       t.integer  "overall_losses",        default: 0
       t.integer  "overall_ties",        default: 0
@@ -237,11 +240,11 @@ class CreateModels < ActiveRecord::Migration
       t.integer  "playoff_ties",        default: 0
       t.integer  "playoff_points_for",        default: 0
       t.integer  "playoff_points_against",        default: 0
-      t.integer  "champ_wins",        default: 0
-      t.integer  "champ_losses",        default: 0
-      t.integer  "champ_ties",        default: 0
-      t.integer  "champ_points_for",        default: 0
-      t.integer  "champ_points_against",        default: 0
+      t.integer  "final_wins",        default: 0
+      t.integer  "final_losses",        default: 0
+      t.integer  "final_ties",        default: 0
+      t.integer  "final_points_for",        default: 0
+      t.integer  "final_points_against",        default: 0
       t.integer  "overall_wins",        default: 0
       t.integer  "overall_losses",        default: 0
       t.integer  "overall_ties",        default: 0
@@ -268,11 +271,11 @@ class CreateModels < ActiveRecord::Migration
       t.integer  "playoff_ties",        default: 0
       t.integer  "playoff_points_for",        default: 0
       t.integer  "playoff_points_against",        default: 0
-      t.integer  "champ_wins",        default: 0
-      t.integer  "champ_losses",        default: 0
-      t.integer  "champ_ties",        default: 0
-      t.integer  "champ_points_for",        default: 0
-      t.integer  "champ_points_against",        default: 0
+      t.integer  "final_wins",        default: 0
+      t.integer  "final_losses",        default: 0
+      t.integer  "final_ties",        default: 0
+      t.integer  "final_points_for",        default: 0
+      t.integer  "final_points_against",        default: 0
       t.integer  "overall_wins",        default: 0
       t.integer  "overall_losses",        default: 0
       t.integer  "overall_ties",        default: 0
