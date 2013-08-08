@@ -1,6 +1,4 @@
 class Roster < ActiveRecord::Base
-  # attr_accessible :abbreviation, :name
-
   validates_presence_of :name, :abbreviation
 
   has_many :roster_users
@@ -9,11 +7,11 @@ class Roster < ActiveRecord::Base
   has_many :group_rosters
   has_many :groups, :through => :group_rosters
 
-  has_many :roster_stat_games
-  has_many :roster_stat_seasons
-  has_many :roster_stat_careers
-  has_many :group_logs
-
   has_many :roster_slots
   has_many :players, :through => :roster_slots
+
+  has_many :roster_stat_periods
+  has_many :roster_stat_seasons
+  has_one :roster_stat_career
+  has_many :group_logs
 end

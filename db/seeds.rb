@@ -41,12 +41,12 @@ puts "Groups created"
 CSV.foreach("#{Rails.root}/db/fill/rosters.csv", :headers => :first_row) do |row|
   roster = Roster.create!(name: row[0], abbreviation: row[1])
 
-  (1..15).each do |rsg|
-    RosterStatGame.create!(roster_id: roster.id, season: 2012, period: rsg)
+  (1..15).each do |rsp|
+    RosterStatPeriod.create!(roster_id: roster.id, season: 2012, period: rsp)
   end
 
-  (1..15).each do |rsg|
-    RosterStatGame.create!(roster_id: roster.id, season: 2013, period: rsg)
+  (1..15).each do |rsp|
+    RosterStatPeriod.create!(roster_id: roster.id, season: 2013, period: rsp)
   end
 
   RosterStatSeason.create!(roster_id: roster.id, season: 2012)
@@ -128,6 +128,10 @@ puts "GroupUsers created"
   # end
 
 end
+
+
+
+
 puts "Players created"
 puts "PlayerStatCareer created"
 puts "PlayerStatSeasons created"

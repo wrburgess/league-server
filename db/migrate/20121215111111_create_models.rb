@@ -186,24 +186,35 @@ class CreateModels < ActiveRecord::Migration
       t.datetime "updated_at",   null: false
     end
 
-    create_table "roster_stat_games", force: true do |t|
+    create_table "roster_stat_periods", force: true do |t|
       t.integer  "roster_id"
       t.integer  "season",      null: false
       t.integer  "period",      null: false
-      t.integer  "win",        default: 0
-      t.integer  "loss",        default: 0
-      t.integer  "tie",        default: 0
-      t.integer  "div_win",        default: 0
-      t.integer  "div_loss",        default: 0
-      t.integer  "div_tie",        default: 0
-      t.integer  "points_for",        default: 0
-      t.integer  "points_against",        default: 0
-      t.integer  "champ_win",        default: 0
-      t.integer  "champ_loss",        default: 0
-      t.integer  "champ_tie",        default: 0
-      t.integer  "playoff_win",        default: 0
+      t.integer  "group_wins",        default: 0
+      t.integer  "group_losses",        default: 0
+      t.integer  "group_ties",        default: 0
+      t.integer  "group_points_for",        default: 0
+      t.integer  "group_points_against",        default: 0
+      t.integer  "division_wins",        default: 0
+      t.integer  "division_losses",        default: 0
+      t.integer  "division_ties",        default: 0
+      t.integer  "division_points_for",        default: 0
+      t.integer  "division_points_against",        default: 0
+      t.integer  "playoff_wins",        default: 0
       t.integer  "playoff_losses",        default: 0
-      t.integer  "playoff_tie",        default: 0
+      t.integer  "playoff_ties",        default: 0
+      t.integer  "playoff_points_for",        default: 0
+      t.integer  "playoff_points_against",        default: 0
+      t.integer  "champ_wins",        default: 0
+      t.integer  "champ_losses",        default: 0
+      t.integer  "champ_ties",        default: 0
+      t.integer  "champ_points_for",        default: 0
+      t.integer  "champ_points_against",        default: 0
+      t.integer  "overall_wins",        default: 0
+      t.integer  "overall_losses",        default: 0
+      t.integer  "overall_ties",        default: 0
+      t.integer  "overall_points_for",        default: 0
+      t.integer  "overall_points_against",        default: 0
       t.datetime "created_at", null: false
       t.datetime "updated_at", null: false
     end
@@ -211,40 +222,62 @@ class CreateModels < ActiveRecord::Migration
     create_table "roster_stat_seasons", force: true do |t|
       t.integer  "roster_id"
       t.integer  "season",      null: false
-      t.integer  "wins",        default: 0
-      t.integer  "losses",        default: 0
-      t.integer  "ties",        default: 0
-      t.integer  "div_wins",        default: 0
-      t.integer  "div_losses",        default: 0
-      t.integer  "div_ties",        default: 0
-      t.integer  "points_for",        default: 0
-      t.integer  "points_against",        default: 0
-      t.integer  "champ_wins",        default: 0
-      t.integer  "champ_losses",        default: 0
-      t.integer  "champ_ties",        default: 0
+      t.integer  "group_wins",        default: 0
+      t.integer  "group_losses",        default: 0
+      t.integer  "group_ties",        default: 0
+      t.integer  "group_points_for",        default: 0
+      t.integer  "group_points_against",        default: 0
+      t.integer  "division_wins",        default: 0
+      t.integer  "division_losses",        default: 0
+      t.integer  "division_ties",        default: 0
+      t.integer  "division_points_for",        default: 0
+      t.integer  "division_points_against",        default: 0
       t.integer  "playoff_wins",        default: 0
       t.integer  "playoff_losses",        default: 0
       t.integer  "playoff_ties",        default: 0
+      t.integer  "playoff_points_for",        default: 0
+      t.integer  "playoff_points_against",        default: 0
+      t.integer  "champ_wins",        default: 0
+      t.integer  "champ_losses",        default: 0
+      t.integer  "champ_ties",        default: 0
+      t.integer  "champ_points_for",        default: 0
+      t.integer  "champ_points_against",        default: 0
+      t.integer  "overall_wins",        default: 0
+      t.integer  "overall_losses",        default: 0
+      t.integer  "overall_ties",        default: 0
+      t.integer  "overall_points_for",        default: 0
+      t.integer  "overall_points_against",        default: 0
       t.datetime "created_at", null: false
       t.datetime "updated_at", null: false
     end
 
     create_table "roster_stat_careers", force: true do |t|
       t.integer  "roster_id",        default: 0
-      t.integer  "wins",             default: 0
-      t.integer  "losses",           default: 0
-      t.integer  "ties",             default: 0
-      t.integer  "div_wins",        default: 0
-      t.integer  "div_losses",        default: 0
-      t.integer  "div_ties",        default: 0
-      t.integer  "points_for",       default: 0
-      t.integer  "points_against",   default: 0
-      t.integer  "champ_wins",       default: 0
-      t.integer  "champ_losses",     default: 0
-      t.integer  "champ_ties",       default: 0
-      t.integer  "playoff_wins",     default: 0
-      t.integer  "playoff_losses",   default: 0
-      t.integer  "playoff_ties",     default: 0
+      t.integer  "group_wins",        default: 0
+      t.integer  "group_losses",        default: 0
+      t.integer  "group_ties",        default: 0
+      t.integer  "group_points_for",        default: 0
+      t.integer  "group_points_against",        default: 0
+      t.integer  "division_wins",        default: 0
+      t.integer  "division_losses",        default: 0
+      t.integer  "division_ties",        default: 0
+      t.integer  "division_points_for",        default: 0
+      t.integer  "division_points_against",        default: 0
+      t.integer  "playoff_wins",        default: 0
+      t.integer  "playoff_losses",        default: 0
+      t.integer  "playoff_ties",        default: 0
+      t.integer  "playoff_points_for",        default: 0
+      t.integer  "playoff_points_against",        default: 0
+      t.integer  "champ_wins",        default: 0
+      t.integer  "champ_losses",        default: 0
+      t.integer  "champ_ties",        default: 0
+      t.integer  "champ_points_for",        default: 0
+      t.integer  "champ_points_against",        default: 0
+      t.integer  "overall_wins",        default: 0
+      t.integer  "overall_losses",        default: 0
+      t.integer  "overall_ties",        default: 0
+      t.integer  "overall_points_for",        default: 0
+      t.integer  "overall_points_against",        default: 0
       t.datetime "created_at", null: false
       t.datetime "updated_at", null: false
     end
