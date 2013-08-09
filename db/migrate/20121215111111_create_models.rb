@@ -106,9 +106,7 @@ class CreateModels < ActiveRecord::Migration
       t.integer  "group_id"
       t.integer  "season"
       t.integer  "period"
-      t.boolean  "regular"
-      t.boolean  "playoff"
-      t.boolean  "final"
+      t.string   "game_type", default: "regular"
       t.datetime "created_at",  null: false
       t.datetime "updated_at",  null: false
     end

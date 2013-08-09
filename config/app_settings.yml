@@ -13,6 +13,10 @@ defaults: &defaults
   app_alias_season: "season"
   app_alias_playoff: "playoff"
   app_alias_final: "championship"
+  app_game_types:
+    - "regular"
+    - "playoff"
+    - "final"
   redis_host: localhost
   redis_port: 6379
   redis_password:

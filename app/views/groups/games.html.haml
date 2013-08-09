@@ -14,8 +14,8 @@
         Team
   %tbody
     - @group_games.each do |game|
-      %tr{ class: "row-#{game.id}" }
-        - game.group_game_opponents.each do |opponent|
+      %tr{ class: "row-#{game.id} #{game.game_type}" }
+        - game.group_game_opponents.away_first.each do |opponent|
           %td.team-name
             = link_to opponent.roster.name, group_roster_path(@group, opponent.roster)
           %td.score

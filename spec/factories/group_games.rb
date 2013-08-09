@@ -3,8 +3,6 @@ FactoryGirl.define do
     group
     season 2013
     period 1
-    regular true
-    playoff false
-    final false
+    game_type "regular"
   end
 end

@@ -3,4 +3,6 @@ class GroupGameOpponent < ActiveRecord::Base
 
   belongs_to :group_game
   belongs_to :roster
+
+  scope :away_first, -> { order("home_roster ASC, roster_id ASC") }
 end
