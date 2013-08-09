@@ -16,5 +16,6 @@ class Roster < ActiveRecord::Base
   has_many :roster_stat_periods
   has_many :roster_stat_seasons
   has_one  :roster_stat_career
+  
   has_many :group_logs
 end

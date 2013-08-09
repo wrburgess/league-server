@@ -12,8 +12,8 @@ class GroupsController < BrowserController
 
   end
   
-  def schedule
-    
+  def games
+    @group_games = @group.group_games.where(season: 2013)
   end
 
   def transactions

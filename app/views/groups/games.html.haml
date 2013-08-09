@@ -1,0 +1,22 @@
+%h1
+  = AppSettings.app_alias_period.capitalize.pluralize
+
+%table
+  %thead
+    %tr
+      %th.team-name
+        Team
+      %th.score
+        Score
+      %th.score
+        Score
+      %th.team-name
+        Team
+  %tbody
+    - @group_games.each do |game|
+      %tr{ class: "row-#{game.id}" }
+        game.group_game_opponents.each do |opponent|
+          %td.team-name
+            = opponent.roster.abbrev
+          %td.score
+            = opponent.calculated_score

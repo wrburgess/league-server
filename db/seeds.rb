@@ -41,11 +41,11 @@ puts "Groups created"
 CSV.foreach("#{Rails.root}/db/fill/rosters.csv", :headers => :first_row) do |row|
   roster = Roster.create!(name: row[0], abbreviation: row[1])
 
-  (1..15).each do |rsp|
+  (1..25).each do |rsp|
     RosterStatPeriod.create!(roster_id: roster.id, season: 2012, period: rsp)
   end
 
-  (1..15).each do |rsp|
+  (1..25).each do |rsp|
     RosterStatPeriod.create!(roster_id: roster.id, season: 2013, period: rsp)
   end
 
@@ -58,6 +58,29 @@ puts "Rosters created"
 puts "RosterStatGames created"
 puts "RosterStatSeasons created"
 puts "RosterStatCareers created"
+
+CSV.foreach("#{Rails.root}/db/fill/group_games.csv", :headers => :first_row) do |row|
+  group_game = GroupGame.create!(
+    group_id: row["group_id"], 
+    season: row["season"],
+    period: row["period"],
+    regular: row["regular"],
+    playoff: row["playoff"],
+    final: row["final"]
+  )
+end
+puts "GroupGames created"
+
+CSV.foreach("#{Rails.root}/db/fill/group_games.csv", :headers => :first_row) do |row|
+  GroupGameOpponent.create!(
+    group_game_id: row["group_game_id"],
+    roster_id: row["roster_id"],
+    home_roster: row["home_roster"],
+    calculated_score: row["calculated_score"],
+    adjusted_score: row["adjusted_score"]
+  )
+end
+puts "GroupGameOpponents created"
 
 (1..8).each do |group|
   (1..50).each do |entry|

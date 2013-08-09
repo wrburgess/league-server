@@ -29,19 +29,25 @@ ActiveRecord::Schema.define(version: 20121215111111) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "group_game_opponents", force: true do |t|
+    t.integer  "group_game_id",                null: false
+    t.integer  "roster_id",                    null: false
+    t.integer  "home_roster",      default: 0
+    t.integer  "calculated_score", default: 0
+    t.integer  "adjusted_score",   default: 0
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+  end
+
   create_table "group_games", force: true do |t|
     t.integer  "group_id"
     t.integer  "season"
     t.integer  "period"
-    t.boolean  "counts",                       default: false
-    t.integer  "away_roster_id"
-    t.integer  "away_roster_score",            default: 0
-    t.integer  "away_roster_score_adjustment", default: 0
-    t.integer  "home_roster_id"
-    t.integer  "home_roster_score",            default: 0
-    t.integer  "home_roster_score_adjustment", default: 0
-    t.datetime "created_at",                                   null: false
-    t.datetime "updated_at",                                   null: false
+    t.boolean  "regular"
+    t.boolean  "playoff"
+    t.boolean  "final"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "group_logs", force: true do |t|
@@ -200,11 +206,6 @@ ActiveRecord::Schema.define(version: 20121215111111) do
     t.integer  "group_ties",              default: 0
     t.integer  "group_points_for",        default: 0
     t.integer  "group_points_against",    default: 0
-    t.integer  "overall_wins",            default: 0
-    t.integer  "overall_losses",          default: 0
-    t.integer  "overall_ties",            default: 0
-    t.integer  "overall_points_for",      default: 0
-    t.integer  "overall_points_against",  default: 0
     t.integer  "division_wins",           default: 0
     t.integer  "division_losses",         default: 0
     t.integer  "division_ties",           default: 0
@@ -220,6 +221,11 @@ ActiveRecord::Schema.define(version: 20121215111111) do
     t.integer  "final_ties",              default: 0
     t.integer  "final_points_for",        default: 0
     t.integer  "final_points_against",    default: 0
+    t.integer  "overall_wins",            default: 0
+    t.integer  "overall_losses",          default: 0
+    t.integer  "overall_ties",            default: 0
+    t.integer  "overall_points_for",      default: 0
+    t.integer  "overall_points_against",  default: 0
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
   end
@@ -233,11 +239,6 @@ ActiveRecord::Schema.define(version: 20121215111111) do
     t.integer  "group_ties",              default: 0
     t.integer  "group_points_for",        default: 0
     t.integer  "group_points_against",    default: 0
-    t.integer  "overall_wins",            default: 0
-    t.integer  "overall_losses",          default: 0
-    t.integer  "overall_ties",            default: 0
-    t.integer  "overall_points_for",      default: 0
-    t.integer  "overall_points_against",  default: 0
     t.integer  "division_wins",           default: 0
     t.integer  "division_losses",         default: 0
     t.integer  "division_ties",           default: 0
@@ -253,6 +254,11 @@ ActiveRecord::Schema.define(version: 20121215111111) do
     t.integer  "final_ties",              default: 0
     t.integer  "final_points_for",        default: 0
     t.integer  "final_points_against",    default: 0
+    t.integer  "overall_wins",            default: 0
+    t.integer  "overall_losses",          default: 0
+    t.integer  "overall_ties",            default: 0
+    t.integer  "overall_points_for",      default: 0
+    t.integer  "overall_points_against",  default: 0
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
   end
@@ -265,11 +271,6 @@ ActiveRecord::Schema.define(version: 20121215111111) do
     t.integer  "group_ties",              default: 0
     t.integer  "group_points_for",        default: 0
     t.integer  "group_points_against",    default: 0
-    t.integer  "overall_wins",            default: 0
-    t.integer  "overall_losses",          default: 0
-    t.integer  "overall_ties",            default: 0
-    t.integer  "overall_points_for",      default: 0
-    t.integer  "overall_points_against",  default: 0
     t.integer  "division_wins",           default: 0
     t.integer  "division_losses",         default: 0
     t.integer  "division_ties",           default: 0
@@ -285,6 +286,11 @@ ActiveRecord::Schema.define(version: 20121215111111) do
     t.integer  "final_ties",              default: 0
     t.integer  "final_points_for",        default: 0
     t.integer  "final_points_against",    default: 0
+    t.integer  "overall_wins",            default: 0
+    t.integer  "overall_losses",          default: 0
+    t.integer  "overall_ties",            default: 0
+    t.integer  "overall_points_for",      default: 0
+    t.integer  "overall_points_against",  default: 0
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
   end

@@ -14,20 +14,8 @@ describe GroupGame do
     FactoryGirl.build(:group_game, period: nil).should_not be_valid
   end
 
-  it 'is invalid without a counts flag' do
-    FactoryGirl.build(:group_game, counts: nil).should_not be_valid
-  end
-
   it 'is invalid without a group' do
     FactoryGirl.build(:group_game, group: nil).should_not be_valid
-  end
-
-  it 'is invalid without an away roster' do
-    FactoryGirl.build(:group_game, away_roster: nil).should_not be_valid
-  end
-
-  it 'is invalid without a home roster' do
-    FactoryGirl.build(:group_game, home_roster: nil).should_not be_valid
   end
 
   it { should belong_to(:group) }

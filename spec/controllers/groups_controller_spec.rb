@@ -53,6 +53,19 @@ describe GroupsController, :type => :controller do
     end
   end
 
+  describe "#games" do
+    it "renders the 'games' template under the 'browser' layout" do
+      get :games, group_id: @group
+      response.should render_template :games
+      response.should render_template layout: "layouts/browser"
+    end
+
+    it "assigns the requested games to @games" do
+      get :games, group_id: @group
+      expect(assigns(:games)).to eq @games
+    end
+  end
+
   describe "#transactions" do
     it "renders the 'transactions' template under the 'browser' layout" do
       get :transactions, group_id: @group, id: @roster1
@@ -62,7 +75,7 @@ describe GroupsController, :type => :controller do
 
     it "assigns the requested group to @group" do
       get :transactions, group_id: @group, id: @roster1
-      expect(assigns(:group)).to eq @group
+      expect(assigns(:group_logs).to eq @group_logs
     end
   end
 
