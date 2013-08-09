@@ -1,3 +1,8 @@
+CSV.foreach("#{Rails.root}/db/fill/system_periods.csv", :headers => :first_row) do |row|
+  SystemPeriod.create!(period: row["period"], start_date: row["start_date"], start_date: row["end_date"])
+end
+puts "SystemPeriods created"
+
 RosterSlotType.create(name: "Starter", abbreviation: "START", weight: 10)
 RosterSlotType.create(name: "Reserve", abbreviation: "RESV", weight: 20)
 RosterSlotType.create(name: "Injured", abbreviation: "INJ", weight: 30)
@@ -64,9 +69,7 @@ CSV.foreach("#{Rails.root}/db/fill/group_games.csv", :headers => :first_row) do 
     group_id: row["group_id"], 
     season: row["season"],
     period: row["period"],
-    regular: row["regular"],
-    playoff: row["playoff"],
-    final: row["final"]
+    game_type: row["group_type"]
   )
   puts "Created GroupGame"
 end
@@ -143,20 +146,7 @@ puts "GroupUsers created"
     )
     game_date + 7.days
   end
-
-  # (1..50).each do |roster|
-  #   (1..14).each do |period|
-  #     (1.15).each do |roster_slot_fill|
-  #       roster_slot = RosterSlot.create(season: 2013, period: 1, roster: roster, player_id: 1, roster_slot_type_id: roster_slot_fill, roster_slot_position_id: roster_slot_fill)
-  #     end
-  #   end
-  # end
-
 end
-
-
-
-
 puts "Players created"
 puts "PlayerStatCareer created"
 puts "PlayerStatSeasons created"

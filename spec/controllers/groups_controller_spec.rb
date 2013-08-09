@@ -55,14 +55,14 @@ describe GroupsController, :type => :controller do
 
   describe "#games" do
     before do
-      @group_game1 = FactoryGirl.create :group_game, group: @group, season: AppSettings.app_season, period: 1, regular: true
-      @group_game2 = FactoryGirl.create :group_game, group: @group, season: AppSettings.app_season, period: 1, regular: true
-      @group_game3 = FactoryGirl.create :group_game, group: @group, season: AppSettings.app_season, period: 2, regular: true
-      @group_game4 = FactoryGirl.create :group_game, group: @group, season: AppSettings.app_season, period: 2, regular: true
-      @group_game5 = FactoryGirl.create :group_game, group: @group, season: AppSettings.app_season, period: 3, regular: true
-      @group_game6 = FactoryGirl.create :group_game, group: @group, season: AppSettings.app_season, period: 3, regular: true
-      @group_game7 = FactoryGirl.create :group_game, group: @group, season: AppSettings.app_season, period: 4, regular: true
-      @group_game8 = FactoryGirl.create :group_game, group: @group, season: AppSettings.app_season, period: 4, regular: true
+      @group_game1 = FactoryGirl.create :group_game, group: @group, season: AppSettings.app_season, period: 1, game_type: "regular"
+      @group_game2 = FactoryGirl.create :group_game, group: @group, season: AppSettings.app_season, period: 1, game_type: "regular"
+      @group_game3 = FactoryGirl.create :group_game, group: @group, season: AppSettings.app_season, period: 2, game_type: "regular"
+      @group_game4 = FactoryGirl.create :group_game, group: @group, season: AppSettings.app_season, period: 2, game_type: "regular"
+      @group_game5 = FactoryGirl.create :group_game, group: @group, season: AppSettings.app_season, period: 3, game_type: "regular"
+      @group_game6 = FactoryGirl.create :group_game, group: @group, season: AppSettings.app_season, period: 3, game_type: "regular"
+      @group_game7 = FactoryGirl.create :group_game, group: @group, season: AppSettings.app_season, period: 4, game_type: "playoff"
+      @group_game8 = FactoryGirl.create :group_game, group: @group, season: AppSettings.app_season, period: 4, game_type: "final"
       @group_game_opponent1 = FactoryGirl.create :group_game_opponent, group_game: @group_game1, roster: @roster1, home_roster: true
       @group_game_opponent2 = FactoryGirl.create :group_game_opponent, group_game: @group_game1, roster: @roster2, home_roster: false
       @group_game_opponent3 = FactoryGirl.create :group_game_opponent, group_game: @group_game2, roster: @roster3, home_roster: true

@@ -9,7 +9,7 @@ class GroupsController < BrowserController
   end
 
   def standings
-
+    @rosters = @group.rosters.all
   end
   
   def games

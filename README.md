@@ -107,3 +107,24 @@ name: "Forward", abbreviation: "F"
 ## Schedule
 
 * 11/01/2013 - 02/28/2014   
+
+Week 01 Mon, Nov 04 - Sun, Nov 10 REGULAR  
+Week 02 Mon, Nov 11 - Sun, Nov 17 REGULAR  
+Week 03 Mon, Nov 18 - Sun, Nov 24 REGULAR   
+Week 04 Mon, Nov 25 - Sun, Dec 01 REGULAR   
+
+Week 05 Mon, Dec 02 - Sun, Dec 08 REGULAR   
+Week 06 Mon, Dec 09 - Sun, Dec 15 REGULAR  
+Week 07 Mon, Dec 16 - Sun, Dec 22 REGULAR  
+Week 08 Mon, Dec 23 - Sun, Dec 29 REGULAR  
+Week 09 Mon, Dec 30 - Sun, Jan 05 REGULAR  
+
+Week 10 Mon, Jan 06 - Sun, Jan 12 REGULAR  
+Week 11 Mon, Jan 13 - Sun, Jan 19 REGULAR  
+Week 12 Mon, Jan 20 - Sun, Jan 26 REGULAR  
+Week 13 Mon, Jan 27 - Sun, Feb 02 REGULAR  
+
+Week 14 Mon, Feb 03 - Sun, Feb 09 REGULAR  
+Week 15 Mon, Feb 10 - Sun, Feb 16 PLAYOFF  
+Week 16 Mon, Feb 17 - Sun, Feb 23 PLAYOFF  
+Week 17 Mon, Feb 24 - Sun, Mar 03 CHAMP  
