@@ -13,7 +13,7 @@ class GroupsController < BrowserController
   end
   
   def games
-    @group_games = @group.group_games.where(season: 2013)
+    @group_games = @group.group_games.where(season: 2014)
   end
 
   def transactions

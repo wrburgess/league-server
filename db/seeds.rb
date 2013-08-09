@@ -68,10 +68,11 @@ CSV.foreach("#{Rails.root}/db/fill/group_games.csv", :headers => :first_row) do 
     playoff: row["playoff"],
     final: row["final"]
   )
+  puts "Created GroupGame"
 end
 puts "GroupGames created"
 
-CSV.foreach("#{Rails.root}/db/fill/group_games.csv", :headers => :first_row) do |row|
+CSV.foreach("#{Rails.root}/db/fill/group_game_opponents.csv", :headers => :first_row) do |row|
   GroupGameOpponent.create!(
     group_game_id: row["group_game_id"],
     roster_id: row["roster_id"],
@@ -79,6 +80,7 @@ CSV.foreach("#{Rails.root}/db/fill/group_games.csv", :headers => :first_row) do 
     calculated_score: row["calculated_score"],
     adjusted_score: row["adjusted_score"]
   )
+  puts "Created GroupGameOpponent"
 end
 puts "GroupGameOpponents created"
 

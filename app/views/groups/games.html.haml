@@ -1,5 +1,5 @@
 %h1
-  = AppSettings.app_alias_period.capitalize.pluralize
+  = AppSettings.app_alias_game.capitalize.pluralize
 
 %table
   %thead
@@ -15,8 +15,8 @@
   %tbody
     - @group_games.each do |game|
       %tr{ class: "row-#{game.id}" }
-        game.group_game_opponents.each do |opponent|
+        - game.group_game_opponents.each do |opponent|
           %td.team-name
-            = opponent.roster.abbrev
+            = link_to opponent.roster.name, group_roster_path(@group, opponent.roster)
           %td.score
             = opponent.calculated_score

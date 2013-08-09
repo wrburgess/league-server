@@ -1,4 +1,4 @@
-game_id,roster_id,home_roster,calculated_score,adjusted_score
+group_game_id,roster_id,home_roster,calculated_score,adjusted_score
 1,1,TRUE,0,0
 2,2,TRUE,0,0
 3,3,TRUE,0,0

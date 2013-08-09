@@ -54,15 +54,43 @@ describe GroupsController, :type => :controller do
   end
 
   describe "#games" do
+    before do
+      @group_game1 = FactoryGirl.create :group_game, group: @group, season: AppSettings.app_season, period: 1, regular: true
+      @group_game2 = FactoryGirl.create :group_game, group: @group, season: AppSettings.app_season, period: 1, regular: true
+      @group_game3 = FactoryGirl.create :group_game, group: @group, season: AppSettings.app_season, period: 2, regular: true
+      @group_game4 = FactoryGirl.create :group_game, group: @group, season: AppSettings.app_season, period: 2, regular: true
+      @group_game5 = FactoryGirl.create :group_game, group: @group, season: AppSettings.app_season, period: 3, regular: true
+      @group_game6 = FactoryGirl.create :group_game, group: @group, season: AppSettings.app_season, period: 3, regular: true
+      @group_game7 = FactoryGirl.create :group_game, group: @group, season: AppSettings.app_season, period: 4, regular: true
+      @group_game8 = FactoryGirl.create :group_game, group: @group, season: AppSettings.app_season, period: 4, regular: true
+      @group_game_opponent1 = FactoryGirl.create :group_game_opponent, group_game: @group_game1, roster: @roster1, home_roster: true
+      @group_game_opponent2 = FactoryGirl.create :group_game_opponent, group_game: @group_game1, roster: @roster2, home_roster: false
+      @group_game_opponent3 = FactoryGirl.create :group_game_opponent, group_game: @group_game2, roster: @roster3, home_roster: true
+      @group_game_opponent4 = FactoryGirl.create :group_game_opponent, group_game: @group_game2, roster: @roster4, home_roster: false
+      @group_game_opponent5 = FactoryGirl.create :group_game_opponent, group_game: @group_game3, roster: @roster1, home_roster: true
+      @group_game_opponent6 = FactoryGirl.create :group_game_opponent, group_game: @group_game3, roster: @roster4, home_roster: false
+      @group_game_opponent7 = FactoryGirl.create :group_game_opponent, group_game: @group_game4, roster: @roster2, home_roster: true
+      @group_game_opponent8 = FactoryGirl.create :group_game_opponent, group_game: @group_game4, roster: @roster3, home_roster: false
+      @group_game_opponent9 = FactoryGirl.create :group_game_opponent, group_game: @group_game5, roster: @roster1, home_roster: true
+      @group_game_opponent10 = FactoryGirl.create :group_game_opponent, group_game: @group_game5, roster: @roster3, home_roster: false
+      @group_game_opponent11 = FactoryGirl.create :group_game_opponent, group_game: @group_game6, roster: @roster2, home_roster: true
+      @group_game_opponent12 = FactoryGirl.create :group_game_opponent, group_game: @group_game6, roster: @roster4, home_roster: false
+      @group_game_opponent13 = FactoryGirl.create :group_game_opponent, group_game: @group_game7, roster: @roster1, home_roster: false
+      @group_game_opponent14 = FactoryGirl.create :group_game_opponent, group_game: @group_game7, roster: @roster2, home_roster: true
+      @group_game_opponent15 = FactoryGirl.create :group_game_opponent, group_game: @group_game8, roster: @roster3, home_roster: false
+      @group_game_opponent16 = FactoryGirl.create :group_game_opponent, group_game: @group_game8, roster: @roster4, home_roster: true
+      @group_games = @group.group_games.where(season: AppSettings.app_season)
+    end
+
     it "renders the 'games' template under the 'browser' layout" do
       get :games, group_id: @group
       response.should render_template :games
       response.should render_template layout: "layouts/browser"
     end
 
-    it "assigns the requested games to @games" do
+    it "assigns the requested group_games to @group_games" do
       get :games, group_id: @group
-      expect(assigns(:games)).to eq @games
+      expect(assigns(:group_games)).to eq @group_games
     end
   end
 
@@ -75,7 +103,7 @@ describe GroupsController, :type => :controller do
 
     it "assigns the requested group to @group" do
       get :transactions, group_id: @group, id: @roster1
-      expect(assigns(:group_logs).to eq @group_logs
+      expect(assigns(:group)).to eq @group
     end
   end
 

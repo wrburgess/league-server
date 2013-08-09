@@ -12,6 +12,7 @@ class Group < ActiveRecord::Base
   has_many :player_teams, :through => :group_player_teams
   has_many :players, :through => :player_teams
 
+  has_many :group_games
   has_many :group_rules
   has_many :group_logs
 

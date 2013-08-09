@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "Group Transactions Page" do
+describe "Group Games View" do
   let!(:group) { FactoryGirl.create :group }
   let(:roster1) { FactoryGirl.create :roster, name: "Illinois Towers" }
   let(:roster2) { FactoryGirl.create :roster, name: "St. Simons Avians" }
@@ -16,11 +16,11 @@ describe "Group Transactions Page" do
   let!(:group_log3) { FactoryGirl.create :group_log, group: group, roster: roster6 }
   let!(:group_log4) { FactoryGirl.create :group_log, group: group, roster: roster8, group_owner: true }
 
-  describe "#transactions" do
+  describe "#games" do
     it "has the correct default elements", :slow do
       visit group_transactions_path(group)
-      page.should have_css("body.transactions")
-      page.should have_css("h1", :text => "Transactions")
+      page.should have_css("body.games")
+      page.should have_css("h1", :text => "Games")
     end
 
     it "redirects to first team group_roster show view", :slow do

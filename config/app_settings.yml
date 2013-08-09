@@ -2,13 +2,14 @@ defaults: &defaults
   app_name: "league-server"
   app_server: "Default"
   app_license: "All Rights Reserved"
-  app_season: 2013
+  app_season: 2014
   app_periods: 25
   app_alias_group: "league"
   app_alias_roster: "team"
   app_alias_player_team: "school"
   app_alias_player_conference: "conference"
   app_alias_period: "week"
+  app_alias_game: "game"
   app_alias_season: "season"
   app_alias_playoff: "playoff"
   app_alias_final: "championship"
