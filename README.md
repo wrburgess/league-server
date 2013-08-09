@@ -9,7 +9,7 @@ A fantasy sports league engine
 
 ## Development Startup
 
-* You need redis and resque installed on your development environment
+* You need redisresque installed on your development environment
 * TODO: Explain redis and resque install
 * The ```foreman``` gem will work with the ```Procfile.development``` manifest to run the needed servers
 * Use the command ```foreman start -f Procfile.development``` to execute the services

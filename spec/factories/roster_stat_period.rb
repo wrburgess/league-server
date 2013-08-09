@@ -18,11 +18,11 @@ FactoryGirl.define do
     playoff_ties 0
     playoff_points_for 0
     playoff_points_against 0
-    champ_wins 0
-    champ_losses 0
-    champ_ties 0
-    champ_points_for 0
-    champ_points_against 0
+    final_wins 0
+    final_losses 0
+    final_ties 0
+    final_points_for 0
+    final_points_against 0
     overall_wins 0
     overall_losses 0
     overall_ties 0
