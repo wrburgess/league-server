@@ -63,6 +63,7 @@ describe "Group Games Page" do
 
     it "renders regular games, playoff games, and final game", :slow do
       visit group_games_path(group)
+      expect(all("table.period").count).to eq 4
       expect(all("tr.regular").count).to eq 5
       expect(all("tr.playoff").count).to eq 2
       expect(all("tr.final").count).to eq 1
