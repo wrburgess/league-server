@@ -26,8 +26,8 @@ class Group < ActiveRecord::Base
   end
 
   def default_group_division
-    if group_divisions.count == 0 
-      return group_divisions.create(name: "Default", abbreviation: "MAIN", weight: 0, default: true)
+    unless group_divisions.any? 
+      return group_divisions.create(name: "Default", abbreviation: "DFLT", weight: 0, default: true)
     else
       return group_divisions.default_first
     end
