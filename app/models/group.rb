@@ -8,6 +8,8 @@ class Group < ActiveRecord::Base
   has_many :group_rosters
   has_many :rosters, :through => :group_rosters
 
+  has_many :group_divisions
+
   has_many :group_player_teams
   has_many :player_teams, :through => :group_player_teams
   has_many :players, :through => :player_teams

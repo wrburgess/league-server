@@ -7,6 +7,8 @@ class Roster < ActiveRecord::Base
   has_many :group_rosters
   has_many :groups, through: :group_rosters
 
+  has_many :group_divisions
+
   has_many :roster_slots
   has_many :players, through: :roster_slots
 

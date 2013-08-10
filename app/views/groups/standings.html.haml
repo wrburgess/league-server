@@ -4,7 +4,7 @@
 - @divisions.each_pair do |key, division|
   %table
     %caption
-      = AppSettings.app_alias_division
+      = AppSettings.app_alias_division.capitalize
     %thead
       %tr
         %th.name
@@ -25,13 +25,13 @@
           %td.name
             = link_to roster.name, group_roster_path(@group, roster)
           %td.group-wins
-            = "1" #roster.roster_stat_seasons.where(season: AppSettings.app_season).first.wins
+            = "0" #roster.roster_stat_seasons.where(season: AppSettings.app_season).first.wins
           %td.group-losses
-            = "2" #roster.roster_stat_seasons.where(season: AppSettings.app_season).first.losses
+            = "0" #roster.roster_stat_seasons.where(season: AppSettings.app_season).first.losses
           %td.group-ties
-            = "3" #roster.roster_stat_seasons.where(season: AppSettings.app_season).first.ties
+            = "0" #roster.roster_stat_seasons.where(season: AppSettings.app_season).first.ties
           %td.points-for
-            = "4" #roster.roster_stat_seasons.where(season: AppSettings.app_season).first.points_for
+            = "0" #roster.roster_stat_seasons.where(season: AppSettings.app_season).first.points_for
           %td.points-against
-            = "5" #roster.roster_stat_seasons.where(season: AppSettings.app_season).first.points_against
+            = "0" #roster.roster_stat_seasons.where(season: AppSettings.app_season).first.points_against
 

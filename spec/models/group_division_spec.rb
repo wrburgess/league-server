@@ -19,5 +19,7 @@ describe GroupDivision do
   end
 
   it { should belong_to(:group) }
+  it { should have_many(:group_rosters) }
+  it { should have_many(:rosters) }
 
 end

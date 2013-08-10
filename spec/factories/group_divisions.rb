@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :group_division do
-    group_id 1
+    group
     name "Eastern"
     abbreviation "EAST"
     weight 0
