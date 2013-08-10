@@ -36,7 +36,7 @@ group :development, :test do
   gem "dotenv-rails", "0.8.0"
   gem "factory_girl_rails", "4.2.1"
   gem "fuubar", "1.1.1"
-  gem "mail_view", "1.0.3"
+  gem "mail_view", "2.0.0"
   gem "pry-rails", "0.3.2"
   gem "pry-remote", "0.1.7"
   gem "rspec-rails", "2.14.0"
