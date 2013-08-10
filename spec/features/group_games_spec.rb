@@ -61,18 +61,10 @@ describe "Group Games Page" do
       expect(current_path).to eq group_roster_path group, group_game1.group_game_opponents.first.roster_id
     end
 
-    it "renders four regular games", :slow do
+    it "renders regular games, playoff games, and final game", :slow do
       visit group_games_path(group)
       expect(all("tr.regular").count).to eq 5
-    end
-
-    it "renders playoff games", :slow do
-      visit group_games_path(group)
       expect(all("tr.playoff").count).to eq 2
-    end
-
-    it "renders final games", :slow do
-      visit group_games_path(group)
       expect(all("tr.final").count).to eq 1
     end
   end
