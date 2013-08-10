@@ -13,7 +13,8 @@ class GroupsController < BrowserController
   end
   
   def games
-    @group_games = @group.group_games.where(season: AppSettings.app_season)
+    group_games = GroupGame.where(group: @group, season: AppSettings.app_season)
+    @periods = group_games.group_by { |group_game| group_game.period }
   end
 
   def transactions

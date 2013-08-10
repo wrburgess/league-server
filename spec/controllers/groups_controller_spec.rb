@@ -88,9 +88,11 @@ describe GroupsController, :type => :controller do
       response.should render_template layout: "layouts/browser"
     end
 
-    it "assigns the requested group_games to @group_games" do
+    it "assigns the requested period groups to @periods" do
       get :games, group_id: @group
-      expect(assigns(:group_games)).to eq @group_games
+      group_games = GroupGame.where(group: @group, season: AppSettings.app_season)
+      @periods = group_games.group_by { |group_game| group_game.period }
+      expect(assigns(:periods)).to eq @periods
     end
   end
 
