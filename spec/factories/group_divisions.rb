@@ -4,5 +4,6 @@ FactoryGirl.define do
     name "Eastern"
     abbreviation "EAST"
     weight 0
+    default false
   end
 end

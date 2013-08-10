@@ -98,6 +98,7 @@ class CreateModels < ActiveRecord::Migration
       t.string   "name",          null: false
       t.string   "abbreviation",  null: false
       t.integer  "weight",        default: 0
+      t.integer  "default",       default: false
       t.datetime "created_at",    null: false
       t.datetime "updated_at",    null: false
     end

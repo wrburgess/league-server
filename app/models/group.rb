@@ -18,4 +18,17 @@ class Group < ActiveRecord::Base
   has_many :group_rules
   has_many :group_logs
 
+  def add_roster(roster)
+    group_division = self.default_group_division
+    group_rosters.create(roster: roster, group_division: group_division) 
+  end
+
+  def default_group_division
+    if group_divisions.count == 0 
+      return group_divisions.create(name: "Default", abbreviation: "MAIN", weight: 0, default: true)
+    else
+      return group_divisions.default_first
+    end
+  end
+
 end

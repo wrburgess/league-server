@@ -13,16 +13,36 @@ describe Group do
   it { should have_many(:group_users) }
   it { should have_many(:users) }
 
-  describe 'mailers' do
-
-    # xit "sends a weekly_review" do
-    #   user = FactoryGirl.create(:user, email: "test@example.com", password: "secret")
-    #   group = FactoryGirl.create(:group)
-    #   group.send_weekly_review(user)
-    #   ActionMailer::Base.deliveries.last.to.should == [user.email]
-    # end
-
+  describe "#add_roster" do
+    it "adds a roster to a group with a default group_division" do
+      group = FactoryGirl.create :group
+      roster = FactoryGirl.create :roster
+      group.add_roster roster
+      expect(roster.groups.first).to eq(group)
+      expect(roster.group_divisions.where(group: group).first).to eq(group.default_group_division)
+    end
   end
 
+  describe "#default_group_division" do
+    
+    let(:group) { FactoryGirl.create :group }
+
+    it "retrieves the default group division even if none exists" do
+      expect(group.group_divisions.count).to eq(0)
+      group_division_default = group.default_group_division
+      expect(group.group_divisions.count).to eq(1)
+    end
+
+    it "retrieves the default group division that already exists" do
+      group_division_default = FactoryGirl.create :group_division, group: group, name: "Default", abbreviation: "MAIN", weight: 0, default: true
+      expect(group.default_group_division).to eq(group_division_default)
+    end
+
+    it "retrieves the default group division when multiple group divisions exist" do
+      group_division_default = FactoryGirl.create :group_division, group: group, name: "Default", abbreviation: "MAIN", weight: 0, default: true
+      group_division_2 = FactoryGirl.create :group_division, group: group, name: "Eastern", abbreviation: "EAST", weight: 1     
+      expect(group.default_group_division).to eq(group_division_default)
+    end
+  end
 end
 
