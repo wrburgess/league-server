@@ -13,24 +13,23 @@ describe "Group Standings Page" do
 
   describe "#standings" do
     before do
-      rosters = [roster1, roster2, roster3, roster4, roster5, roster6, roster7, roster8]
-      group.add_rosters(rosters)
+      group.add_rosters [roster1, roster2, roster3, roster4, roster5, roster6, roster7, roster8]
     end
 
     it "has the correct default elements", :slow do
-      visit group_standings_path(group)
+      visit group_standings_path group
       page.should have_css("body.standings")
       page.should have_css("h1", :text => "Standings")
     end
 
     it "redirects to first team group_roster show view", :slow do
-      visit group_standings_path(group, roster3)
-      all("tr.row-#{roster2.id} td.name a")[1].click
+      visit group_standings_path group
+      find("tr.row-#{roster2.id} td.name a").click
       expect(current_path).to eq group_roster_path group, roster2
     end
 
     it "redirects to last team group_roster show view", :slow do
-      visit group_standings_path(group, roster6)
+      visit group_standings_path group
       find("tr.row-#{roster8.id} td.name a").click
       expect(current_path).to eq group_roster_path group, roster8
     end
