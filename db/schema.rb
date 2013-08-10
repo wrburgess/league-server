@@ -310,6 +310,12 @@ ActiveRecord::Schema.define(version: 20121215111111) do
     t.datetime "updated_at",   null: false
   end
 
+  create_table "system_periods", force: true do |t|
+    t.integer  "period",     null: false
+    t.datetime "start_date", null: false
+    t.datetime "end_date",   null: false
+  end
+
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false

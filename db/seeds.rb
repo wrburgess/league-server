@@ -1,5 +1,9 @@
 CSV.foreach("#{Rails.root}/db/fill/system_periods.csv", :headers => :first_row) do |row|
-  SystemPeriod.create!(period: row["period"], start_date: row["start_date"], start_date: row["end_date"])
+  SystemPeriod.create!(
+    period: row["period"], 
+    start_date: DateTime.strptime(row["start_date"], "%m/%d/%Y"), 
+    end_date: DateTime.strptime(row["end_date"], "%m/%d/%Y")
+  )
 end
 puts "SystemPeriods created"
 
@@ -69,7 +73,7 @@ CSV.foreach("#{Rails.root}/db/fill/group_games.csv", :headers => :first_row) do 
     group_id: row["group_id"], 
     season: row["season"],
     period: row["period"],
-    game_type: row["group_type"]
+    game_type: row["game_type"]
   )
   puts "Created GroupGame"
 end
