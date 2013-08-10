@@ -13,14 +13,8 @@ describe "Group Standings Page" do
 
   describe "#standings" do
     before do
-      group.rosters << roster1
-      group.rosters << roster2
-      group.rosters << roster3
-      group.rosters << roster4
-      group.rosters << roster5
-      group.rosters << roster6
-      group.rosters << roster7
-      group.rosters << roster8
+      rosters = [roster1, roster2, roster3, roster4, roster5, roster6, roster7, roster8]
+      group.add_rosters(rosters)
     end
 
     it "has the correct default elements", :slow do

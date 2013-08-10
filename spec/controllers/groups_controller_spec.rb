@@ -3,15 +3,12 @@ require 'spec_helper'
 describe GroupsController, :type => :controller do
 
   before do
-    @group = FactoryGirl.create(:group)
-    @roster1 = FactoryGirl.create(:roster)
-    @roster2 = FactoryGirl.create(:roster)
-    @roster3 = FactoryGirl.create(:roster)
-    @roster4 = FactoryGirl.create(:roster)
-    @group.rosters << @roster1
-    @group.rosters << @roster2
-    @group.rosters << @roster3
-    @group.rosters << @roster4
+    @group = FactoryGirl.create :group 
+    @roster1 = FactoryGirl.create :roster, name: "Chicago Bulls", abbreviation: "CHI"
+    @roster2 = FactoryGirl.create :roster, name: "Miami Marlins", abbreviation: "MIA"
+    @roster3 = FactoryGirl.create :roster, name: "Atlanta Falcons", abbreviation: "ATL"
+    @roster4 = FactoryGirl.create :roster, name: "Detroit Red Wings", abbreviation: "DET"
+    @group.add_rosters [@roster1, @roster2, @roster3, @roster4]
   end
 
   describe "#draft" do
@@ -48,10 +45,10 @@ describe GroupsController, :type => :controller do
     end
 
     it "assigns the requested divisions to @divisions" do
-      get :games, group_id: @group
-      rosters = Roster.where(group: @group)
-      @divisions = rosters.group_by { |roster| roster.division }
-      expect(assigns(:divisions)).to eq @divisions
+      get :standings, group_id: @group
+      rosters = @group.rosters
+      @group_divisions = rosters.group_by { |roster| roster.group_divisions.first.id }
+      expect(assigns(:group_divisions)).to eq @group_divisions
     end
   end
 

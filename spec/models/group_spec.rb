@@ -13,18 +13,17 @@ describe Group do
   it { should have_many(:group_users) }
   it { should have_many(:users) }
 
-  describe "#add_roster" do
-    it "adds a roster to a group with a default group_division" do
+  describe "#add_rosters" do
+    it "adds rosters to a group with a default group_division" do
       group = FactoryGirl.create :group
       roster = FactoryGirl.create :roster
-      group.add_roster roster
+      group.add_rosters [roster]
       expect(roster.groups.first).to eq(group)
       expect(roster.group_divisions.where(group: group).first).to eq(group.default_group_division)
     end
   end
 
   describe "#default_group_division" do
-    
     let(:group) { FactoryGirl.create :group }
 
     it "retrieves the default group division even if none exists" do

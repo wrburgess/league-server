@@ -1,0 +1,17 @@
+group_id,name,abbreviation,default
+1,Eastern,EAST,TRUE
+1,Western,WEST,FALSE
+2,Northern,NORTH,TRUE
+2,Southern,SOUTH,FALSE
+3,Legends,LGND,TRUE
+3,Leaders,LEAD,FALSE
+4,Up,UP,TRUE
+4,Down,DOWN,FALSE
+5,Eastern,EAST,TRUE
+5,Southern,SOUTH,FALSE
+6,Northern,NORTH,TRUE
+6,Western,WEST,FALSE
+7,Default,MAIN,TRUE
+8,Default,MAIN,TRUE
+9,Default,MAIN,TRUE
+10,Default,MAIN,TRUE

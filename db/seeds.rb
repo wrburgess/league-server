@@ -103,7 +103,12 @@ puts "GroupGameOpponents created"
     )
   end
 end
-puts "Group logs created"
+puts "GroupLogs created"
+
+CSV.foreach("#{Rails.root}/db/fill/group_divisions.csv", :headers => :first_row) do |row|
+  GroupDivision.create!(group_id: row["group_id"], name: row["name"], abbreviation: row["abbreviation"], default: row["default"])
+end
+puts "GroupDivisions created"
 
 CSV.foreach("#{Rails.root}/db/fill/group_rosters.csv", :headers => :first_row) do |row|
   GroupRoster.create!(group_id: row[0], roster_id: row[1], group_division_id: row[2])

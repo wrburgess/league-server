@@ -18,9 +18,11 @@ class Group < ActiveRecord::Base
   has_many :group_rules
   has_many :group_logs
 
-  def add_roster(roster)
-    group_division = self.default_group_division
-    group_rosters.create(roster: roster, group_division: group_division) 
+  def add_rosters(rosters)
+    rosters.each do |roster|
+      group_division = self.default_group_division
+      group_rosters.create(roster: roster, group_division: group_division) 
+    end
   end
 
   def default_group_division

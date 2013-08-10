@@ -9,10 +9,8 @@ feature "Group Roster Views" do
 
   describe "#index" do
     before do
-      group.add_roster roster1
-      group.add_roster roster2
-      group.add_roster roster3
-      group.add_roster roster4
+      rosters = [roster1, roster2, roster3, roster4]
+      group.add_rosters(rosters)
     end
 
     it "has the correct content and elements", :slow do

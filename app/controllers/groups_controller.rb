@@ -9,8 +9,8 @@ class GroupsController < BrowserController
   end
 
   def standings
-    rosters = @group.rosters.includes(:group_divisions)
-    @divisions = rosters.group_by { |roster| roster.group_rosters.first.group_division_id }
+    rosters = @group.rosters
+    @group_divisions = rosters.group_by { |roster| roster.group_divisions.first.id }
   end
   
   def games
