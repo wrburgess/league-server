@@ -8,29 +8,29 @@ class CreateModels < ActiveRecord::Migration
     end
 
     create_table "players", force: true do |t|
-      t.string   "first_name", null: false
-      t.string   "last_name", null: false
-      t.integer  "player_team_id", null: false
-      t.integer  "player_position_id", null: false
-      t.datetime "created_at", null: false
-      t.datetime "updated_at", null: false
+      t.string   "first_name",          null: false
+      t.string   "last_name",           null: false
+      t.integer  "player_team_id",      null: false
+      t.integer  "player_position_id",  null: false
+      t.datetime "created_at",          null: false
+      t.datetime "updated_at",          null: false
     end
 
     create_table "player_positions", force: true do |t|
-      t.string   "name", null: false
-      t.string   "abbreviation", null: false
-      t.integer  "weight", null: false
-      t.datetime "created_at", null: false
-      t.datetime "updated_at", null: false
+      t.string   "name",          null: false
+      t.string   "abbreviation",  null: false
+      t.integer  "weight",        null: false
+      t.datetime "created_at",    null: false
+      t.datetime "updated_at",    null: false
     end
 
     create_table "player_teams", force: true do |t|
       t.string   "location_name"
       t.string   "nickname"
-      t.string   "abbreviation",  null: false
-      t.integer  "player_conference_id", null: false
-      t.datetime "created_at",    null: false
-      t.datetime "updated_at",    null: false
+      t.string   "abbreviation",          null: false
+      t.integer  "player_conference_id",  null: false
+      t.datetime "created_at",            null: false
+      t.datetime "updated_at",            null: false
     end
 
     create_table "player_conferences", force: true do |t|
@@ -43,7 +43,7 @@ class CreateModels < ActiveRecord::Migration
     create_table "player_stat_games", force: true do |t|
       t.integer  "player_id",   null: false
       t.integer  "season",      null: false
-      t.integer  "period",        null: false
+      t.integer  "period",      null: false
       t.date     "game_date"
       t.integer  "opponent_id"
       t.integer  "pa_att",      default: 0
@@ -56,13 +56,13 @@ class CreateModels < ActiveRecord::Migration
     end
 
     create_table "player_stat_seasons", force: true do |t|
-      t.integer  "player_id",  null: false
-      t.integer  "season",     null: false
-      t.integer  "pa_att",     default: 0
-      t.integer  "pa_comp",    default: 0
-      t.integer  "pa_td",      default: 0
-      t.integer  "pa_yd",      default: 0
-      t.integer  "pa_int",     default: 0
+      t.integer  "player_id",   null: false
+      t.integer  "season",      null: false
+      t.integer  "pa_att",      default: 0
+      t.integer  "pa_comp",     default: 0
+      t.integer  "pa_td",       default: 0
+      t.integer  "pa_yd",       default: 0
+      t.integer  "pa_int",      default: 0
       t.datetime "created_at",  null: false
       t.datetime "updated_at",  null: false
     end
@@ -81,7 +81,6 @@ class CreateModels < ActiveRecord::Migration
     create_table "groups", force: true do |t|
       t.string   "name",          null: false
       t.string   "abbreviation",  null: false
-      t.integer  "divisions"
       t.datetime "created_at",    null: false
       t.datetime "updated_at",    null: false
     end
@@ -90,35 +89,36 @@ class CreateModels < ActiveRecord::Migration
       t.integer  "group_id"
       t.integer  "roster_id"
       t.integer  "group_division_id"
-      t.datetime "created_at",  null: false
-      t.datetime "updated_at",  null: false
+      t.datetime "created_at",        null: false
+      t.datetime "updated_at",        null: false
     end
 
     create_table "group_divisions", force: true do |t|
-      t.integer  "group_id"
-      t.string   "name"
-      t.integer  "weight"
-      t.datetime "created_at",  null: false
-      t.datetime "updated_at",  null: false
+      t.integer  "group_id",      null: false
+      t.string   "name",          null: false
+      t.string   "abbreviation",  null: false
+      t.integer  "weight",        default: 0
+      t.datetime "created_at",    null: false
+      t.datetime "updated_at",    null: false
     end
 
     create_table "group_games", force: true do |t|
       t.integer  "group_id"
       t.integer  "season"
       t.integer  "period"
-      t.string   "game_type", default: "regular"
+      t.string   "game_type",   default: "regular"
       t.datetime "created_at",  null: false
       t.datetime "updated_at",  null: false
     end
 
     create_table "group_game_opponents", force: true do |t|
-      t.integer  "group_game_id",  null: false
-      t.integer  "roster_id",  null: false
-      t.integer  "home_roster", default: false
-      t.integer  "calculated_score", default: 0
-      t.integer  "adjusted_score", default: 0
-      t.datetime "created_at",  null: false
-      t.datetime "updated_at",  null: false
+      t.integer  "group_game_id",     null: false
+      t.integer  "roster_id",         null: false
+      t.integer  "home_roster",       default: false
+      t.integer  "calculated_score",  default: 0
+      t.integer  "adjusted_score",    default: 0
+      t.datetime "created_at",        null: false
+      t.datetime "updated_at",        null: false
     end
 
     create_table "group_logs", force: true do |t|
@@ -150,10 +150,10 @@ class CreateModels < ActiveRecord::Migration
     end
 
     create_table "group_player_teams", force: true do |t|
-      t.integer  "group_id",  null: false
+      t.integer  "group_id",        null: false
       t.integer  "player_team_id",  null: false
-      t.datetime "created_at",  null: false
-      t.datetime "updated_at",  null: false
+      t.datetime "created_at",      null: false
+      t.datetime "updated_at",      null: false
     end
 
     create_table "rosters", force: true do |t|
@@ -313,8 +313,8 @@ class CreateModels < ActiveRecord::Migration
       t.datetime "last_sign_in_at"
       t.string   "current_sign_in_ip"
       t.string   "last_sign_in_ip"
-      t.datetime "created_at",  null: false
-      t.datetime "updated_at",  null: false
+      t.datetime "created_at",            null: false
+      t.datetime "updated_at",            null: false
     end
 
     add_index "users", ["email"], name: "index_users_on_email", unique: true

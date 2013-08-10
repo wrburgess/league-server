@@ -5,6 +5,7 @@ defaults: &defaults
   app_season: 2014
   app_periods: 25
   app_alias_group: "league"
+  app_alias_division: "division"
   app_alias_roster: "team"
   app_alias_player_team: "school"
   app_alias_player_conference: "conference"

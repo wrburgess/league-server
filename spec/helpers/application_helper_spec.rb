@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe ApplicationHelper do
-
+  
   describe "#commish_flag" do
     it 'returns flag to mark group log entry executed by commish' do
       log = FactoryGirl.create :group_log, group_owner: true

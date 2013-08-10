@@ -1,34 +1,37 @@
 %h1
   Standings
 
-%table
-  %thead
-    %tr
-      %th.name
-        Team
-      %th.group-wins
-        W
-      %th.group-losses
-        L
-      %th.group-ties
-        T
-      %th.points-for
-        PF
-      %th.points-against
-        PA
-  %tbody
-    - @group.rosters.each do |roster|
-      %tr{ class: "row-#{roster.id}" }
-        %td.name
-          = link_to roster.name, group_roster_path(@group, roster)
-        %td.group-wins
-          = "1" #roster.roster_stat_seasons.where(season: AppSettings.app_season).first.wins
-        %td.group-losses
-          = "2" #roster.roster_stat_seasons.where(season: AppSettings.app_season).first.losses
-        %td.group-ties
-          = "3" #roster.roster_stat_seasons.where(season: AppSettings.app_season).first.ties
-        %td.points-for
-          = "4" #roster.roster_stat_seasons.where(season: AppSettings.app_season).first.points_for
-        %td.points-against
-          = "5" #roster.roster_stat_seasons.where(season: AppSettings.app_season).first.points_against
+- @divisions.each_pair do |key, division|
+  %table
+    %caption
+      = AppSettings.app_alias_division
+    %thead
+      %tr
+        %th.name
+          Team
+        %th.group-wins
+          W
+        %th.group-losses
+          L
+        %th.group-ties
+          T
+        %th.points-for
+          PF
+        %th.points-against
+          PA
+    %tbody
+      - division.each do |roster|
+        %tr{ class: "row-#{roster.id}" }
+          %td.name
+            = link_to roster.name, group_roster_path(@group, roster)
+          %td.group-wins
+            = "1" #roster.roster_stat_seasons.where(season: AppSettings.app_season).first.wins
+          %td.group-losses
+            = "2" #roster.roster_stat_seasons.where(season: AppSettings.app_season).first.losses
+          %td.group-ties
+            = "3" #roster.roster_stat_seasons.where(season: AppSettings.app_season).first.ties
+          %td.points-for
+            = "4" #roster.roster_stat_seasons.where(season: AppSettings.app_season).first.points_for
+          %td.points-against
+            = "5" #roster.roster_stat_seasons.where(season: AppSettings.app_season).first.points_against
 

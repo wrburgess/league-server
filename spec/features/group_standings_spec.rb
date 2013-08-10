@@ -31,7 +31,7 @@ describe "Group Standings Page" do
 
     it "redirects to first team group_roster show view", :slow do
       visit group_standings_path(group, roster3)
-      find("tr.row-#{roster2.id} td.name a").click
+      all("tr.row-#{roster2.id} td.name a")[1].click
       expect(current_path).to eq group_roster_path group, roster2
     end
 

@@ -47,9 +47,11 @@ describe GroupsController, :type => :controller do
       response.should render_template layout: "layouts/browser"
     end
 
-    it "assigns the requested group to @group" do
-      get :standings, group_id: @group
-      expect(assigns(:group)).to eq @group
+    it "assigns the requested divisions to @divisions" do
+      get :games, group_id: @group
+      rosters = Roster.where(group: @group)
+      @divisions = rosters.group_by { |roster| roster.division }
+      expect(assigns(:divisions)).to eq @divisions
     end
   end
 
