@@ -1,10 +1,11 @@
 %h1
   Standings
 
-- @group_divisions.each_pair do |key, division|
-  %table
-    %caption
-      = AppSettings.app_alias_division.capitalize
+- @group_divisions.each_pair do |key, rosters|
+  %table.division
+    - if @group_divisions.count > 1
+      %caption
+        = "#{key} #{AppSettings.app_alias_division.capitalize}"
     %thead
       %tr
         %th.name
@@ -20,7 +21,7 @@
         %th.points-against
           PA
     %tbody
-      - division.each do |roster|
+      - rosters.each do |roster|
         %tr{ class: "row-#{roster.id}" }
           %td.name
             = link_to roster.name, group_roster_path(@group, roster)

@@ -18,8 +18,15 @@ describe Group do
       group = FactoryGirl.create :group
       roster = FactoryGirl.create :roster
       group.add_rosters [roster]
-      expect(roster.groups.first).to eq(group)
       expect(roster.group_divisions.where(group: group).first).to eq(group.default_group_division)
+    end
+
+    it "adds rosters to a group with a non-default group_division" do
+      group = FactoryGirl.create :group
+      roster = FactoryGirl.create :roster
+      group_division2 = FactoryGirl.create :group_division, group: group
+      group.add_rosters [roster], group_division2
+      expect(roster.group_divisions.where(group: group).first).to eq(group_division2)
     end
   end
 

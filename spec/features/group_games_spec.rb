@@ -2,6 +2,9 @@ require 'spec_helper'
 
 describe "Group Games Page" do
   let!(:group) { FactoryGirl.create :group }
+  let!(:group_division1) { FactoryGirl.create :group_division, group: group, name: "Northern", abbreviation: "NORTH", default: true }
+  let!(:group_division2) { FactoryGirl.create :group_division, group: group, name: "Southern", abbreviation: "South" }
+
   let!(:roster1) { FactoryGirl.create :roster, name: "Illinois Towers" }
   let!(:roster2) { FactoryGirl.create :roster, name: "St. Simons Avians" }
   let!(:roster3) { FactoryGirl.create :roster, name: "Orlando Thunder" }
@@ -39,8 +42,8 @@ describe "Group Games Page" do
 
   describe "#index" do
     before do
-      rosters = [roster1, roster2, roster3, roster4, roster5, roster6, roster7, roster8]
-      group.add_rosters(rosters)
+      group.add_rosters([roster1, roster2, roster3, roster4])
+      group.add_rosters([roster5, roster6, roster7, roster8], group_division2)
     end
 
     it "has the correct default elements", :slow do

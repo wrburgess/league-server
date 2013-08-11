@@ -47,7 +47,7 @@ describe GroupsController do
     it "assigns the requested divisions to @divisions" do
       get :standings, group_id: @group
       rosters = @group.rosters
-      @group_divisions = rosters.group_by { |roster| roster.group_divisions.first.id }
+      @group_divisions = rosters.group_by { |roster| roster.group_divisions.first.name }
       expect(assigns(:group_divisions)).to eq @group_divisions
     end
   end
