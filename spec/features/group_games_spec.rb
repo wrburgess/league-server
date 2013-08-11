@@ -42,28 +42,53 @@ describe "Group Games Page" do
 
   describe "#index" do
     before do
-      group.add_rosters([roster1, roster2, roster3, roster4])
-      group.add_rosters([roster5, roster6, roster7, roster8], group_division2)
+      group.add_rosters [roster1, roster2, roster3, roster4]
+      group.add_rosters [roster5, roster6, roster7, roster8], group_division2
     end
 
     it "has the correct default elements", :slow do
-      visit group_games_path(group)
-      page.should have_css("body.games")
-      page.should have_css("h1", :text => AppSettings.app_alias_game.capitalize.pluralize)
+      visit group_games_path group
+      page.should have_css "body.games.index"
+      page.should have_css "h1", :text => AppSettings.app_alias_game.capitalize.pluralize
     end
 
     it "redirects to first game > away team group_roster show view", :slow do
-      visit group_games_path(group)
+      visit group_games_path group
       all("tr.row-#{group_game1.id} td.team-name a")[1].click
       expect(current_path).to eq group_roster_path group, group_game1.group_game_opponents.first.roster_id
     end
 
     it "renders regular games, playoff games, and final game", :slow do
-      visit group_games_path(group)
+      visit group_games_path group
       expect(all("table.period").count).to eq 4
       expect(all("tr.regular").count).to eq 5
       expect(all("tr.playoff").count).to eq 2
       expect(all("tr.final").count).to eq 1
+    end
+  end
+
+  describe "#show" do
+    before do
+      group.add_rosters [roster1, roster2, roster3, roster4]
+      group.add_rosters [roster5, roster6, roster7, roster8], group_division2
+    end
+
+    it "has the correct default elements", :slow do
+      visit group_game_path group, group_game1
+      page.should have_css "body.games.show"
+      page.should have_css "h1", :text => AppSettings.app_alias_game.capitalize
+    end
+
+    it "redirects to group_game show view", :slow do
+      visit group_game_path group, group_game2
+      all("tr.row-#{group_game2.id} td.team-name a")[0].click
+      expect(current_path).to eq group_roster_path group, group_game2.group_game_opponents.away_first.first.roster
+    end
+
+    it "renders a game with a game_type class", :slow do
+      visit group_game_path group, group_game7
+      expect(all("table.game").count).to eq 1
+      expect(all("tr.#{group_game7.game_type}").count).to eq 1
     end
   end
 end

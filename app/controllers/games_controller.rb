@@ -6,7 +6,7 @@ class GamesController < BrowserController
   end
 
   def show
-
+    @group_game = GroupGame.find(params[:id])
   end
 
 end

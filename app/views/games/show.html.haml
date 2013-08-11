@@ -1,0 +1,21 @@
+%h1
+  = AppSettings.app_alias_game.capitalize
+
+  %table.game
+    %thead
+      %tr
+        %th.team-name
+          Team
+        %th.score
+          Score
+        %th.score
+          Score
+        %th.team-name
+          Team
+      %tbody
+        %tr{ class: "row-#{@group_game.id} #{@group_game.game_type}" }
+          - @group_game.group_game_opponents.away_first.each do |opponent|
+            %td.team-name
+              = link_to opponent.roster.name, group_roster_path(@group, opponent.roster)
+            %td.score
+              = opponent.calculated_score
