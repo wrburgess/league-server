@@ -95,8 +95,8 @@ class CreateModels < ActiveRecord::Migration
 
     create_table "group_divisions", force: true do |t|
       t.integer  "group_id",      null: false
-      t.string   "name",          null: false
-      t.string   "abbreviation",  null: false
+      t.string   "name",          null: false, default: "Main"
+      t.string   "abbreviation",  null: false, default: "MAIN"
       t.integer  "weight",        default: 0
       t.integer  "default",       default: false
       t.datetime "created_at",    null: false

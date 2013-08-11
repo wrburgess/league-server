@@ -13,6 +13,7 @@ League::Application.routes.draw do
 
   namespace :admin, defaults: { format: "html" } do
     root :to => "static#index"
+    resources :games
     resources :groups
     resources :players
     resources :player_teams
@@ -25,19 +26,18 @@ League::Application.routes.draw do
     get "draft" => "groups#draft"
     get "news" => "players#news"
     get "rules" => "groups#rules"
-    get "games" => "groups#games"
-    get "scores" => "groups#scores"
     get "search" => "players#search"
     get "standings" => "groups#standings"
     get "stats" => "players#stats"
     get "transactions" => "groups#transactions"
 
+    resources :games
+    resources :players
+
     namespace :settings do
       root :to => "groups#settings"
       get "scoring" => "groups#scoring"
     end
-
-    resources :players
 
     resources :rosters do
       root :to => "rosters#index"

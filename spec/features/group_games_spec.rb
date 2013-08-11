@@ -37,7 +37,7 @@ describe "Group Games Page" do
   let!(:group_game_opponent15) { FactoryGirl.create :group_game_opponent, group_game: group_game8, roster: roster3, home_roster: false }
   let!(:group_game_opponent16) { FactoryGirl.create :group_game_opponent, group_game: group_game8, roster: roster4, home_roster: true }
 
-  describe "#games" do
+  describe "#index" do
     before do
       rosters = [roster1, roster2, roster3, roster4, roster5, roster6, roster7, roster8]
       group.add_rosters(rosters)

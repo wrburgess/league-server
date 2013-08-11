@@ -26,11 +26,7 @@ class Group < ActiveRecord::Base
   end
 
   def default_group_division
-    unless group_divisions.any? 
-      return group_divisions.create(name: "Default", abbreviation: "DFLT", weight: 0, default: true)
-    else
-      return group_divisions.default_first
-    end
+    group_divisions.any? ? group_divisions.default_first : group_divisions.create(default: true)
   end
 
 end

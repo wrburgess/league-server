@@ -22,13 +22,13 @@ ActiveRecord::Schema.define(version: 20121215111111) do
   end
 
   create_table "group_divisions", force: true do |t|
-    t.integer  "group_id",                 null: false
-    t.string   "name",                     null: false
-    t.string   "abbreviation",             null: false
+    t.integer  "group_id",                      null: false
+    t.string   "name",         default: "Main", null: false
+    t.string   "abbreviation", default: "MAIN", null: false
     t.integer  "weight",       default: 0
     t.integer  "default",      default: 0
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
   end
 
   create_table "group_game_opponents", force: true do |t|
