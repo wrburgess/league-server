@@ -7,23 +7,23 @@
       = "#{AppSettings.app_alias_period.capitalize} #{key}"
     %thead
       %tr
+        %th.team-name
+          Team
+        %th.score
+          Score
+        %th.score
+          Team
+        %th.team-name
+          Score
         %th.view
           &nbsp;
-        %th.team-name
-          Team
-        %th.score
-          Score
-        %th.score
-          Score
-        %th.team-name
-          Team
       %tbody
       - group_games.each do |group_game|
         %tr{ class: "row-#{group_game.id} #{group_game.game_type}" }
-          %td.view
-            = link_to "View", group_game_path(@group, group_game)
           - group_game.group_game_opponents.away_first.each do |opponent|
             %td.team-name
               = link_to opponent.roster.name, group_roster_path(@group, opponent.roster)
             %td.score
               = opponent.calculated_score
+          %td.view
+            = link_to "View", group_game_path(@group, group_game)
