@@ -52,6 +52,12 @@ describe "Group Games Page" do
       page.should have_css "h1", :text => AppSettings.app_alias_game.capitalize.pluralize
     end
 
+    it "redirects to group_game show view", :slow do
+      visit group_games_path group
+      find("tr.row-#{group_game2.id} td.view a").click
+      expect(current_path).to eq group_game_path group, group_game2
+    end
+
     it "redirects to first game > away team group_roster show view", :slow do
       visit group_games_path group
       all("tr.row-#{group_game1.id} td.team-name a")[1].click
