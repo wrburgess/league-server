@@ -104,6 +104,28 @@ name: "Guard", abbreviation: "G"
 name: "Center", abbreviation: "C"  
 name: "Forward", abbreviation: "F" 
 
+## Slots
+
+ID Slot      Position
+01 Starting  G  
+02 Starting  C  
+03 Starting  F  
+04 Starting  G/F/C  
+05 Starting  G/C  
+06 Starting  C/F  
+07 Reserved  G  
+08 Reserved  C  
+09 Reserved  F  
+10 Redshirt  G  
+11 Redshirt  C  
+12 Redshirt  F  
+13 Suspended G  
+14 Suspended C
+15 Suspended F
+16 Injured   G  
+17 Injured   C  
+18 Injured   F  
+
 ## Schedule
 
 * 11/01/2013 - 02/28/2014   
