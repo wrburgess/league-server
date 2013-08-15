@@ -106,7 +106,8 @@ name: "Forward", abbreviation: "F"
 
 ## Slots
 
-ID Slot      Position
+ID Slot      Positionsublime .
+
 01 Starting  G  
 02 Starting  C  
 03 Starting  F  
