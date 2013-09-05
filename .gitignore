@@ -17,7 +17,7 @@ pickle-email-*.html
 .DS_Store
 database.yml
 dump.rdb
-.sublime-workspace
-.sublime-project
+*.sublime-workspace
+*.sublime-project
 .powrc
 .env
