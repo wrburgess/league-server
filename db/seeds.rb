@@ -160,3 +160,15 @@ puts "Players created"
 puts "PlayerStatCareer created"
 puts "PlayerStatSeasons created"
 puts "PlayerStatGames created"
+
+CSV.foreach("#{Rails.root}/db/fill/roster_slots.csv", :headers => :first_row) do |row|
+  RosterSlot.create!(
+    season: row["season"], 
+    period: row["period"], 
+    roster_id: row["roster_id"], 
+    player_id: row["player_id"], 
+    roster_slot_type_id: row["roster_slot_type_id"], 
+    roster_slot_position_id: row["roster_slot_position_id"]
+  )
+end
+puts "RosterSlots created"
