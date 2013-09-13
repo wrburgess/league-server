@@ -176,16 +176,16 @@ class CreateModels < ActiveRecord::Migration
     end
 
     create_table "roster_slot_types", force: true do |t|
-      t.integer  "name",         null: false
-      t.integer  "abbreviation", null: false
+      t.string  "name",         null: false
+      t.string  "abbreviation", null: false
       t.integer  "weight",       null: false
       t.datetime "created_at",   null: false
       t.datetime "updated_at",   null: false
     end
 
     create_table "roster_slot_positions", force: true do |t|
-      t.integer  "name",         null: false
-      t.integer  "abbreviation", null: false
+      t.string  "name",         null: false
+      t.string  "abbreviation", null: false
       t.integer  "weight",       null: false
       t.datetime "created_at",   null: false
       t.datetime "updated_at",   null: false

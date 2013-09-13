@@ -7,11 +7,15 @@
       %th
         Slot
       %th
+        Pos
+      %th
         Player
   %tbody
     - @roster_slots.each do |slot|
       %tr
         %td
-          = slot.id
+          = slot.roster_slot_type.name
+        %td
+          = slot.roster_slot_position.name
         %td
           = slot.player.full_name

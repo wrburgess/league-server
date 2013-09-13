@@ -7,21 +7,21 @@ CSV.foreach("#{Rails.root}/db/fill/system_periods.csv", :headers => :first_row) 
 end
 puts "SystemPeriods created"
 
-RosterSlotType.create(name: "Starter", abbreviation: "START", weight: 10)
-RosterSlotType.create(name: "Reserve", abbreviation: "RESV", weight: 20)
-RosterSlotType.create(name: "Injured", abbreviation: "INJ", weight: 30)
-RosterSlotType.create(name: "Suspended", abbreviation: "SUSP", weight: 40)
-RosterSlotType.create(name: "Redshirt", abbreviation: "RS", weight: 50)
+RosterSlotType.create!(name: "Starter", abbreviation: "START", weight: 10)
+RosterSlotType.create!(name: "Reserve", abbreviation: "RESV", weight: 20)
+RosterSlotType.create!(name: "Injured", abbreviation: "INJ", weight: 30)
+RosterSlotType.create!(name: "Suspended", abbreviation: "SUSP", weight: 40)
+RosterSlotType.create!(name: "Redshirt", abbreviation: "RS", weight: 50)
 puts "RosterSlotTypes created"
 
-RosterSlotPosition.create(name: "Guard", abbreviation: "G", weight: 100)
-RosterSlotPosition.create(name: "Forward", abbreviation: "F", weight: 200)
-RosterSlotPosition.create(name: "Center", abbreviation: "C", weight: 300)
+RosterSlotPosition.create!(name: "Guard", abbreviation: "G", weight: 100)
+RosterSlotPosition.create!(name: "Forward", abbreviation: "F", weight: 200)
+RosterSlotPosition.create!(name: "Center", abbreviation: "C", weight: 300)
 puts "RosterSlotPositions created"
 
-PlayerPosition.create(name: "Guard", abbreviation: "G", weight: 100) #1
-PlayerPosition.create(name: "Forward", abbreviation: "F", weight: 200) #2
-PlayerPosition.create(name: "Center", abbreviation: "C", weight: 300) #3
+PlayerPosition.create!(name: "Guard", abbreviation: "G", weight: 100) #1
+PlayerPosition.create!(name: "Forward", abbreviation: "F", weight: 200) #2
+PlayerPosition.create!(name: "Center", abbreviation: "C", weight: 300) #3
 puts "PlayerPositions created"
 
 (1..50).each do |u|
