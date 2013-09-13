@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
 
   # Include default devise modules :confirmable, :timeoutable
   devise :database_authenticatable, :lockable, :registerable,
-         :recoverable, :rememberable, :token_authenticatable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable, :validatable
 
   has_many :group_users
   has_many :groups, :through => :group_users
