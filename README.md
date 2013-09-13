@@ -45,6 +45,7 @@ A fantasy sports league engine
 APP_SECRET_KEY_BASE:        xxxx
 MANDRILL_APIKEY:            xxxx
 MANDRILL_USERNAME:          xxxx
+DEVISE_SECRET_KEY:          xxxx
 NEW_RELIC_APP_NAME:         league-server-staging
 NEW_RELIC_ID:               xxxx
 NEW_RELIC_LICENSE_KEY:      xxxx
