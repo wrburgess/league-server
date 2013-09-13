@@ -3,13 +3,13 @@ source "https://rubygems.org"
 ruby "2.0.0"
 gem "rails", "4.0.0"
 
-gem "coveralls", "0.6.7", require: false
-gem "devise", "3.0.3"
+gem "coveralls", "0.6.9", require: false
+gem "devise", "3.1.0"
 gem "faker", "1.2.0"
 gem "haml-rails", "0.4.0"
 gem "jquery-rails", "3.0.4"
 gem "json", "1.8.0"
-gem "newrelic_rpm", "3.6.6.147"
+gem "newrelic_rpm", "3.6.7.152"
 gem "nokogiri", "1.6.0"
 gem "pg", "0.16.0"
 gem "resque", "1.24.1", require: "resque/server"
@@ -24,7 +24,7 @@ group :production do
 end
 
 group :development do
-  gem "better_errors", "0.9.0"
+  gem "better_errors", "1.0.1"
   gem "binding_of_caller", "0.7.2"
   gem "tracer_bullets", "0.0.5"
 end
