@@ -152,3 +152,6 @@ Week 14 Mon, Feb 03 - Sun, Feb 09 REGULAR
 Week 15 Mon, Feb 10 - Sun, Feb 16 PLAYOFF  
 Week 16 Mon, Feb 17 - Sun, Feb 23 PLAYOFF  
 Week 17 Mon, Feb 24 - Sun, Mar 03 CHAMP  
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/wrburgess/league-server/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
